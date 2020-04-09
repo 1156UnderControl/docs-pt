@@ -84,7 +84,7 @@ html_theme = "sphinx_rtd_theme"
 html_static_path = ['_static']
 
 # Sidebar logo
-html_logo = "assets/wpilibDocsLogo.png"
+html_logo = "assets/Logo-Under-Vetor-Certo.png"
 
 # URL favicon
 html_favicon = "assets/FIRSTicon_RGB_withTM.ico"
