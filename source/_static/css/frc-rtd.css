@@ -7,38 +7,6 @@
 	padding: 15px;
 }
 
-.color-strip {
-	height: 10px;
-	margin :0;
-	padding: 0;
-	position: relative;
-	width: 100%;
-	z-index: 999;
-}
-
-.color-strip .fblue {
-	background: #009cd7;
-}
-
-.color-strip .fgreen {
-	background: #00a651;
-}
-
-.color-strip .forange {
-	background: #f57e25;
-}
-
-.color-strip .fred {
-	background: #ed1c24;
-}
-
-.color-strip div {
-	display: block;
-	float: left;
-	height: 100%;
-	width: 25%;
-}
-
 .rst-versions {
 	width: 320px !important;
 }
