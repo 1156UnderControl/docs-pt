@@ -12,19 +12,16 @@ Seja bem-vindo a documentação do sistema de controle da FRC! Aqui você irá e
 
 **Atenção!** Este guia foi adaptado da :ref: `documentação oficial da FIRST<https://docs.wpilib.org/en/stable/>` e da :ref:`CTRE <https://phoenix-documentation.readthedocs.io/en/latest/>.
 
-
-Welcome to the *FIRST*\ |reg| Robotics Competition Control System Documentation! An overview of the changes from 2019 to 2020 is available on the :ref:`New for 2020 <docs/software/wpilib-overview/new-for-2020:New for 2020>` document.
-
 .. toctree::
    :maxdepth: 2
-   :caption: Programming and Electrical Basics
+   :caption: Fundamentos de Programação e Elétrica
 
    docs/getting-started/getting-started-frc-control-system/index
    docs/getting-started/running-a-benchtop/index
 
 .. toctree::
    :maxdepth: 1
-   :caption: WPILib Programming Basics
+   :caption: Fundamentos da Biblioteca WPIlib
 
    docs/software/wpilib-overview/index
    docs/software/labview/index
@@ -36,10 +33,7 @@ Welcome to the *FIRST*\ |reg| Robotics Competition Control System Documentation!
 
 .. toctree::
    :maxdepth: 1
-   :caption: API Docs
-
-   WPILib Java API Docs <https://first.wpi.edu/FRC/roborio/release/docs/java/index.html>
-   WPILib C++ API Docs <https://first.wpi.edu/FRC/roborio/release/docs/cpp/index.html>
+   :caption: Documentação da CTRE
 
 .. toctree::
    :maxdepth: 1
