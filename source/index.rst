@@ -5,8 +5,13 @@
 
 .. include:: <isonum.txt>
 
-FIRST Robotics Competition Control System
+Sistema de Controle da FIRST Robotics Competition
 ===========================================
+
+Seja bem-vindo a documentação do sistema de controle da FRC! Aqui você irá encontrar um guia passo-a-passo para a correta configuração e programação dos componentes eletrônicos mais importantes utilizados na competição.
+
+**Atenção!** Este guia foi adaptado da :ref: `documentação oficial da FIRST<https://docs.wpilib.org/en/stable/>` e da :ref:`CTRE <https://phoenix-documentation.readthedocs.io/en/latest/>.
+
 
 Welcome to the *FIRST*\ |reg| Robotics Competition Control System Documentation! An overview of the changes from 2019 to 2020 is available on the :ref:`New for 2020 <docs/software/wpilib-overview/new-for-2020:New for 2020>` document.
 
