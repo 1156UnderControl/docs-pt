@@ -87,7 +87,7 @@ html_static_path = ['_static']
 html_logo = "assets/Logo-Under-Vetor-Certo.png"
 
 # URL favicon
-html_favicon = "assets/FIRSTicon_RGB_withTM.ico"
+html_favicon = "assets/Logo-Under-Vetor-Certo.png"
 
 html_theme_options = {
 	'collapse_navigation': True,
