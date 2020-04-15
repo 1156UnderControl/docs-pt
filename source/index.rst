@@ -33,21 +33,20 @@ Seja bem-vindo a documentação do sistema de controle da FRC! Aqui você irá e
 
 .. toctree::
    :maxdepth: 1
-   :caption: Documentação da CTREx
+   :caption: Documentação da CTRE
 
 .. toctree::
    :maxdepth: 1
-   :caption: WPILib Software Tools
+   :caption: Ferramentas de Software da WPIlib
 
    docs/software/driverstation/index
-   docs/software/wpilib-tools/shuffleboard/index
-   docs/software/wpilib-tools/smartdashboard/index
+..   docs/software/wpilib-tools/smartdashboard/index
    docs/software/wpilib-tools/pathweaver/index
    docs/software/wpilib-tools/robotbuilder/index
    docs/software/wpilib-tools/robot-simulation/index
    docs/software/wpilib-tools/robot-characterization/index
 
-.. toctree::
+ toctree::
    :maxdepth: 1
    :caption: WPILib Advanced Programming
 
@@ -59,14 +58,14 @@ Seja bem-vindo a documentação do sistema de controle da FRC! Aqui você irá e
    docs/software/roborio-info/index
    docs/software/advanced-control/index
 
-.. toctree::
+ toctree::
    :maxdepth: 1
    :caption: WPILib Examples and Tutorials
 
    docs/software/examples-tutorials/wpilib-examples
    docs/software/examples-tutorials/trajectory-tutorial/index
 
-.. toctree::
+ toctree::
    :maxdepth: 1
    :caption: WPILib Hardware
 
@@ -75,12 +74,12 @@ Seja bem-vindo a documentação do sistema de controle da FRC! Aqui você irá e
 
 .. toctree::
    :maxdepth: 1
-   :caption: Robot Networking
+   :caption: Configuração da Rede do robô
 
    docs/networking/networking-introduction/index
-   docs/networking/networking-utilities/index
+..   docs/networking/networking-utilities/index
 
-.. toctree::
+ toctree::
    :maxdepth: 1
    :caption: Contributing
 
@@ -89,10 +88,13 @@ Seja bem-vindo a documentação do sistema de controle da FRC! Aqui você irá e
    docs/contributing/build-instructions
    docs/contributing/top-contributors
 
-.. toctree::
+ toctree::
    :maxdepth: 1
    :caption: Issues
 
    Report an Issue <https://github.com/wpilibsuite/frc-docs/issues>
+
+
+
 
 .. todolist::
