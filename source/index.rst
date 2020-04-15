@@ -10,7 +10,7 @@ Sistema de Controle da FIRST Robotics Competition
 
 Seja bem-vindo a documentação do sistema de controle da FRC! Aqui você irá encontrar um guia passo-a-passo para a correta configuração e programação dos componentes eletrônicos mais importantes utilizados na competição.
 
-**Atenção!** Este guia foi adaptado da `Documentação oficial da FIRST <https://docs.wpilib.org/en/stable/>`_ e da`Cross the Road Eletronics <https://phoenix-documentation.readthedocs.io/en/latest/>`_.
+**Atenção!** Este guia foi adaptado da `Documentação oficial da FIRST <https://docs.wpilib.org/en/stable/>`_ e da`Cross the Road Eletronics <https://phoenix-documentation.readthedocs.io/en/latest/>`_ .
 
 .. toctree::
    :maxdepth: 2
@@ -34,6 +34,9 @@ Seja bem-vindo a documentação do sistema de controle da FRC! Aqui você irá e
 .. toctree::
    :maxdepth: 1
    :caption: Documentação da CTRE
+
+
+
 
 .. toctree::
    :maxdepth: 1
