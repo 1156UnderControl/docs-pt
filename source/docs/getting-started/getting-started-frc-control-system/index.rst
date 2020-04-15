@@ -8,7 +8,6 @@ Getting Started
    control-system-software
    control-system-hardware
    offline-installation-preparations
-   wpilib-setup
    labview-setup
    frc-game-tools
    how-to-wire-a-robot
