@@ -10,7 +10,7 @@ Sistema de Controle da FIRST Robotics Competition
 
 Seja bem-vindo a documentação do sistema de controle da FRC! Aqui você irá encontrar um guia passo-a-passo para a correta configuração e programação dos componentes eletrônicos mais importantes utilizados na competição.
 
-**Atenção!** Este guia foi adaptado da `Documentação oficial da FIRST <https://docs.wpilib.org/en/stable/>`_ e da `Cross the Road Eletronics <https://phoenix-documentation.readthedocs.io/en/latest/>`_ .
+**Atenção!** Este guia foi adaptado português da `Documentação oficial da FIRST <https://docs.wpilib.org/en/stable/>`_ e da `Cross the Road Eletronics <https://phoenix-documentation.readthedocs.io/en/latest/>`_.
 
 .. toctree::
    :maxdepth: 2
@@ -46,66 +46,21 @@ Seja bem-vindo a documentação do sistema de controle da FRC! Aqui você irá e
    docs/CTRE/ch10_BringUpPDP
    docs/CTRE/ch13_MC
    docs/CTRE/ch20_FAQ
-   
+
 
 .. toctree::
    :maxdepth: 1
    :caption: Ferramentas de Software da WPIlib
 
    docs/software/driverstation/index
-..   docs/software/wpilib-tools/smartdashboard/index
-   docs/software/wpilib-tools/pathweaver/index
-   docs/software/wpilib-tools/robotbuilder/index
-   docs/software/wpilib-tools/robot-simulation/index
-   docs/software/wpilib-tools/robot-characterization/index
-
- toctree::
-   :maxdepth: 1
-   :caption: WPILib Advanced Programming
-
-   docs/software/vision-processing/index
-   docs/software/commandbased/index
-   docs/software/old-commandbased/index
-   docs/software/kinematics-and-odometry/index
-   docs/software/networktables/index
-   docs/software/roborio-info/index
-   docs/software/advanced-control/index
-
- toctree::
-   :maxdepth: 1
-   :caption: WPILib Examples and Tutorials
-
-   docs/software/examples-tutorials/wpilib-examples
-   docs/software/examples-tutorials/trajectory-tutorial/index
-
- toctree::
-   :maxdepth: 1
-   :caption: WPILib Hardware
-
-   docs/hardware/hardware-basics/index
-   docs/hardware/sensors/index
+.. 
 
 .. toctree::
    :maxdepth: 1
    :caption: Configuração da Rede do robô
 
    docs/networking/networking-introduction/index
-..   docs/networking/networking-utilities/index
-
- toctree::
-   :maxdepth: 1
-   :caption: Contributing
-
-   docs/contributing/contribution-guidelines
-   docs/contributing/style-guide
-   docs/contributing/build-instructions
-   docs/contributing/top-contributors
-
- toctree::
-   :maxdepth: 1
-   :caption: Issues
-
-   Report an Issue <https://github.com/wpilibsuite/frc-docs/issues>
+..  
 
 Entre em contato conosco: robotica.1156@gmail.com
 
