@@ -18,8 +18,8 @@
 # -- Project information -----------------------------------------------------
 
 project = 'FIRST Robotics Competition'
-copyright = '2020, FIRST'
-author = 'WPILib'
+copyright = '2020, FIRST and CTRE'
+author = 'WPILib and CTRE'
 version = '2020'
 
 
