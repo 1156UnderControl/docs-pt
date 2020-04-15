@@ -49,18 +49,18 @@ Seja bem-vindo a documentação do sistema de controle da FRC! Aqui você irá e
 
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Ferramentas de Software da WPIlib
 
    docs/software/driverstation/index
-.. 
+..
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Configuração da Rede do robô
 
    docs/networking/networking-introduction/index
-..  
+..
 
 Entre em contato conosco: robotica.1156@gmail.com
 
