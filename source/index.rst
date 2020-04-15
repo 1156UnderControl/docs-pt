@@ -6,7 +6,7 @@
 .. include:: <isonum.txt>
 
 Sistema de Controle da FIRST Robotics Competition
-===========================================
+=================================================
 
 Seja bem-vindo a documentação do sistema de controle da FRC! Aqui você irá encontrar um guia passo-a-passo para a correta configuração e programação dos componentes eletrônicos mais importantes utilizados na competição.
 
@@ -35,8 +35,18 @@ Seja bem-vindo a documentação do sistema de controle da FRC! Aqui você irá e
    :maxdepth: 1
    :caption: Documentação da CTRE
 
-
-
+   docs/CTRE/ch01_PhoeSoftRefManual
+   docs/CTRE/ch02_PrimerCAN
+   docs/CTRE/ch03_PrimerPhoenixSoft
+   docs/CTRE/ch05_PrepWorkstation
+   docs/CTRE/ch06_PrepRobot
+   docs/CTRE/ch07_InitHardTesting
+   docs/CTRE/ch08_BringUpCAN
+   docs/CTRE/ch09_BringUpPCM
+   docs/CTRE/ch10_BringUpPDP
+   docs/CTRE/ch13_MC
+   docs/CTRE/ch20_FAQ
+   
 
 .. toctree::
    :maxdepth: 1
