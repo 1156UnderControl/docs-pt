@@ -94,7 +94,6 @@ Seja bem-vindo a documentação do sistema de controle da FRC! Aqui você irá e
 
    Report an Issue <https://github.com/wpilibsuite/frc-docs/issues>
 
-
-
+Entre em contato conosco: robotica.1156@gmail.com
 
 .. todolist::
