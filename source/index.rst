@@ -23,7 +23,6 @@ Seja bem-vindo a documentação do sistema de controle da FRC! Aqui você irá e
    :maxdepth: 1
    :caption: Fundamentos da Biblioteca WPIlib
 
-   docs/software/wpilib-overview/index
    docs/software/labview/index
    docs/software/actuators/index
    docs/software/sensors/index
