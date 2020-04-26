@@ -5,6 +5,8 @@ How to Wire an FRC Robot
 
    This document details the wiring of a basic electronics board for bench-top testing.
 
+   Este documento descreve como fazer o cabeamento de uma chapa com componentes eletônicos para testes.
+
    Some images shown in this section reflect the setup for a Robot Control System using Spark motor controllers. Wiring diagram and layout should be similar for other motor controllers. Where appropriate, a second set of images shows the wiring steps for using PWM controllers with integrated wires.
 
 Gather Materials
