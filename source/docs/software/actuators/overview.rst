@@ -1,16 +1,16 @@
-Actuator Overview
-==================
-This section discusses the control of motors and pneumatics
-through speed controllers, solenoids and pneumatics, and
-their interface with C++ and Java WPILib.
+Visão geral dos atuadores
+=========================
+Essa sessão discute sobre o controle de motor e pneumático
+através de rápidos controladores, solenóides e pneumático, e
+sua interface com C++ e Java WPILib.
 
-Speed controllers
------------------
-A speed controller is responsible on your robot for making motors move.
-For brushed DC motors such as CIMs or 775s, the speed controller regulates
-the voltage that the motor receives, much like a light bulb. For
-brushless speed controllers such as the Spark MAX, the controller regulates
-the power delivered to each "phase" of the motor.
+Controladores de velocidade
+---------------------------
+Um controlador de velocidade é responsável em seu robô para fazer os motores mover.
+Para brushed DC motors como também para CIMs ou 775s, o controlador de velocidade regula
+a voltagem do que o motor recebe, muito parecido com uma lâmpada. Para
+o controlador de velocidade Brushless como também para o Spark MAX, os controladores regulam
+a energia entregue para cada "fase" do motor.
 
 .. .. hint::
 ..     One can make a quick, non-competition-legal speed controller by
@@ -20,13 +20,14 @@ the power delivered to each "phase" of the motor.
 ..     but note that the 775 is fine at up to 24 volts.
 
 .. warning::
-    Connecting a BRUSHLESS motor controller straight to power, such as
-    to a conventional brushed motor controller, will destroy the motor!
+Conectando um  controlador de motor BRUSHLESS direto a energia, como também
+para a convencional  controlador de motor brushed, irá destruir o motor!
 
-FRC Legal Motor Controllers
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Speed controllers come in lots of shapes, sizes and feature sets. This
-is the full list of FRC Legal speed controllers as of January 2020:
+
+Controladores de motores permitidos na FRC
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Controladores de velocidade vêm em muitas formas, tamanhos e conjuntos de recursos. Isso
+é a lista completa de Controladores de Velocidade permitidos na FRC como de Janeiro 2020:
 
 - DMC 60/DMC 60c Motor Controller (P/N: 410-334-1, 410-334-2)
 - Jaguar Motor Controller (P/N: MDL-BDC, MDL-BDC24, and 217-3367) connected to PWM only
@@ -43,18 +44,20 @@ is the full list of FRC Legal speed controllers as of January 2020:
 - Victor SPX Motor Controller (P/N: 217-9191, 17-868388, am-3748)
 - Venom Motor with Controller (P/N BDC-10001) for controlling integral motor only​
 
-Pneumatics
+Pneumática
 ----------
-Pneumatics are a quick and easy way to make something that's in one
-state or another using compressed air. For information on operating
-pneumatics, see :doc:`pneumatics`.
+Pneumática é um caminho rádido e fácil para fazer alguma coisa que é em um
+estado ou outro usando compressão de ar. Para informações em operando
+pneumática, veja :doc:`pneumatics`.
 
 
-FRC Legal Relay Modules
-^^^^^^^^^^^^^^^^^^^^^^^
+
+ Relay Modules permitidos na FRC
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 - Spike H-Bridge Relay (P/N: 217-0220 and SPIKE-RELAY-H)
 - Automation Direct Relay (P/N: AD-SSR6M12-DC200D, AD-SSR6M25-DC200D, AD-SSR6M40-DC200D)
 
-FRC Legal Pneumatics controllers
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Controladores pneumáticos permitidos na FRC
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 - Pneumatics Control Module (P/N: am-2858, 217-4243)
