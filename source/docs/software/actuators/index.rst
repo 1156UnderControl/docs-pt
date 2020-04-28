@@ -6,7 +6,7 @@ Atuadores
 
    Visão geral
    Pneumática
-   using-speed-controllers
+   Usando Controladores de Velocidade
    Controladores PWM
    wpi-drive-classes
    servos
