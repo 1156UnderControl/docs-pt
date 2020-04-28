@@ -46,7 +46,7 @@ Controladores de velocidade vêm em muitas formas, tamanhos e conjuntos de recur
 
 Pneumática
 ----------
-Pneumática é um caminho rádido e fácil para fazer alguma coisa que é em um
+Pneumática é um caminho rápido e fácil para fazer alguma coisa que é em um
 estado ou outro usando compressão de ar. Para informações em operando
 pneumática, veja :doc:`pneumatics`.
 

@@ -1,4 +1,4 @@
-Actuators
+Atuadores
 =========
 
 .. toctree::

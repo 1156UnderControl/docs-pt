@@ -1,9 +1,9 @@
-Operating pneumatic cylinders
-=============================
+Operando cilindros pneumáticos
+==============================
 
-Using the FRC Control System to control Pneumatics
----------------------------------------------------
-.. note:: The Pneumatics Control Module (PCM) is a CAN-based device that
+Usando o sistema de controle da FRC para controlar a pneumática
+---------------------------------------------------------------
+.. note:: PCM é a CAN-based device that
     provides complete control over the compressor and up to 8 solenoids per
     module. The PCM is integrated into WPILib through a series of classes
     that make it simple to use. The closed loop control of the Compressor
