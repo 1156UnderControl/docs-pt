@@ -50,8 +50,8 @@ Pneumática é um caminho rápido e fácil para fazer alguma coisa que é em um
 estado ou outro usando compressão de ar. Para informações em operando pneumática, veja :doc:`pneumatics`.
 
 
- Relay Modules permitidos na FRC
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Relay Modules permitidos na FRC
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 - Spike H-Bridge Relay (P/N: 217-0220 and SPIKE-RELAY-H)
 - Automation Direct Relay (P/N: AD-SSR6M12-DC200D, AD-SSR6M25-DC200D, AD-SSR6M40-DC200D)
 
