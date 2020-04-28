@@ -4,10 +4,10 @@ Atuadores
 .. toctree::
    :maxdepth: 1
 
-   overview
-   pneumatics
+   Visão geral
+   Pneumática
    using-speed-controllers
-   pwm-controllers
+   Controladores PWM
    wpi-drive-classes
    servos
    addressable-leds
