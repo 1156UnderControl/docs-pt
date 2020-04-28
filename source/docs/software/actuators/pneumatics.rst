@@ -3,9 +3,9 @@ Operando cilindros pneumáticos
 
 Usando o sistema de controle da FRC para controlar a pneumática
 ---------------------------------------------------------------
-.. note:: PCM é a CAN-based device that
-    provides complete control over the compressor and up to 8 solenoids per
-    module. The PCM is integrated into WPILib through a series of classes
+.. note:: PCM é a um dispositivo que utiliza a comunicação CAN que
+    tem controle total do compressor  e até 8 módulos solenóides .
+    PCM é integrada em WPILib through a series of classes
     that make it simple to use. The closed loop control of the Compressor
     and Pressure switch is handled by the PCM hardware and the Solenoids are
     handled by the upgraded Solenoid class that now controls the solenoid
