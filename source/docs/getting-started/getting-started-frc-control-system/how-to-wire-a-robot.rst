@@ -71,9 +71,9 @@ Organize os componentes na chapa. O layout da imagem acima (images/how-to-wire-a
    :width: 600
 
 
-Fasten Components
+
 Prenda os componentes
------------------
+---------------------
 
 Utilizando Dual Lock (tipo de velcro), fitas dupla-face (VHB por exemplo) ou ZIP ties, prenda todos componentes à base. Tenha em mente que, em muitos dos jogos da FRC, há constante toque físico entre os robôs, sendo a Dual Lock uma opção que pode ser utilizada, mas não sozinha. Muitos times optam por utilizar fitas dupla face e, principalmente, ZIP ties, mesmo sem Dual Lock.
 
@@ -84,15 +84,16 @@ Prenda o Battery Conector  à PDP
 .. image:: images/how-to-wire-a-robot/image3.jpg
    :width: 600
 
-Requires: Battery Connector, 6AWG terminal lugs, 1/16" Allen, 5mm Allen,
+Requer: Battery Connector, 6AWG terminal lugs, 1/16" Allen, 5mm Allen,
 7/16" Box end
+
 
 
 Prenda os "terminal lugs" ao battery conector (Conector da bateria):
 
-1. Using a 1/16" Allen wrench, remove the two screws securing the PDP terminal cover.
-2. Using a 5mm Allen wrench (3/16" will work if metric is not available), remove the negative (-) bolt and washer from the PDP and fasten the negative terminal of the battery connector.
-3. Using a 7/16" box end wrench, remove the nut on the "Batt" side of the main breaker and secure the positive terminal of the battery connector
+1. Utilizando uma 1/16" Allen wrench, retire os dois parafusos que prendem a proteção dos terminais da PDP.
+2. Utilizando uma 5mm Allen wrench (3/16" também funciona se não tiver em mm), remova o parafuso e a arruela que que fica rosqueadas ao o polo negativo da PDP e prenda o terminal negativo do battery conector (conector da bateria).
+3. Utilizando um 7/16" box end wrench, remova a proteção de borracha e a porca do "parafuso" do main breaker, encaixe o terminal positivo do conector do battery conector (conector de bateria) e prenda-o bem com a porca.
 
 Conecte o Breaker à PDP
 -----------------------
@@ -101,7 +102,7 @@ Conecte o Breaker à PDP
    :width: 600
 
 
-Requires: 6AWG red wire, 2x 6AWG terminal lugs, 5mm Allen, 7/16" box end
+Requer: 6AWG red wire, 2x 6AWG terminal lugs, 5mm Allen, 7/16" box end
 
 Secure one terminal lug to the end of the 6AWG red wire. Using the 7/16"
 box end, remove the nut from the “AUX” side of the 120A main breaker and
@@ -111,26 +112,24 @@ wire). Measure out the length of wire required to reach the positive
 terminal of the PDP.
 
 1. Cut, strip, and crimp the terminal to the 2nd end of the red 6AWG wire.
-2. Using the 7/16" box end, secure the wire to the "AUX" side of the 120A main breaker.
-3. Using the 5mm, secure the other end to the PDP positive terminal.
+1. Corte, encaixa e crimpe o terminal ao "2nd end" do fio vermelho 6AWG.
+2. Utilizando o 7/16" box end, prenda o fio ao lado "AUX" do main breaker de 120A.
+3. Utilizando a Allen de 5mm, prenda a outra ponta ao teminal positivo da PDP.
 
 Insulate PDP connections
+Isole as conexões da PDP
 ------------------------
 
 .. image:: images/how-to-wire-a-robot/image5.jpg
    :width: 600
 
-Requires: 1/16" Allen, Electrical tape
+Requer: 1/16" Allen, Electrical tape (Fita isolante)
 
-1. Using electrical tape, insulate the two connections to the 120A
-   breaker. Also insulate any part of the PDP terminals which will
-   be exposed when the cover is replaced. One method for insulating
-   the main breaker connections is to wrap the stud and nut first,
-   then use the tape wrapped around the terminal and wire to secure
-   the tape.
-2. Using the 1/16" Allen wrench, replace the PDP terminal cover
 
-Wago connectors
+1. Utilizando a fita isolante, isole as duas conexões do main breaker. Isole a parte dos terminais da PDPD que irão entrar em contato com a proteção quando for presa novamente. Uma maneira de isolar as conexões do main breaker é passar a fita no cabo e na porca antes de serem presos e, depois de presos, passar fita novamente.
+2. Utilizando a Allen de 1/16", prenda a proteção dos terminais à PDP.
+
+Conectores Wago
 ---------------
 
 .. raw:: html
