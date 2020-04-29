@@ -3,9 +3,10 @@ How to Wire an FRC Robot
 
 .. note::
 
-   Este documento descreve como fazer o cabeamento de uma chapa com componentes eletônicos para testes.
+   Este documento descreve como fazer o cabeamento de uma chapa com componentes eletrônicos para testes.
 
-   Some images shown in this section reflect the setup for a Robot Control System using Spark motor controllers. Wiring diagram and layout should be similar for other motor controllers. Where appropriate, a second set of images shows the wiring steps for using PWM controllers with integrated wires.
+
+   Algumas das imagens presentes nessa seção demonstram o Setup do sistema de controle de um robô que utiliza controladores de motor Spark. Os diagramas e layouts do cabeamento a seguir são bem parecidos com o dos demais controladores. Há também um segundo set de imagens que demonstram o passo a passo do cabeamento de controladores PWM com fios integrados.
 
 Gather Materials
 ----------------
@@ -14,7 +15,7 @@ Gather Materials
    :width: 600
 
 Locate the following control system components and tools
-
+Encontre os seguintes componentes eletrônicos e ferramentas
 
 - Kit Materials:
 
@@ -52,39 +53,32 @@ Locate the following control system components and tools
       - Wire cutters, strippers, and crimpers
       - 7/16” box end wrench or nut driver
 
-Create the Base for the Control System
---------------------------------------
+Produza a base do para o Sistema de Controle
+--------------------------------------------
 
-For a benchtop test board, cut piece of 1/4” or 1/2" material (wood or
-plastic) approximately 24" x 16". For a Robot Quick Build control board
-see the supporting documentation for the proper size board for the
-chosen chassis configuration.
+Para a produção da base, corte uma chapa (madeira ou plástico) de 1/4” ou 1/2" de espessura e aproximadamente 24" x 16". Se for o caso de um Robot Quick Build, consulte a documentação e verifique o tamanho ideal para a configuração do chassi correspondente.
 
-Layout the Core Control System Components
------------------------------------------
+Organize os principais componentes do Sistema de Controle
+---------------------------------------------------------
 
 .. image:: images/how-to-wire-a-robot/image1.jpg
    :width: 600
 
 
-Layout the components on the board. One layout that should work is shown
-in the images/how-to-wire-a-robot above.
+Organize os componentes na chapa. O layout da imagem acima (images/how-to-wire-a-robot) é um bom exemplo.
 
 .. image:: images/how-to-wire-a-robot/image2.png
    :width: 600
 
 
 Fasten Components
+Prenda os componentes
 -----------------
 
-Using the Dual Lock or hardware, fasten all components to the board.
-Note that in many FRC games robot-to-robot contact may be substantial
-and Dual Lock alone is unlikely to stand up as a fastener for many
-electronic components. Teams may wish to use nut and bolt fasteners or
-(as shown in the image above) cable ties, with or without Dual Lock to
-secure devices to the board.
+Utilizando Dual Lock (tipo de velcro), fitas dupla-face (VHB por exemplo) ou ZIP ties, prenda todos componentes à base. Tenha em mente que, em muitos dos jogos da FRC, há constante toque físico entre os robôs, sendo a Dual Lock uma opção que pode ser utilizada, mas não sozinha. Muitos times optam por utilizar fitas dupla face e, principalmente, ZIP ties, mesmo sem Dual Lock.
 
 Attach Battery Connector to PDP
+Prenda o Battery Conector  à PDP
 -------------------------------
 
 .. image:: images/how-to-wire-a-robot/image3.jpg
@@ -94,14 +88,14 @@ Requires: Battery Connector, 6AWG terminal lugs, 1/16" Allen, 5mm Allen,
 7/16" Box end
 
 
-Attach terminal lugs to battery connector:
+Prenda os "terminal lugs" ao battery conector (Conector da bateria):
 
 1. Using a 1/16" Allen wrench, remove the two screws securing the PDP terminal cover.
 2. Using a 5mm Allen wrench (3/16" will work if metric is not available), remove the negative (-) bolt and washer from the PDP and fasten the negative terminal of the battery connector.
 3. Using a 7/16" box end wrench, remove the nut on the "Batt" side of the main breaker and secure the positive terminal of the battery connector
 
-Wire Breaker to PDP
--------------------
+Conecte o Breaker à PDP
+-----------------------
 
 .. image:: images/how-to-wire-a-robot/image4.jpg
    :width: 600
