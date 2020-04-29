@@ -1,44 +1,44 @@
 .. include:: <isonum.txt>
 
-FRC Control System Hardware Overview
-====================================
+Visão geral do Hardware do Sistema de Controle de FRC\ |reg|
+============================================================
 
-The goal of this document is to provide a brief overview of the hardware components that make up the FRC\ |reg| Control System. Each component will contain a brief description of the component function, a brief listing of critical connections, and a link to more documentation if available.
+O objetivo desse documento é fornecer uma breve visão geral dos componentes de hardware que compõem o Sistema de Controle de FRC\ |reg|. Cada componente vai conter uma breve descrição da função do componente, uma breve lista de conexões críticas, e um link para mais documentação se disponível.
 
-.. note:: For complete wiring instructions/diagrams, please see the :doc:`Wiring the FRC Control System <how-to-wire-a-robot>` document.
+.. note:: Para instruções/diagramas de fiação completos, acesse o documento :doc:`Fiação do Sistema de Controle <how-to-wire-a-robot>`.
 
 National Instruments roboRIO
 ----------------------------
 
 .. image:: images/control-system-hardware/roborio.png
 
-The NI-roboRIO is the main robot controller used for FRC. The roboRIO includes a dual-core ARM Cortex™-A9 processor and FPGA which runs both trusted elements for control and safety as well as team-generated code. Integrated controller I/O includes a variety of communication protocols (Ethernet, USB, CAN, SPI, I2C, and serial) as well as PWM, servo, digital I/O, and analog I/O channels used to connect to robot peripherals for sensing and control.The roboRIO should connect to the dedicated 12V port on the Power Distribution Panel for power. Wired communication is available via USB or Ethernet. Detailed information on the roboRIO can be found in the `roboRIO User Manual <https://www.ni.com/pdf/manuals/374474a.pdf>`__.
+O NI-roboRIO é o principal controlador de robô usado para FRC. O roboRIO inclui um processador dual-core ARM Cortex™-A9 e FPGA que executa os elementos confiáveis ​​para controle e segurança, bem como o código gerado pela equipe. O Controlador integrado I/O inclui uma variedade de protocolos de comunicação (Ethernet, USB, CAN, SPI, I2C, e serial) como PWM, servo, digital I/O, e canais analógicos I/O usados para conectar os periféricos do robô para detecção e controle. O roboRIO deve conectar-se à porta de 12V no power distribuition panel. A comunicação com fio está disponível via USB ou Ethernet. Informações detalhadas sobre o roboRIO podem ser encontradas no `Manual do Usuário do roboRIO <https://www.ni.com/pdf/manuals/374474a.pdf>`__.
 
 Power Distribution Panel
 ------------------------
 
 .. image:: images/control-system-hardware/power-distribution-panel.png
 
-The Power Distribution Panel (PDP) is designed to distribute power from a 12VDC battery to various robot components through auto-resetting circuit breakers and a small number of special function fused connections. The PDP provides 8 output pairs rated for 40A continuous current and 8 pairs rated for 30A continuous current. The PDP provides dedicated 12V connectors for the roboRIO, as well as connectors for the Voltage Regulator Module and Pneumatics Control Module. It also includes a CAN interface for logging current, temperature, and battery voltage. For more detailed information, see the `PDP User Manual <https://www.ctr-electronics.com/downloads/pdf/PDP%20User's%20Guide.pdf>`__.
+A Power Distribution Panel (PDP) foi projetada para distribuir energia de uma bateria 12VDC para vários componentes do robô por meio de disjuntores com redefinição automática e um pequeno número de conexões com funções especiais. A PDP oferece 8 pares de saída classificados para corrente contínua de 40A e 8 pares classificados para corrente contínua de 30A. A PDP oferece conectores dedicados de 12V para o roboRIO, bem como conectores para o Voltage Regulator Module (VRM) e para o Pneumatics Control Module (PCM). Ela também inclui uma interface CAN para registrar a corrente, temperatura e tensão da bateria. Para informações mais detalhadas, consulte o `PDP User Manual <https://www.ctr-electronics.com/downloads/pdf/PDP%20User's%20Guide.pdf>`__.
 
 Pneumatics Control Module
 -------------------------
 
 .. image:: images/control-system-hardware/pneumatics-control-module.png
 
-The PCM is a device that contains all of the inputs and outputs required to operate 12V or 24V pneumatic solenoids and the on board compressor. The PCM is enabled/disabled by the roboRIO over the CAN interface. The PCM contains an input for the pressure sensor and will control the compressor automatically when the robot is enabled and a solenoid has been created in the code. The device also collects diagnostic information such as solenoid states, pressure switch state, and compressor state. The module includes diagnostic LED’s for both CAN and the individual solenoid channels. For more information see the `PCM User Manual <https://www.ctr-electronics.com/downloads/pdf/PCM%20User's%20Guide.pdf>`__.
+A PCM é um dispositivo que contém todas as entradas e saídas necessárias para operar solenóides pneumáticas de 12V ou 24V e o compressor. A PCM é ativada/desativada pelo roboRIO através da interface CAN. A PCM contém uma entrada para o sensor de pressão e controlará o compressor automaticamente quando o robô estiver ativado e uma solenóide tiver sido criado no código. O dispositivo também coleta informações de diagnóstico, como o estado das solenóides, o estado do sensor de pressão, e o estado do compressor. O módulo inclui LEDs de diagnóstico para os canais de solenóide e CAN individualmente. Para mais informações, consulte o `Manual do Usuário da PCM <https://www.ctr-electronics.com/downloads/pdf/PCM%20User's%20Guide.pdf>`__.
 
 Voltage Regulator Module
 ------------------------
 
 .. image:: images/control-system-hardware/voltage-regulator-module.png
 
-The VRM is an independent module that is powered by 12 volts. The device is wired to a dedicated connector on the PDP. The module has multiple regulated 12V and 5V outputs. The purpose of the VRM is to provide regulated power for the robot radio, custom circuits, and IP vision cameras. The two connector pairs associated with each label have a combined rating of what the label indicates (e.g. 5V/500mA total for both pairs not for each pair). The 12V/2A limit is a peak rating, the supply should not be loaded with more than 1.5A continuous current draw. For more information, see the `VRM User Manual <https://www.ctr-electronics.com/VRM%20User's%20Guide.pdf>`__.
+O VRM é um módulo independente que é alimentado por 12 volts. O dispositivo está conectado a um conector dedicado a ele na PDP. O módulo possui várias saídas reguladas de 12V e 5V. O objetivo do VRM é fornecer energia regulada para o rádio do robô, circuitos personalizados e câmeras de visão IP. Os dois pares de conectores associados a cada etiqueta têm uma classificação combinada do que a etiqueta indica (por exemplo, 5V / 500mA total para ambos os pares, não para cada par). O limite de 12V / 2A é uma classificação de pico, a fonte não deve ser carregada com mais de 1,5A de corrente contínua. Para mais informações, consulte o `Manual do Usuário do VRM <https://www.ctr-electronics.com/VRM%20User's%20Guide.pdf>`__.
 
 Motor Controllers
 -----------------
 
-There are a variety of different motor controllers which work with the FRC Control System and are approved for use. These devices are used to provide variable voltage control of the brushed DC motors used in FRC. They are listed here in alphabetical order.
+Há uma variedade de motor controllers diferentes que funcionam com o sistema de controle FRC e são aprovados para uso. Esses dispositivos são usados ​​para fornecer controle de tensão variável dos brushed DC motors usados ​​na FRC. Eles estão listados aqui em ordem alfabética.
 
 DMC-60 and DMC-60C Motor Controller
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
