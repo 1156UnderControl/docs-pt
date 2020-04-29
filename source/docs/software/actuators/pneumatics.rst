@@ -3,44 +3,41 @@ Operando cilindros pneumáticos
 
 Usando o sistema de controle da FRC para controlar a pneumática
 ---------------------------------------------------------------
-.. note:: PCM é a um dispositivo que utiliza a comunicação CAN que
-    tem controle total do compressor  e até 8 módulos solenóides .
-    PCM é integrada em WPILib through a series of classes
-    that make it simple to use. The closed loop control of the Compressor
-    and Pressure switch is handled by the PCM hardware and the Solenoids are
-    handled by the upgraded Solenoid class that now controls the solenoid
-    channels on the PCM. An additional PCM module can be used where the
-    modules corresponding solenoids are differentiated by the module number
-    in the constructors of the Solenoid and Compressor classes.
+.. note:: Pneumatics Control Module (PCM) é a um dispositivo que utiliza a comunicação CAN que
+tem controle total do compressor  e até 8 módulos solenóides .
+A PCM é integrada em WPILib através de uma série de classes que simplificam o uso.
+O controle de circuito fechado do compressor e pressão é tratado pelo
+hardware da PCM e dos solenóides são manipulados pela Solenóide atualizada, que
+agora, controla os canais do solenóide na PCM. Além disso, um módulo PCM pode ser usado
+onde os módulo correspondentes aos solenóides são diferenciados pelo número do módulo
+nos construtores das classes de Solenóide e Compressor.
+
 
 .. image:: images/pcm.jpg
     :width: 400
 
-The Pneumatics Control Module from CTR Electronics is responsible
-for regulating the robot's pressure using a pressure switch and a
-compressor and switching solenoids on and off. The PCM communicates
-with the roboRIO over CAN. For more information, see `FRC Control System Hardware Overview`
+O Módulo de Controle Pneumático da CTR Electronics é responsável por regular a pressão
+do robô usando um switch de pressão e um compressor e ligando e desligando os solenóides.
+A PCM se comunica com o roboRIO através do CAN. Para obter mais informações, consulte a
+Visão geral do hardware do sistema de controle FRC.
 
-PCM Module Numbers
-------------------
-PCM Modules are identified by their Node ID. The default Node ID for
-PCMs is 0. If using a single PCM on the bus it is recommended to leave
-it at the default Node ID.
+Números de módulos PCM
+----------------------
+Os módulos da PCM são identificados pelo seus Node ID. O padrão Node ID para
+PCMs é 0. Se estiver usando um único PCM na linha CAN é recomendado deixá-lo
+no padrão Node ID.
 
-Generating and Storing Pressure
--------------------------------
-In FRC, pressure is created using a pneumatic compressor and stored
-in pneumatic tanks. The compressor doesn't necessarily have to be
-on the robot, but must be powered by the robot's PCM(s). The
-"Closed Loop" mode on the Compressor is enabled by default,
-and it is *not* recommended that teams change this setting. When
-closed loop control is enabled the PCM will automatically turn the
-compressor on when the pressure switch is closed (below the pressure threshold)
-and turn it off when the pressure switch is open (~120PSI). When closed
-loop control is disabled the compressor will not be turned on.
-Using a Compressor, users can query the status of the compressor. The state
-(currently on or off), pressure switch state, and compressor current can
-all be queried from the Compressor object.
+Gerando e armazenando pressão
+-----------------------------
+Na FRC, a pressão é criada usando um compressor pneumático e armazenada em tanques pneumáticos.
+O compressor não precisa necessariamente estar no robô, mas deve ser alimentado pela PCM
+do robô. O modo de “Closed Loop” no compressor é ativado por padrão, e é ele não recomenda que
+as equipes de alterar essa configuração. Quando o "closed loop control" está ativado, o PCM liga
+automaticamente o compressor quando o switch pressão está fechado (abaixo do limiar de pressão) e o
+desliga quando o switch pressão está aberto (~ 120PSI). Quando o "loop control" está
+desativado, o compressor não liga. Usando um compressor, os usuários podem consultar o status
+do compressor. O estado (atualmente ativado ou desativado), o estado do switch pressão e a
+corrente do compressor podem ser consultados no objeto Compressor.
 
 .. note:: The Pneumatics Control Module from Cross the Road Electronics
     allows for integrated closed loop control of a compressor. Creating any
