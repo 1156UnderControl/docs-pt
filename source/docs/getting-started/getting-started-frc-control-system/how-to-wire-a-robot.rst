@@ -359,13 +359,13 @@ You may wish to temporarily secure the RSL to the control board using
 cable ties or Dual Lock (it is recommended to move the RSL to a more
 visible location as the robot is being constructed) Circuit Breakers
 
-Circuit Breakers
+Circuit Breakers / Fusíveis
 ----------------
 
 .. image:: images/how-to-wire-a-robot/image19.jpg
    :width: 600
 
-Requires: 4x 40A circuit breakers
+Requer: 4x 40A circuit breakers
 
 Insert 40-amp Circuit Breakers into the positions on the PDP
 corresponding with the Wago connectors the Victors are connected to. Note
@@ -382,22 +382,22 @@ Motor Power
 .. image:: images/how-to-wire-a-robot/image20.jpg
    :width: 600
 
-Requires: Wire stripper, wire crimper, phillips head screwdriver, wire
+Requer: Wire stripper, wire crimper, phillips head screwdriver, wire
 connecting hardware
 
-For each CIM motor:
+Para cada CIM motor:
 
-- Strip the ends of the red and black wires from the CIM
+- Estique os fios vermelhos e pretos de cada motor CIM
 
-For integrated wire controllers (including Victor SPX):
+Para controladores com fios integrados (incluindo Victor SPX):
 
-1. Strip the white and green wires from the controller
-2. Connect the motor wires to the controller output wires (it is recommended to connect the red wire to the white M+ output). The images/how-to-wire-a-robot above show examples using quick disconnect terminals.
+1. Deixe os cabos brancos e vermelhos do controlador esticados.
+2. Conecte os fios do motor nos fios output/saída do controlador (é recomendado que conecte o fio vermelho ao fio branco M+). A imagem abaixo mostra exemplos de utilização dos quick disconnect terminal.
 
-For Sparks or other non-integrated-wire controllers:
+Para Sparks e outros controladores com fios não integrados:
 
-1. Crimp a ring/fork terminal on each of the motor wires.
-2. Attach the wires to the output side of the motor controller (red to +, black to -)
+1. Crimpe um terminal "olho" ou "fork" em cada um dos fios (tanto dos motores quanto controladores).
+2. Conecte os fios no output/saída de cada controlador de motor (vermelho no positivo, preto no negativo).
 
 STOP
 ----
@@ -409,34 +409,26 @@ STOP
 
 .. danger:: Before plugging in the battery, make sure all connections have been made with the proper polarity. Ideally have someone that did not wire the robot check to make sure all connections are correct.
 
-Before plugging in the battery, make sure all connections have been made
-with the proper polarity. Ideally have someone that did not wire the
-robot check to make sure all connections are correct.
 
-- Start with the battery and verify that the red wire is connected to the positive terminal
-- Check that the red wire passes through the main breaker and to the + terminal of the PDP and that the black wire travels directly to the - terminal.
-- For each motor controller, verify that the red wire goes from the red PDP terminal to the Red wire on the Victor SPX (not the white M+!!!!)
-- For each device on the end of the PDP, verify that the red wire connects to the red terminal on the PDP and the red terminal on the component.
-- Make sure that the orange Passive PoE cable is plugged directly into the radio NOT THE roboRIO! It must be connected to the roboRIO using an additional Ethernet cable.
+Antes de conectar a bateria, tenha certeza que todas as conexões estão com as polaridades corretas (positivo no positivo, negativo no negativo). Provavelmente devem ter algumas que não estão conectadas, cheque tudo.
 
-It is also recommended to put the robot on blocks so the wheels are off
-the ground before proceeding. This will prevent any unexpected movement
-from becoming dangerous.
+- Verifique se o fio vermelho está conectado ao terminal positivo da bateria.
+- Verifique se o fio vermelho está indo do main breaker para o terminal positivo da PDP e se o fio preto está indo para o terminal negativo.
+- Para cada controlador de motor, verifique se o fio vermelho que sai do terminal vermelho da PDP está conectado com o fio vermelho do Victor SPX (não o M+ branco!!!!)
+- Para cada componente que está ligado à PDP, verifique se o fio vermelho que sai do terminal vermelho da PDP se conecta com o terminal positivo do componente.
+- Tenha certeza de que o conector PoE está conectado diretamente ao rádio, NÃO AO RoboRIO! Para conectar no RoboRIO, deve ser utilizado um cabo Ethernet adicional.
+
+É recomendado que o robô esteja com as rodas suspensas para prevenir acidentes se o robô se movimentar de maneira inesperada.
 
 Manage Wires
+Organize os fios
 ------------
 
 .. image:: images/how-to-wire-a-robot/image22.jpg
    :width: 600
 
-Requires: Zip ties
+Requer: Zip ties
 
-Now may be a good time to add a few zip ties to manage some of the wires
-before proceeding. This will help keep the robot wiring neat. Connect
-Battery Connect BatteryZoom: Connect Battery
+Essa é a hora de adicionar alguns zip ties aos fios. Isso fará com que os fios do robô se mantenham firmes e organizados.
 
-Connect the battery to the robot side of the Andersen connector. Power
-on the robot by moving the lever on the top of the 120A main breaker
-into the ridge on the top of the housing. If stuff blinks, you
-probably did it right. From here, you should connect to the roboRIO
-and try uploading your code!
+Conecte a bateria ao robô como o conector Anderson. Para ligar o robô, empurre a "alavanca" do main breaker até ela dar um estalo e ficar presa. Se as os eletrônicos começarem a piscar, provavelmente está tudo certo. Agora conecte o RoboRIO ao computador e tente passar o código!
