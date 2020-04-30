@@ -35,148 +35,118 @@ Voltage Regulator Module
 
 O VRM é um módulo independente que é alimentado por 12 volts. O dispositivo está conectado a um conector dedicado a ele na PDP. O módulo possui várias saídas reguladas de 12V e 5V. O objetivo do VRM é fornecer energia regulada para o rádio do robô, circuitos personalizados e câmeras de visão IP. Os dois pares de conectores associados a cada etiqueta têm uma classificação combinada do que a etiqueta indica (por exemplo, 5V / 500mA total para ambos os pares, não para cada par). O limite de 12V / 2A é uma classificação de pico, a fonte não deve ser carregada com mais de 1,5A de corrente contínua. Para mais informações, consulte o `Manual do Usuário do VRM <https://www.ctr-electronics.com/VRM%20User's%20Guide.pdf>`__.
 
-Motor Controllers
------------------
+Controladores de Motor
+-----------------------
 
-Há uma variedade de motor controllers diferentes que funcionam com o sistema de controle FRC e são aprovados para uso. Esses dispositivos são usados ​​para fornecer controle de tensão variável dos brushed DC motors usados ​​na FRC. Eles estão listados aqui em ordem alfabética.
+Há uma variedade de controladores de motor diferentes que funcionam com o sistema de controle FRC e são aprovados para uso. Esses dispositivos são usados ​​para fornecer controle de tensão variável dos Brushed DC Motors usados ​​na FRC. Eles estão listados aqui em ordem alfabética.
 
-DMC-60 and DMC-60C Motor Controller
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. image:: images/control-system-hardware/dmc-60c-motor-controller.png
-
-The DMC-60 is a PWM motor controller from Digilent. The DMC-60 features integrated thermal sensing and protection including current-foldback to prevent overheating and damage, and four multi-color LEDs to indicate speed, direction, and status for easier debugging. For more information, see the `DMC-60 reference manual <https://reference.digilentinc.com/_media/dmc-60/dmc60_rm.pdf>`__
-
-The DMC-60C adds CAN smart controller capabilities to the DMC-60 controller. This enables closed loop control features and other intelligent control options. For more information see the `DMC-60C Product Page <https://store.digilentinc.com/dmc60c-digital-motor-controller-approved-for-first-robotics/>`__
-
-Jaguar Motor Controller
-^^^^^^^^^^^^^^^^^^^^^^^
-
-.. image:: images/control-system-hardware/jaguar-motor-controller.png
-
-The Jaguar Motor Controller from VEX Robotics (formerly made by Luminary Micro and Texas Instruments) is a variable speed motor controller for use in FRC. For FRC, the Jaguar may only be controlled using the PWM interface.
-
-SD540B and SD540C Motor Controllers
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. image:: images/control-system-hardware/sdb540-motor-controller.png
-
-The SD540 Motor Controller from Mindsensors is a variable speed motor controller for use in FRC. The SD540B is controlled using the PWM interface. The SD540C is controllable over CAN. Limit switches may be wired directly to the SD540 to limit motor travel in one or both directions. Switches on the device are used to flip the direction of motor travel, configure the wiring polarity of limit switches, set Brake or Coast mode, and put the device in calibration mode. For more information see the `Mindsensors FRC page <http://www.mindsensors.com/68-frc>`__
-
-SPARK Motor Controller
-^^^^^^^^^^^^^^^^^^^^^^
+Controlador SPARK Motor
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: images/control-system-hardware/spark-motor-controller.png
 
-The SPARK Motor Controller from REV Robotics is a variable speed motor controller for use in FRC. The SPARK is controlled using the PWM interface. Limit switches may be wired directly to the SPARK to limit motor travel in one or both directions. The RGB status LED displays the current state of the device including whether the device is currently in Brake mode or Coast mode. For more information, see the `REV Robotics SPARK product page <https://www.revrobotics.com/rev-11-1200/>`__
+O Controlador SPARK Motor da REV Robotics é um controlador Speed Motor para uso na FRC. O SPARK é controlado utilizando a interface PWM. Os Limit switches podem ser conectados diretamente ao SPARK para limitar o deslocamento do motor em uma ou ambas as direções. O LED de status RGB exibe o estado atual do dispositivo, incluindo se o dispositivo está atualmente em Brake mode ou Coast mode. Para mais informações, acesse o `Página do produto REV Robotics SPARK <https://www.revrobotics.com/rev-11-1200/>`__
 
 SPARK MAX Motor Controller
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: images/control-system-hardware/spark-max-motor-controller.png
 
-The SPARK MAX Motor Controller from REV Robotics is a variable speed motor controller for use in FRC. The SPARK MAX is capable of controlling either the traditional brushed DC motors commonly used in FRC or the new brushless REV Robotics NEO Brushless Motor. The SPARK MAX can be controlled over PWM, CAN or USB (for configuration/testing only). The controller has a data port for sensor input and is capable of closed loop control modes when controlled over CAN or USB. For more information see the `REV Robotics SPARK MAX product page <https://www.revrobotics.com/rev-11-2158/>`__.
+O Controlador SPARK MAX Motor da REV Robotics é um controlador Speed Motor para uso na FRC. O SPARK MAX é capaz de controlar tanto os tradicionais Brushed DC Motors comumente usados na FRC ou o novo Brushless REV Robotics NEO Brushless Motor. O SPARK MAX pode ser controlado por meio da PWM, CAN ou USB (para configuração/testagem apenas). O controlador possui uma porta de dados para entrada do sensor e é capaz de assumir modos de closed loop control quando controlado por meio CAN ou USB. Para mais informações, acesse `Página do Produto REV Robotics SPARK MAX <https://www.revrobotics.com/rev-11-2158/>`__.
 
-Talon Motor Controller
-^^^^^^^^^^^^^^^^^^^^^^
+Controlador Talon Motor
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: images/control-system-hardware/talon-motor-controller.png
 
-The Talon Motor Controller from Cross the Road Electronics is a variable speed motor controller for use in FRC. The Talon is controlled over the PWM interface. The Talon should be connected to a PWM output of the roboRIO and powered from the Power Distribution Panel. For more information see the `Talon User Manual <https://ctr-electronics.com/Talon_User_Manual_1_1.pdf>`__.
+O Controlador Talon Motor pela Cross the Road Electronics é um controlador Speed Motor para uso na FRC. O Talon é controlado por meio de interface PWM . O Talon deve ser conectado a uma saída PWM do roboRIO e  alimentado pela Power Distribution Panel. Para mais informações, acesse o `Manual do Usuário do Talon <https://ctr-electronics.com/Talon_User_Manual_1_1.pdf>`__.
 
 Talon SRX
 ^^^^^^^^^
 
 .. image:: images/control-system-hardware/talonsrx-motor-controller.png
 
-The Talon SRX motor controller is a CAN-enabled “smart motor controller” from Cross The Road Electronics/VEX Robotics. The Talon SRX has an electrically isolated metal housing for heat dissipation, making the use of a fan optional. The Talon SRX can be controlled over the CAN bus or PWM interface. When using the CAN bus control, this device can take inputs from limit switches and potentiometers, encoders, or similar sensors in order to perform advanced control such as limiting or PID(F) closed loop control on the device. For more information see the `Talon SRX User Manual <https://www.ctr-electronics.com/talon-srx.html>`__.
+O Controlador Talon SRX motor é um “controlador de motor inteligente” habilitado para CAN da Cross The Road Electronics/VEX Robotics. O Talon SRX possui um compartimento de metal eletricamente isolado para dissipação de calor, tornando opcional o uso de um ventilador. O Talon SRX pode ser controlado por meio CAN bus ou por interface PWM. Ao usar o controle CAN bus, esse dispositivo pode receber entradas de limit switches e potentiometers, encoders, ou sensores similares para executar um controle avançado como limitar ou PID(F) closed loop control no dispositivo. Para mais informações acesse o `Manual do Usuário do Talon SRX <https://www.ctr-electronics.com/talon-srx.html>`__.
 
-.. note:: CAN Talon SRX has been removed from WPILib. See this `blog <https://www.firstinspires.org/robotics/frc/blog/2017-control-system-update>`__ for more info and find the CTRE Toolsuite installer `here <https://www.ctr-electronics.com/Talon%20SRX%20User's%20Guide.pdf>`__.
+.. note:: CAN Talon SRX foi removido do WPILib. Acesse `blog <https://www.firstinspires.org/robotics/frc/blog/2017-control-system-update>`__ para mais informações e encontre o Instalador CTRE Toolsuite `aqui <https://www.ctr-electronics.com/Talon%20SRX%20User's%20Guide.pdf>`__.
 
-Victor 888 Motor Controller / Victor 884 Motor Controller
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Controlador Victor 888 Motor / Controlador Victor 884 Motor
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: images/control-system-hardware/victor-888-motor-controller.png
 
-The Victor 888 Motor Controller from VEX Robotics is a variable speed motor controller for use in FRC. The Victor 888 replaces the Victor 884, which is also usable in FRC. The Victor is controlled over the PWM interface. The Victor should be connected to a PWM output of the roboRIO and powered from the Power Distribution Panel. For more information, see the `Victor 884 User Manual <https://content.vexrobotics.com/docs/ifi-v884-users-manual-9-25-06.pdf>`__ and `Victor 888 User Manual <https://content.vexrobotics.com/docs/217-2769-Victor888UserManual.pdf>`__.
+O Controlador Victor 888 Motor da VEX Robotics é um controlador Speed Motor para uso na FRC. O Victor 888 substitui o Victor 884, que também pode ser utilizado na FRC. O Victor é controlado por interface PWM. O Victor deve ser conectado a uma saída PWM output do roboRIO e alimentado pela Power Distribution Panel. Para mais informações, acesse o `Manual do Usuário do Victor 884  <https://content.vexrobotics.com/docs/ifi-v884-users-manual-9-25-06.pdf>`__ e `Manual do Usuário do Victor 888 <https://content.vexrobotics.com/docs/217-2769-Victor888UserManual.pdf>`__.
 
 Victor SP
 ^^^^^^^^^
 
 .. image:: images/control-system-hardware/victor-sp-motor-controller.png
 
-The Victor SP motor controller is a PWM motor controller from Cross The Road Electronics/VEX Robotics. The Victor SP has an electrically isolated metal housing for heat dissipation, making the use of the fan optional. The case is sealed to prevent debris from entering the controller. The controller is approximately half the size of previous models.
+O Victor SP motor é um controlador PWM da Cross The Road Electronics/VEX Robotics. O Victor SP possui uma carcaça de metal eletricamente isolada para dissipação de calor, tornando opcional o uso do ventilador. O dispositivo é selado para impedir que detritos entrem no controlador. O controlador é aproximadamente metade do tamanho dos modelos anteriores.
 
 Victor SPX
 ^^^^^^^^^^
 
 .. image:: images/control-system-hardware/victor-spx-motor-controller.png
 
-The Victor SPX motor controller is a CAN or PWM controlled motor controller from Cross The Road Electronics/VEX Robotics. The device is connectorized to allow easy connection to the roboRIO PWM connectors or a CAN bus chain. When controlled over the CAN bus, the device has a number of the closed loop features also present in the Talon SRX. The case is sealed to prevent debris from entering the controller. For more information, see the `Victor SPX Webpage <https://www.vexrobotics.com/217-9191.html>`__.
+O Victor SPX motor é um controlador de motor por meio CAN ou PWM da Cross The Road Electronics/VEX Robotics. O dispositivo é conectado para permitir a fácil conexão com o os conectores roboRIO, PWM  ou CAN bus chain. Quando controlado por meio CAN bus, o dispositivo tem um número de recursos de closed loop também presente no Talon SRX. O dispositivo é selado para impedir que detritos entrem no controlador. Para mais informações, acesse a `Victor SPX Webpage <https://www.vexrobotics.com/217-9191.html>`__.
 
-.. note:: Victor SPX CAN control is not supported from WPILib. See `this blog <https://www.firstinspires.org/robotics/frc/blog/2017-control-system-update>`__ for more info and find the CTRE Toolsuite installer `here <https://www.ctr-electronics.com/control-system/hro.html#product_tabs_technical_resources>`__.
+.. note:: O controlador Victor SPX CAN não é suportado pelo WPILib. Acesse `this blog <https://www.firstinspires.org/robotics/frc/blog/2017-control-system-update>`__ para mais informações e encontre o instalador CTRE Toolsuite `aqui <https://www.ctr-electronics.com/control-system/hro.html#product_tabs_technical_resources>`__.
 
 Spike H-Bridge Relay
 --------------------
 
 .. image:: images/control-system-hardware/spike-relay.png
 
-The Spike H-Bridge Relay from VEX Robotics is a device used for controlling power to motors or other custom robot electronics. When connected to a motor, the Spike provides On/Off control in both the forward and reverse directions. The Spike outputs are independently controlled so it can also be used to provide power to up to 2 custom electronic circuits. The Spike H-Bridge Relay should be connected to a relay output of the roboRIO and powered from the Power Distribution Panel. For more information, see the `Spike User’s Guide <https://content.vexrobotics.com/docs/spike-blue-guide-sep05.pdf>`__.
+O Spike H-Bridge Relay da VEX Robotics é um dispositivo usado para controlar a energia de motores ou outros componentes eletrônicos de robôs personalizados. Quando conectado a um motor, o Spike oferece On/Off control nas direções direta e reversa. As saídas do Spike outputs são independentemente controladas portanto também pode ser usado para fornecer energia para até 2 circuitos eletrônicos personalizados. O Spike H-Bridge Relay deve ser conectado a uma saída relay do roboRIO e alimentado pela Power Distribution Panel. Para mais informaçõ `Guia do Uusário do Spike <https://content.vexrobotics.com/docs/spike-blue-guide-sep05.pdf>`__.
 
 Servo Power Module
 ------------------
 
 .. image:: images/control-system-hardware/servo-power-module.png
 
-The Servo Power Module from Rev Robotics is capable of expanding the power available to servos beyond what the roboRIO integrated power supply is capable of. The Servo Power Module provides up to 90W of 6V power across 6 channels. All control signals are passed through directly from the roboRIO. For more information, see the `Servo Power Module webpage <https://www.revrobotics.com/rev-11-1144/>`__.
-
-Axis M1013/M1011/206 Ethernet Camera
-------------------------------------
-
-.. image:: images/control-system-hardware/axis-camera.png
-
-The Axis M1013, M1011 and Axis 206 Ethernet cameras are used for capturing images/control-system-hardware for vision processing and/or sending video back to the Driver Station laptop. The camera should be wired to a 5V power output on the Voltage Regulator Module and an open ethernet port on the robot radio. For more information, see :ref:`Configuring an Axis Camera <docs/software/vision-processing/introduction/configuring-an-axis-camera:Configuring an Axis Camera>` and the `Axis 206 <https://www.axis.com/en-us/products/axis-206>`__, `Axis M1011 <https://www.axis.com/en-us/products/axis-m1011>`__, `Axis M1013 pages <https://www.axis.com/en-us/products/axis-m1013>`__.
+O Servo Power Module da Rev Robotics é capaz de expandir a energia disponível para os servos além do que a fonte de alimentação integrada do roboRIO é capaz. O Servo Power Module fornece até 90W de potência de 6V em 6 canais. Todos os sinais de controle são transmitidos diretamente do roboRIO. Para mais informações, acesse a `Servo Power Module Webpage <https://www.revrobotics.com/rev-11-1144/>`__.
 
 Microsoft Lifecam HD3000
 ------------------------
 
 .. image:: images/control-system-hardware/microsoft-lifecam.png
 
-The Microsoft Lifecam HD3000 is a USB webcam that can be plugged directly into the roboRIO. The camera is capable of capturing up to 1280x720 video at 30 FPS. For more information about the camera, see the `Microsoft product page <https://www.microsoft.com/accessories/en-us/products/webcams/lifecam-hd-3000/t3h-00011#support>`__. For more information about using the camera with the roboRIO, see the :ref:`Vision Processing <docs/software/vision-processing/index:Vision Processing>` section of this documentation.
+A Microsoft Lifecam HD3000 é uma webcam USB que pode ser conectada diretamente ao roboRIO. A câmera é capaz de capturar vídeo de até 1280x720 a 30 FPS. Para mais informações sobre a câmera, consulte a `Página do produto Microsoft <https://www.microsoft.com/accessories/en-us/products/webcams/lifecam-hd-3000/t3h-00011#support>`__. Para obter mais informações sobre o uso da câmera com o roboRIO, consulte a seção :ref:`Vision Processing <docs/software/vision-processing/index:Vision Processing>`deste documento.
 
 OpenMesh OM5P-AN or OM5P-AC Radio
 ---------------------------------
 
 .. image:: images/control-system-hardware/openmesh-radio.png
 
-Either the OpenMesh OM5P-AN or OpenMesh OM5P-AC wireless radio is used as the robot radio to provide wireless communication functionality to the robot. The device can be configured as an Access Point for direct connection of a laptop for use at home. It can also be configured as a bridge for use on the field. The robot radio should be powered by one of the 12V/2A outputs on the VRM and connected to the roboRIO controller over Ethernet. For more information, see :ref:`Programming your Radio <docs/getting-started/getting-started-frc-control-system/radio-programming:Programming your Radio>`.
+Ambos os OpenMesh OM5P-AN e OpenMesh OM5P-AC wireless radio são utilizados como o rádio do robô para fornecer funcionalidade de comunicação wireless ao robô. O dispositivo pode ser configurado como um ponto de acesso para conexão direta de um laptop para uso doméstico. Também pode ser configurado como Bridge para uso em campo. O rádio do robô deve ser alimentado por uma das saídas de 12V / 2A no VRM e conectado ao controlador roboRIO por Ethernet. Para mais informações, acesse :ref:`Programando seu Rádio <docs/getting-started/getting-started-frc-control-system/radio-programming:Programming your Radio>`.
 
-The OM5P-AN `is no longer available for purchase <https://www.firstinspires.org/robotics/frc/blog/radio-silence>`__. The OM5P-AC is slightly heavier, has more cooling grates, and has a rough surface texture compared to the OM5P-AN.
+O OM5P-AN `não está mais disponível para compra <https://www.firstinspires.org/robotics/frc/blog/radio-silence>`__. O OM5P-AC é um pouco mais pesado, possui mais grades de resfriamento e possui uma textura superficial áspera em comparação com o OM5P-AN.
 
 120A Circuit Breaker
 --------------------
 
 .. image:: images/control-system-hardware/circuit-breaker.png
 
-The 120A Main Circuit Breaker serves two roles on the robot: the main robot power switch and a protection device for downstream robot wiring and components. The 120A circuit breaker is wired to the positive terminals of the robot battery and Power Distribution boards. For more information, please see the `Cooper Bussmann 18X Series Datasheet (PN: 185120F) <http://www.cooperindustries.com/content/dam/public/bussmann/Transportation/Circuit%20Protection/resources/datasheets/BUS_Tns_DS_18X_CIRCUITBREAKER.pdf>`__
+O 120A Main Circuit Breaker oferece duas funções no robô: a principal power switch do robô e um dispositivo de proteção para a fiação e os componentes do robô. O disjuntor 120A é conectado aos terminais positivos da bateria do robô e dos quadros de distribuição de energia. Para mais informações, acesse a `Ficha de dados Cooper Bussmann 18X Series (PN: 185120F) <http://www.cooperindustries.com/content/dam/public/bussmann/Transportation/Circuit%20Protection/resources/datasheets/BUS_Tns_DS_18X_CIRCUITBREAKER.pdf>`__
 
 Snap Action Circuit Breakers
 ----------------------------
 
 .. image:: images/control-system-hardware/snap-action-circuit-breaker.png
 
-The Snap Action circuit breakers, MX5-A40 and VB3 series, are used with the Power Distribution Panel to limit current to branch circuits. The MX5-A40 40A MAXI style circuit breaker is used with the larger channels on the Power Distribution Panel to power loads which draw current up to 40A continuous. The VB3 series are used with the smaller channels on the PDP to power circuits drawing current of 30A or less continuous. For more information, see the Datasheets for the `MX5 series <http://www.snapaction.net/pdf/MX5%20Spec%20Sheet.pdf>`__ and `VB3 Series <http://www.snapaction.net/pdf/vb3.pdf>`__.
+As nap Action circuit breakers, MX5-A40 and VB3 series, são usadas com a Power Distribution Panel para limitar a corrente aos circuitos de derivação. A MX5-A40 40A MAXI style circuit breaker é usada com os canais maiores na Power Distribution Panel para alimentar cargas que consomem corrente de até 40A. A VB3 series são usados ​​com os canais menores no PDP para alimentar os circuitos com corrente de 30 A ou menos. Para mais informações, acesse as fichas de dados para a `MX5 series <http://www.snapaction.net/pdf/MX5%20Spec%20Sheet.pdf>`__ e `VB3 Series <http://www.snapaction.net/pdf/vb3.pdf>`__.
 
 Robot Battery
 -------------
 
 .. image:: images/control-system-hardware/robot-battery.png
 
-The power supply for an FRC robot is a single 12V 18Ah battery. The batteries used for FRC are sealed lead acid batteries capable of meeting the high current demands of an FRC robot. For more information, see the Datasheets for the `MK ES17-12 <https://www.batteryuniverse.com/msds/sealed-lead-acid-msds.pdf>`__ and `nersys NP18-12 <https://www.enersys.com/WorkArea/DownloadAsset.aspx?id=488>`__.
+A fonte de alimentação de um robô de FRC é uma única bateria de 12V 18Ah. As baterias usadas para FRC são baterias de chumbo-ácido seladas, capazes de atender às altas demandas de corrente de um robô FRC. Para obter mais informações, consulte os dados para o `MK ES17-12 <https://www.batteryuniverse.com/msds/sealed-lead-acid-msds.pdf>`__ e `nersys NP18-12 <https://www.enersys.com/WorkArea/DownloadAsset.aspx?id=488>`__.
 
-.. note:: Other battery part numbers may be legal, consult the `FRC Manual <https://www.firstinspires.org/resource-library/frc/competition-manual-qa-system>`__ for a complete list.
+.. note:: Outros números de peça da bateria podem ser legais, consulte o `Manual FRC <https://www.firstinspires.org/resource-library/frc/competition-manual-qa-system>`__ para uma lista completa.
 
-Image Credits
--------------
+Crédito das Imagens
+--------------------
 
-Image of roboRIO courtesy of National Instruments. Image of DMC-60 courtesy of Digilent. Image of SD540 courtesy of Mindsensors. Images of Jaguar Motor Controller, Talon SRX, Victor 888, Victor SP, Victor SPX, and Spike H-Bridge Relay courtesy of VEX Robotics, Inc. Image of SPARK MAX courtesy of REV Robotics. Lifecam, PDP, PCM, SPARK, and VRM photos courtesy of *FIRST*\ |reg|. All other photos courtesy of AndyMark Inc.
+Imagem do roboRIO, cortesia da National Instruments. Imagens do Talon SRX, Victor 888, Victor SP, Victor SPX, e Spike H-Bridge Relay cortesia da VEX Robotics, Inc. Imagem do SPARK MAX cortesia da REV Robotics. Imagens da Lifecam, PDP, PCM, SPARK, e VRM cortesia da *FIRST*\ |reg|. Todas as outras fotos são cortesia da AndyMark Inc.
