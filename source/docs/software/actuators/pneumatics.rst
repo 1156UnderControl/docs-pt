@@ -38,12 +38,11 @@ desativado, o compressor não liga. Usando um compressor, os usuários podem con
 do compressor. O estado (atualmente ativado ou desativado), o estado do switch pressão e a
 corrente do compressor podem ser consultados no objeto Compressor.
 
-.. note:: The Pneumatics Control Module from Cross the Road Electronics
-    allows for integrated closed loop control of a compressor. Creating any
-    instance of a Solenoid or Double Solenoid object will enable the
-    Compressor control on the corresponding PCM. The Compressor object is
-    only needed if you want the ability to turn off the compressor or
-    query compressor status.
+.. note:: A PCM da Cross the Road Electronics permite para integrar closed
+loop control do compressor. Criando qualquer instância de um objeto Solenóide
+ou Solenóide Duplo habilitará o controle Compressor no PCM correspondente.
+O objeto Compressor é necessário apenas se você desejar desativar o compressor
+ou consultar o status do compressor.
 
 
 
