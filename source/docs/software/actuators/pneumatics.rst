@@ -77,22 +77,6 @@ construct a Solenoid object, simply pass the desired port number
 set the value of the solenoid call set(true) to enable or set(false) to
 disable the solenoid output.
 
-.. tabs::
-
-    .. code-tab:: java
-
-        Solenoid exampleSolenoid = new Solenoid(1);
-
-        exampleSolenoid.set(true);
-        exampleSolenoid.set(false);
-
-    .. code-tab:: c++
-
-        frc::Solenoid exampleSolenoid {1};
-
-        exampleSolenoid.Set(true);
-        exampleSolenoid.Set(false);
-
 
 
 Double Solenoids in WPILib
