@@ -3,13 +3,7 @@ Operando cilindros pneumáticos
 
 Usando o sistema de controle da FRC para controlar a pneumática
 ---------------------------------------------------------------
-.. note:: Pneumatics Control Module (PCM) é a um dispositivo que utiliza a comunicação CAN que
-tem controle total do compressor  e até 8 módulos solenóides . A PCM é integrada em WPILib através de uma série de classes que simplificam o uso.
-O controle de circuito fechado do compressor e pressão é tratado pelo
-hardware da PCM e dos solenóides são manipulados pela Solenóide atualizada, que
-agora, controla os canais do solenóide na PCM. Além disso, um módulo PCM pode ser usado
-onde os módulo correspondentes aos solenóides são diferenciados pelo número do módulo
-nos construtores das classes de Solenóide e Compressor.
+.. note:: Pneumatics Control Module (PCM) é a um dispositivo que utiliza a comunicação CAN que tem controle total do compressor  e até 8 módulos solenóides . A PCM é integrada em WPILib através de uma série de classes que simplificam o uso. O controle de circuito fechado do compressor e pressão é tratado pelo hardware da PCM e dos solenóides são manipulados pela Solenóide atualizada, que agora, controla os canais do solenóide na PCM. Além disso, um módulo PCM pode ser usado onde os módulo correspondentes aos solenóides são diferenciados pelo número do módulo nos construtores das classes de Solenóide e Compressor.
 
 
 .. image:: images/pcm.jpg
@@ -38,12 +32,7 @@ desativado, o compressor não liga. Usando um compressor, os usuários podem con
 do compressor. O estado (atualmente ativado ou desativado), o estado do switch pressão e a
 corrente do compressor podem ser consultados no objeto Compressor.
 
-.. note:: A PCM da Cross the Road Electronics permite para integrar closed
-loop control do compressor. Criando qualquer instância de um objeto Solenóide
-ou Solenóide Duplo habilitará o controle Compressor no PCM correspondente.
-O objeto Compressor é necessário apenas se você desejar desativar o compressor
-ou consultar o status do compressor.
-
+.. note:: A PCM da Cross the Road Electronics permite para integrar closed loop control do compressor. Criando qualquer instância de um objeto Solenóide ou Solenóide Duplo habilitará o controle Compressor no PCM correspondente. O objeto Compressor é necessário apenas se você desejar desativar o compressor ou consultar o status do compressor.
 
 
 Solenoid control
