@@ -35,48 +35,18 @@ corrente do compressor podem ser consultados no objeto Compressor.
 .. note:: A PCM da Cross the Road Electronics permite para integrar closed loop control do compressor. Criando qualquer instância de um objeto Solenóide ou Solenóide Duplo habilitará o controle Compressor no PCM correspondente. O objeto Compressor é necessário apenas se você desejar desativar o compressor ou consultar o status do compressor.
 
 
-Solenoid control
-----------------
-FRC teams use solenoids to preform a variety of tasks, from shifting
-gearboxes to operating robot mechanisms. A solenoid is a valve used to
-electronically switch a pressurized air line "on" or "off". For more
-information on solenoids, see `this wikipedia
-article <https://en.wikipedia.org/wiki/Solenoid_valve>`__. Solenoids are
-controlled by a robot's Pneumatics Control Module, or PCM, which is in
-turn connected to the robot's roboRIO via CAN. The easiest way to see a
-solenoid's state is via the small red LED (which indicates if the valve
-is "on" or not), and solenoids can be manually actuated when un-powered
-with the small button adjacent to the LED.
+Controle Solenóide
+------------------
+As equipes da FRC usam solenóides para realizar várias tarefas, desde a troca de caixas de velocidades até a operação de mecanismos de robô. Um solenóide é uma válvula usada para ativar eletronicamente uma linha de ar pressurizada "ligada" ou "desligada". Para obter mais informações sobre solenóides, consulte este artigo da Wikipedia <https://en.wikipedia.org/wiki/Solenoid_valve>`__.. Os solenóides são controlados pelo módulo de controle pneumático do robô, ou PCM, que por sua vez é conectado ao roboRIO do robô via CAN. A maneira mais fácil de ver o estado de um solenóide é através do pequeno LED vermelho (que indica se a válvula está "ligada" ou não), e os solenóides podem ser acionados manualmente quando não forem energizados com o pequeno botão adjacente ao LED.
 
-Single acting solenoids apply or vent pressure from a single output
-port. They are typically used either when an external force will provide
-the return action of the cylinder (spring, gravity, separate mechanism)
-or in pairs to act as a double solenoid. A double solenoid switches air
-flow between two output ports (many also have a center position where
-neither output is vented or connected to the input). Double solenoid
-valves are commonly used when you wish to control both the extend and
-retract actions of a cylinder using air pressure. Double solenoid valves
-have two electrical inputs which connect back to two separate channels
-on the solenoid breakout.
 
-PCM Modules are identified by their CAN Device ID. The default CAN ID
-for PCMs is 0. If using a single PCM on the bus it is recommended to
-leave it at the default CAN ID. This ID can be changed with the Phoenix
-Tuner application, in addition to other debug information. Phoenix Tuner
-can be downloaded `from GitHub.
-<https://github.com/CrossTheRoadElec/Phoenix-Releases>`_ For more
-information about setting PCM CAN IDs see Updating and Configuring
-Pneumatics Control Module and Power Distribution Panel.
+Os solenóides de ação simples aplicam ou liberam a pressão de uma única porta de saída. Eles geralmente são usados ​​quando uma força externa fornece a ação de retorno do cilindro (mola, gravidade, mecanismo separado) ou em pares para atuar como um solenóide duplo. Um solenóide duplo alterna o fluxo de ar entre duas portas de saída (muitas também têm uma posição central em que nenhuma saída é ventilada ou conectada à entrada). As válvulas solenóides duplas são comumente usadas quando você deseja controlar as ações de extensão e retração de um cilindro usando a pressão do ar. As válvulas solenóides duplas têm duas entradas elétricas que se conectam novamente a dois canais separados na ruptura do solenóide.
 
-Single Solenoids in WPILib
---------------------------
+Os módulos PCM são identificados pelo seu ID de dispositivo CAN. O ID CAN padrão para PCMs é 0. Se você estiver usando um único PCM no barramento, é recomendável deixá-lo no ID CAN padrão. Esse ID pode ser alterado com o aplicativo Phoenix Tuner, além de outras informações de depuração. O Phoenix Tuner pode ser baixado no GitHub.<https://github.com/CrossTheRoadElec/Phoenix-Releases>`_ Para obter mais informações sobre como definir IDs CAN do PCM, consulte Atualização e configuração do módulo de controle pneumático e do painel de distribuição de energia.
 
-Single solenoids in WPILib are controlled using the Solenoid class. To
-construct a Solenoid object, simply pass the desired port number
-(assumes CAN ID 0) or CAN ID and port number to the constructor. To
-set the value of the solenoid call set(true) to enable or set(false) to
-disable the solenoid output.
-
+Solenóides únicos no WPILib
+---------------------------
+Solenóides únicos no WPILib são controlados usando a classe Solenóide. Para construir um objeto Solenóide, simplesmente passe o número da porta desejada (assume CAN ID 0) ou CAN ID e número da porta ao construtor. Para definir o valor do conjunto de chamadas do solenóide (true) para ativar ou definir (false) para desativar a saída do solenóide.
 
 
 Double Solenoids in WPILib
