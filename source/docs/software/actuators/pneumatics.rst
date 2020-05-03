@@ -47,7 +47,7 @@ Os módulos PCM são identificados pelo seu ID de dispositivo CAN. O ID CAN padr
 Solenóides únicos no WPILib
 ---------------------------
 Solenóides únicos no WPILib são controlados usando a classe Solenóide. Para construir um objeto Solenóide, simplesmente passe o número da porta desejada (assume CAN ID 0) ou CAN ID e número da porta ao construtor. Para definir o valor do conjunto de chamadas do solenóide (true) para ativar ou definir (false) para desativar a saída do solenóide.
-
+  
 
 Solenóides duplos no WPILib
 ---------------------------
