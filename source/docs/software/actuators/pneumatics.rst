@@ -4,8 +4,7 @@ Operando cilindros pneumáticos
 Usando o sistema de controle da FRC para controlar a pneumática
 ---------------------------------------------------------------
 .. note:: Pneumatics Control Module (PCM) é a um dispositivo que utiliza a comunicação CAN que
-tem controle total do compressor  e até 8 módulos solenóides .
-A PCM é integrada em WPILib através de uma série de classes que simplificam o uso.
+tem controle total do compressor  e até 8 módulos solenóides . A PCM é integrada em WPILib através de uma série de classes que simplificam o uso.
 O controle de circuito fechado do compressor e pressão é tratado pelo
 hardware da PCM e dos solenóides são manipulados pela Solenóide atualizada, que
 agora, controla os canais do solenóide na PCM. Além disso, um módulo PCM pode ser usado
@@ -45,31 +44,6 @@ corrente do compressor podem ser consultados no objeto Compressor.
     Compressor control on the corresponding PCM. The Compressor object is
     only needed if you want the ability to turn off the compressor or
     query compressor status.
-
-.. tabs::
-
-    .. code-tab:: java
-
-        Compressor c = new Compressor(0);
-
-        c.setClosedLoopControl(true);
-        c.setClosedLoopControl(false);
-
-        boolean enabled = c.enabled();
-        boolean pressureSwitch = c.getPressureSwitchValue();
-        double current = c.getCompressorCurrent();
-
-    .. code-tab:: c++
-
-        frc::Compressor c {0};
-
-        c.SetClosedLoopControl(true);
-        c.SetClosedLoopControl(false);
-
-        bool enabled = c.Enabled();
-        bool pressureSwitch = c.GetPressureSwitchValue();
-        double current = c.GetCompressorCurrent();
-
 
 
 
