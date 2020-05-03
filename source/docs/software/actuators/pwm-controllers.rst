@@ -1,62 +1,17 @@
-PWM Speed Controllers in Depth
-==============================
+Controladores de velocidade PWM em profundidade
+===============================================
 .. hint::
-    WPILib has extensive support for motor control. There are a number
-    of classes that represent different types of speed controllers and
-    servos.  There are currently two classes of speed controllers, PWM
-    based motor controllers and CAN based motor controllers. WPILib also
-    contains composite classes (like DifferentialDrive) which allow you
-    to control multiple motors with a single object. This article will
-    cover the details of PWM motor controllers; CAN controllers and
-    composite classes will be covered in separate articles.
+O WPILib possui amplo suporte para o controle do motor. Existem várias classes que representam diferentes tipos de controladores de velocidade e servos. Atualmente, existem duas classes de controladores de velocidade, controladores de motor baseados em PWM e controladores de motor baseados em CAN. O WPILib também contém classes compostas (como DifferentialDrive) que permitem controlar vários motores com um único objeto. Este artigo abordará os detalhes dos controladores de motor PWM; Controladores CAN e classes compostas serão abordados em artigos separados.
 
-PWM Controllers, brief theory of operation
-------------------------------------------
-The acronym PWM stands for Pulse Width Modulation. For motor
-controllers, PWM can refer to both the input signal and the method the
-controller uses to control motor speed. To control the speed of the
-motor the controller must vary the perceived input voltage of the motor.
-To do this the controller switches the full input voltage on and off
-very quickly, varying the amount of time it is on based on the control
-signal. Because of the mechanical and electrical time constants of the
-types of motors used in FRC this rapid switching produces an effect
-equivalent to that of applying a fixed lower voltage (50% switching
-produces the same effect as applying ~6V).
+Controladores PWM, breve teoria de operação
+-------------------------------------------
+PWM significa Modulação por largura de pulso. Para controladores de motor, o PWM pode se referir ao sinal de entrada e ao método que o controlador usa para controlar a velocidade do motor. Para controlar a velocidade do motor, o controlador deve variar a tensão de entrada percebida do motor. Para fazer isso, o controlador liga e desliga a tensão total de entrada muito rapidamente, variando a quantidade de tempo em que se baseia com base no sinal de controle. Devido às constantes de tempo mecânicas e elétricas dos tipos de motores usados ​​no FRC, essa comutação rápida produz um efeito equivalente ao da aplicação de uma tensão mais baixa fixa (50% de comutação produz o mesmo efeito que a aplicação de ~ 6V).
 
-The PWM signal the controllers use for an input is a little bit
-different. Even at the bounds of the signal range (max forward or max
-reverse) the signal never approaches a duty cycle of 0% or 100%. Instead
-the controllers use a signal with a period of either 5ms or 10ms and a
-midpoint pulse width of 1.5ms. Many of the controllers use the typical
-hobby RC controller timing of 1ms to 2ms.
+O sinal PWM que os controladores usam para uma entrada é um pouco diferente. Mesmo nos limites da faixa do sinal (avanço máximo ou reverso máximo), o sinal nunca se aproxima de um ciclo de trabalho de 0% ou 100%. Em vez disso, os controladores usam um sinal com um período de 5 ms ou 10 ms e uma largura de pulso no ponto médio de 1,5 ms. Muitos dos controladores usam o tempo típico do controlador RC de 1ms a 2ms.
 
-Raw vs Scaled output values
----------------------------
-In general, all of the motor controller classes in WPILib take a scaled
--1.0 to 1.0 value as the output to an actuator. The PWM module in the
-FPGA on the roboRIO is capable of generating PWM signals with periods of
-5, 10, or 20ms and can vary the pulse width in 2000 steps of ~.001ms
-each around the midpoint (1000 steps in each direction around the
-midpoint). The raw values sent to this module are in this 0-2000 range
-with 0 being a special case which holds the signal low (disabled). The
-class for each motor controller contains information about what the
-typical bound values (min, max and each side of the deadband) are as
-well as the typical midpoint. WPILib can then use these values to map
-the scaled value into the proper range for the motor controller. This
-allows for the code to switch seamlessly between different types of
-controllers and abstracts out the details of the specific signaling.
-Calibrating Speed Controllers
+Valores de saída brutos versus dimensionados
+--------------------------------------------
+Em geral, todas as classes de controladores de motor no WPILib assumem um valor escalonado de -1,0 a 1,0 como saída para um atuador. O módulo PWM no FPGA no roboRIO é capaz de gerar sinais PWM com períodos de 5, 10 ou 20ms e pode variar a largura do pulso em 2000 etapas de ~ 0,001ms cada em torno do ponto médio (1000 etapas em cada direção em torno do ponto médio) ) Os valores brutos enviados para este módulo estão nesta faixa de 0-2000, sendo 0 um caso especial que mantém o sinal baixo (desativado). A classe para cada controlador de motor contém informações sobre quais são os valores típicos de limite (min, max e cada lado da faixa morta), bem como o ponto médio típico. O WPILib pode então usar esses valores para mapear o valor escalado na faixa adequada para o controlador do motor. Isso permite que o código alterne perfeitamente entre diferentes tipos de controladores e abstrai os detalhes da sinalização específica. Controladores de velocidade de calibração
 
-So if WPILib handles all this scaling, why would you ever need to
-calibrate your speed controller? The values WPILib uses for scaling are
-approximate based on measurement of a number of samples of each
-controller type. Due to a variety of factors, the timing of an
-individual speed controller may vary slightly. In order to definitively
-eliminate "humming" (midpoint signal interpreted as slight movement in
-one direction) and drive the controller all the way to each extreme,
-calibrating the controllers is still recommended. In general, the
-calibration procedure for each controller involves putting the
-controller into calibration mode then driving the input signal to each
-extreme, then back to the midpoint. For examples on how to use these
-speed controllers in your code, see :doc:`Using Motor Controllers in
+Portanto, se o WPILib lida com toda essa escala, por que você precisaria calibrar seu controlador de velocidade? Os valores que o WPILib usa para dimensionar são aproximados com base na medição de várias amostras de cada tipo de controlador. Devido a uma variedade de fatores, o tempo de um controlador de velocidade individual pode variar um pouco. Para eliminar definitivamente o “zumbido” (sinal do ponto médio interpretado como um leve movimento em uma direção) e conduzir o controlador até o extremo, é recomendável calibrar os controladores. Em geral, o procedimento de calibração para cada controlador envolve colocar o controlador no modo de calibração e, em seguida, direcionar o sinal de entrada para cada extremo e, em seguida, retornar ao ponto médio. Para obter exemplos de como usar esses controladores de velocidade no seu código, consulte :doc:`Using Motor Controllers in
 Code/Using PWM Speed Controllers <using-speed-controllers>`
