@@ -49,38 +49,7 @@ Solenóides únicos no WPILib
 Solenóides únicos no WPILib são controlados usando a classe Solenóide. Para construir um objeto Solenóide, simplesmente passe o número da porta desejada (assume CAN ID 0) ou CAN ID e número da porta ao construtor. Para definir o valor do conjunto de chamadas do solenóide (true) para ativar ou definir (false) para desativar a saída do solenóide.
 
 
-Double Solenoids in WPILib
---------------------------
-Double solenoids are controlled by the DoubleSolenoid class in WPILib.
-These are constructed similarly to the single solenoid but there are now
-two port numbers to pass to the constructor, a forward channel (first)
-and a reverse channel (second). The state of the valve can then be set
-to kOff (neither output activated), kForward (forward channel enabled)
-or kReverse (reverse channel enabled). Additionally, the PCM CAN ID can
-be passed to the DoubleSolenoid if teams have a non-standard PCM CAN ID
+Solenóides duplos no WPILib
+---------------------------
 
-.. tabs::
-
-   .. code-tab:: java
-
-        // Using "import static an.enum.or.constants.inner.class.*;" helps reduce verbosity
-        // this replaces "DoubleSolenoid.Value.kForward" with just kForward
-        // further reading is available at https://www.geeksforgeeks.org/static-import-java/
-        import static edu.wpi.first.wpilibj.DoubleSolenoid.Value.*;
-
-        DoubleSolenoid exampleDouble = new DoubleSolenoid(1, 2);
-        DoubleSolenoid anotherDoubleSolenoid = new DoubleSolenoid(/* The PCM CAN ID */ 9, 4, 5);
-
-
-        exampleDouble.set(kOff);
-        exampleDouble.set(kForward);
-        exampleDouble.set(kReverse);
-
-   .. code-tab:: c++
-
-        frc::DoubleSolenoid exampleDouble {1, 2};
-        frc::DoubleSolenoid exampleDouble {/* The PCM CAN ID */ 9, 1, 2};
-
-        exampleDouble.Set(frc::DoubleSolenoid::Value::kOff);
-        exampleDouble.Set(frc::DoubleSolenoid::Value::kForward);
-        exampleDouble.Set(frc::DoubleSolenoid::Value::kReverse);
+Os solenóides duplos são controlados pela classe Solenóides duplos no WPILib. Eles são construídos de maneira semelhante ao solenóide único, mas agora existem dois números de porta a serem passados ​​ao construtor, um canal direto (primeiro) e um canal reverso (segundo). O estado da válvula pode então ser definido como kOff (nenhuma saída ativada), kForward (canal direto ativado) ou kReverse (canal reverso ativado). Além disso, o PCM CAN ID pode ser passado para o Solenóide duplo se as equipes tiverem um PCM CAN ID não padrão.
