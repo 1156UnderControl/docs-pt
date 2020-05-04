@@ -1,80 +1,20 @@
-Using Motor Controllers in Code
-================================
-Motor controllers come in two main flavors: CAN and PWM. A
-CAN controller can send more detailed status information
-back to the roboRIO, whereas a PWM controller can only be
-set to a value. For information on using these motors with
-the WPI drivetrain classes, see :doc:`wpi-drive-classes`.
+Usando controladores de motor no código
+=======================================
+Os controladores de motores têm dois tipos principais: CAN e PWM. Um controlador CAN pode enviar informações de status mais detalhadas de volta ao roboRIO, enquanto um controlador PWM pode ser definido apenas como um valor. Para obter informações sobre o uso desses motores com as classes de transmissão WPI, consulte :doc:`wpi-drive-classes`.
 
-Using PWM Speed Controllers
----------------------------
-PWM speed controllers can be controlled in the same was as a CAN speed controller.
-For a more detailed background on *how* they work, see
-:doc:`pwm-controllers`. To use a PWM speed controller, simply use the appropriate
-speed controller class provided by WPI
-and supply it the port the speed controller(s) are plugged into on the roboRIO.
-All approved motor controllers have WPI classes provided for them.
+Usando controladores de velocidade PWM
+--------------------------------------
+Os controladores de velocidade PWM podem ser controlados da mesma forma que um controlador de velocidade CAN. Para obter um plano de fundo mais detalhado sobre *how* eles funcionam, consulte :doc:`pwm-controllers`. Para usar um controlador de velocidade PWM, basta usar a classe de controlador de velocidade apropriada fornecida pela WPI e fornecer a porta na qual os controladores de velocidade estão conectados no roboRIO. Todos os controladores de motor aprovados têm classes WPI fornecidas para eles.
 
-.. tabs::
-
-   .. code-tab:: java
-
-      Spark spark = new Spark(
-         // The RIO PWM port this is connected to
-         0
-      );
-
-      spark.set(
-         // the output of the motor, between -1 and 1
-         -0.75
-      );
-
-      VictorSP victor = new VictorSP(
-         // The RIO PWM port this is connected to
-         0
-      );
-
-      victor.set(
-         // the output of the motor, between -1 and 1
-         0.6
-      );
-
-   .. code-tab:: c++
-
-      frc::Spark spark{
-         // The RIO PWM port this is connected to
-         0
-      };
-
-      spark.Set(
-         // the output of the motor, between -1 and 1
-         -0.75
-      );
-
-      frc::VictorSP victor{
-         // The RIO PWM port this is connected to
-         0
-      };
-
-      victor.set(
-         // the output of the motor, between -1 and 1
-         0.6
-      );
-
-
-CAN Motor Controllers
----------------------
-A handful of CAN speed controllers are available through vendors such as CTR Electronics
-and REV Robotics.
+Controladores CAN motor
+-----------------------
+Um punhado de controladores de velocidade CAN está disponível em fornecedores como CTR Electronics e REV Robotics.
 
 SPARK MAX
 ^^^^^^^^^
-For information regarding the SparkMAX CAN Speed Controller, which can be
-used in either CAN or PWM mode, please refer to the SparkMAX `software resources <https://www.revrobotics.com/sparkmax-software/>`_
-and `example code. <https://github.com/REVrobotics/SPARK-MAX-Examples>`_
+Para obter informações sobre o SparkMAX CAN Speed ​​Controller, que pode ser usado no modo CAN ou PWM, consulte os  `software resources <https://www.revrobotics.com/sparkmax-software/>`_
+e `example code. <https://github.com/REVrobotics/SPARK-MAX-Examples>`_
 
-CTRE CAN Motor Controllers
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-Please refer to the third party CTR documentation on the
-Phoenix software for more detailed information. The documentation
-is available `here. <https://phoenix-documentation.readthedocs.io/en/latest/>`_
+Controladores de motor CTRE CAN
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Consulte a documentação da CTR de terceiros no software Phoenix para obter informações mais detalhadas. A documentação está disponível `here. <https://phoenix-documentation.readthedocs.io/en/latest/>`_
