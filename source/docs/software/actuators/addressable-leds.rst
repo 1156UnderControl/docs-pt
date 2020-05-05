@@ -1,14 +1,13 @@
-Addressable LEDs
-================
+LEDs
+====
+Os LEDs são comumente usados pelas equipes há vários anos por vários motivos. Eles permitem que as equipes depurem a funcionalidade do robô do público, forneçam um marcador visual para o robô e podem simplesmente adicionar algum apelo visual. O WPILib possui uma API para controlar os LEDs WS2812 com seus pinos de dados conectados via PWM.
 
-LED strips have been commonly used by teams for several years for a variety of reasons. They allow teams to debug robot functionality from the audience, provide a visual marker for their robot, and can simply add some visual appeal. WPILib has an API for controlling WS2812 LEDs with their data pin connected via PWM.
+Referenciando os LEDs
+---------------------
 
-Instantiating the AddressableLED Object
----------------------------------------
+Você, primeiramente, cria um ``AddressableLED`` objeto que usa a porta PWM como argumento. Ele *must* ser um cabeçalho PWM no roboRIO. Depois, você define o número de LEDs localizados na sua faixa de LEDs, o que pode ser feito com a ``setLength()`` função.
 
-You first create an ``AddressableLED`` object that takes the PWM port as an argument. It *must* be a PWM header on the roboRIO. Then you set the number of LEDs located on your LED strip, with can be done with the ``setLength()`` function.
-
-.. important:: It is important to note that setting the length of the LED header is an expensive task and it's **not** recommended to run this periodically.
+.. important:: É importante notar que definir o comprimento do cabeçalho LED é uma tarefa cara e ele não recomendado para executar este periodicamente.
 
 After the length of the strip has been set, you'll have to create an ``AddressableLEDBuffer`` object that takes the number of LEDs as an input. You'll then call ``myAddressableLed.setData(myAddressableLEDBuffer)`` to set the led output data. Finally, you can call ``myAddressableLed.start()`` to write the output continuously. Below is a full example of the initialization process.
 
