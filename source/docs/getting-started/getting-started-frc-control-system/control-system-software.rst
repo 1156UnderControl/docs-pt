@@ -36,7 +36,7 @@ Driver Station da FRC fornecida pela NI LabVIEW (Somente Windows)
 
 .. image:: images/control-system-software/frc-driver-station.png
 
-A Driver Station da FRC desenvolvido pelo NI LabVIEW é o único software permitido para ser usado com o objetivo de controlar o estado do robô durante a competição. Este software contém o código necessário para enviar dados ao seu robô a partir de uma variedade de dispositivos de entrada, como joysticks, gamepads e placas IO personalizáveis. Ele também contém várias ferramentas usadas para ajudar a solucionar problemas do robô, como indicadores de status e criação de arquivo de log. Instruções para instalar a Driver Station da FRC, fornecida pelo NI LabVIEW (incluída no FRC Game Tools, podem ser encontradas :ref:`aqui <docs/getting-started/getting-started-frc-control-system/frc-game-tools:Installing the FRC Game Tools>`.Mais informações sobre a estação de driver FRC, fornecida pelo NI LabVIEW, podem ser encontradas :ref:`here <docs/software/driverstation/driver-station:FRC Driver Station Powered by NI LabVIEW>`.
+A Driver Station da FRC desenvolvido pelo NI LabVIEW é o único software permitido para ser usado com o objetivo de controlar o estado do robô durante a competição. Este software contém o código necessário para enviar dados ao seu robô a partir de uma variedade de dispositivos de entrada, como joysticks, gamepads e placas IO personalizáveis. Ele também contém várias ferramentas usadas para ajudar a solucionar problemas do robô, como indicadores de status e criação de arquivo de log. Instruções para instalar a Driver Station da FRC, fornecida pelo NI LabVIEW (incluída no FRC Game Tools, podem ser encontradas :ref:`aqui <docs/getting-started/getting-started-frc-control-system/frc-game-tools:Installing the FRC Game Tools>`.Mais informações sobre a estação de driver FRC, fornecida pelo NI LabVIEW, podem ser encontradas :ref:`aqui <docs/software/driverstation/driver-station:FRC Driver Station Powered by NI LabVIEW>`.
 
 
 Painel FRC LabVIEW (somente Windows)
@@ -88,29 +88,29 @@ Visualizador de Registros da FRC Driver Station (Somente Windows)
 
 .. image:: images/control-system-software/frc-log-viewer.png
 
-O Visualisador de Registros da FRC Driver Station é um programa LabVIEW usado para visualizar registros criados pelo FRC Driver Station. Esses registros contêm informações como voltagem da bateria, tempo de disparo, CPU% e modo do robô, além de eventos como remoção do joystick. O visualisador de registro da FRC Driver Station está incluído no FRC Game Tools. As instruções de instalação podem ser encontradas :ref:`aqui <docs/getting-started/getting-started-frc-control-system/frc-game-tools:Installing the FRC Game Tools>`. Mais informações sobre o visualizador de registros da estação de driver FRC e a compreensão dos registros podem ser encontradas :ref:`here <docs/software/driverstation/driver-station-log-viewer:Driver Station Log File Viewer>`.
+O Visualisador de Registros da FRC Driver Station é um programa LabVIEW usado para visualizar registros criados pelo FRC Driver Station. Esses registros contêm informações como voltagem da bateria, tempo de disparo, CPU% e modo do robô, além de eventos como remoção do joystick. O visualisador de registro da FRC Driver Station está incluído no FRC Game Tools. As instruções de instalação podem ser encontradas :ref:`aqui <docs/getting-started/getting-started-frc-control-system/frc-game-tools:Installing the FRC Game Tools>`. Mais informações sobre o visualizador de registros da estação de driver FRC e a compreensão dos registros podem ser encontradas :ref:`aqui <docs/software/driverstation/driver-station-log-viewer:Driver Station Log File Viewer>`.
 
 RobotBuilder
 ------------
 
 .. image:: images/control-system-software/robot-builder.png
 
-RobotBuilder is a tool designed to aid in setup and structuring of a Command Based robot project for C++ or Java. RobotBuilder allows you to enter in the various components of your robot subsystems and operator interface and define what your commands are in a graphical tree structure. RobotBuilder will then verify that you have no port allocation conflicts and can generate a wiring table indicating what is connected to each port as well as C++ or Java code. The code created generates the appropriate files, constructs the appropriate objects and adds LiveWindow code for each sensor and actuator, but does not write any of the actual Subsystem or Command methods. The user must write the appropriate code for these methods for the robot to function. More information about RobotBuilder can be found :ref:`here <docs/software/wpilib-tools/robotbuilder/index:RobotBuilder>`. More information about the Command Based programming architecture can be found :ref:`here <docs/software/commandbased/index:Command-Based Programming>`.
+O RobotBuilder é uma ferramenta projetada para ajudar na configuração e estruturação de um projeto de robô baseado em comando para C ++ ou Java. O RobotBuilder permite que você insira os vários componentes dos subsistemas do robô e da interface do operador e defina quais são seus comandos em uma estrutura de árvore gráfica. O RobotBuilder verificará que você não possui conflitos de alocação de porta e pode gerar uma tabela de ligações indicando o que está conectado a cada porta, bem como o código C ++ ou Java. O código criado gera os arquivos apropriados, constrói os objetos apropriados e adiciona o código do LiveWindow para cada sensor e atuador, mas não grava nenhum dos métodos reais de subsistema ou comando. O usuário deve escrever o código apropriado para esses métodos para o robô funcionar. Mais informações sobre o RobotBuilder podem ser encontradas :ref:`aqui <docs/software/wpilib-tools/robotbuilder/index:RobotBuilder>`. Mais informações sobre a arquitetura de programação baseada em comando podem ser encontradas :ref:`aqui <docs/software/commandbased/index:Command-Based Programming>`.
 
 OutlineViewer
 -------------
 
 .. image:: images/control-system-software/outline-viewer.png
 
-OutlineViewer is a utility used to view, modify and add to the contents of the NetworkTables for debugging purposes. It displays all key value pairs currently in the NetworkTables and can be used to modify the value of existing keys or add new keys to the table. OutlineViewer is included in the C++ and Java language updates (found in ``\tools\wpilib``. Teams may need to install the Java Runtime Environment to use the OutlineViewer on computers not set up for Java programming.
+O OutlineViewer é um utilitário usado para exibir, modificar e adicionar ao conteúdo das Tabelas de Rede para fins de depuração. Ele exibe todos os pares de valores de chave atualmente nas tabelas de rede e pode ser usado para modificar o valor das chaves existentes ou adicionar novas chaves para a tabela. O OutlineViewer está incluído nas atualizações de linguagem C ++ e Java (encontradas em ``\tools\wpilib``. As equipes talvez precisarão instalar o Java Runtime Environment para usar o OutlineViewer em computadores não configurados para programação Java.
 
-To connect to your robot, open OutlineViewer and set the “Server Location” to be your team number. After you click start, OutlineViewer will connect.
+Para conectar-se ao seu robô, abra OutlineViewer e defina a "localização do servidor" como o seu número da sua equipe. Depois de clicar iniciar, OutlineViewer se conectará.
 
-LabVIEW teams can use the Variables tab of the LabVIEW Dashboard to accomplish this functionality.
+As equipes do LabVIEW podem usar a guia Variáveis do LabVIEW Dashboard para realizar essa funcionalidade.
 
-FRC Radio Configuration Utility (Windows Only)
-----------------------------------------------
+Utilitário de configuração de rádio FRC (Somente Windows)
+---------------------------------------------------------
 
 .. image:: images/control-system-software/frc-radio-configuration-utility.png
 
-The FRC Radio Configuration Utility is a tool used to configure the the OpenMesh OM5P-AN or OM5P-AC radio for practice use at home. This tool sets the appropriate IP, and network settings for proper network connection, as well as the QOS settings required to mimic the bandwidth limiting and packet prioritization experience on the FRC playing field. The FRC Radio Configuration Utility is installed by a standalone installer, instructions on installing and using the FRC Radio Configuration Utility to configure your radio can be found :ref:`here <docs/getting-started/getting-started-frc-control-system/radio-programming:Programming your Radio>`.
+O FRC Radio Configuration Utility é uma ferramenta usada para configurar o rádio OpenMesh OM5P-AN ou OM5P-AC para uso prático em casa. Essa ferramenta define as configurações de IP e de configurações de rede para a conexão de rede adequada, bem como as configurações de QOS necessárias para imitar a experiência de limitação de largura de banda e priorização de pacotes no campo de jogo do FRC. O utilitário de configuração de rádio FRC é instalado por um instalador autônomo; instruções sobre a instalação e o uso do utilitário de configuração de rádio FRC para configurar seu rádio podem ser encontradas :ref:`aqui <docs/getting-started/getting-started-frc-control-system/radio-programming:Programming your Radio>`.
