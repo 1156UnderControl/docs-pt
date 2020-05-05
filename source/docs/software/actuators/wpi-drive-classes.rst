@@ -60,8 +60,8 @@ Usando DifferentialDrive para controlar o comando diferencial (CMB) dos robôs
 -----------------------------------------------------------------------------
 .. note:: O WPILib fornece classes de movimentação de robôs separadas para as configurações mais comuns de trem de força (diferencial, mecanismo e Killough). A classe DifferentialDrive lida com a configuração do drivetrain diferencial. Essas bases de acionamento normalmente têm duas ou mais rodas on-line de tração ou omni por lado (por exemplo, 6WD ou 8WD) e também podem ser conhecidas como "skid-steer", "tank drive" ou "West Coast Drive". O sistema de transmissão do Kit de peças é um exemplo de acionamento diferencial. Existem métodos para controlar a unidade com 3 estilos diferentes ("Tanque", "Arcade" ou "Curvatura"), explicados no artigo abaixo.
 
-Unidade Diferencial Multi-Motor com SpeedControllerGroups
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Unidade Multi-Motor com SpeedControllerGroups
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Muitas unidades de transmissão FRC têm mais de 1 motor em cada lado. Para usá-los com o DifferentialDrive, os motores de cada lado precisam ser coletados em um único SpeedController, usando a classe SpeedControllerGroup. Os exemplos abaixo mostram um trem de força com 4 motores (2 por lado). Para estender a mais motores, basta criar os controladores adicionais e passar todos eles para o construtor de grupo SpeedController (é necessário um número arbitrário de entradas).
 
 Modos de acionamento
