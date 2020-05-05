@@ -1,331 +1,82 @@
-Using the WPILib Classes to Drive your Robot
-======================================================
+Usando WPILib para conduzir seu robô
+====================================
+O WPILib contém muitas explicações para ajudar seu robô a dirigir mais rápido.
 
-WPILib includes many classes to help make your robot get
-driving faster.
+Drivetrains padrão
+------------------
 
-Standard drivetrains
---------------------
-
-Differential Drive Robots
-^^^^^^^^^^^^^^^^^^^^^^^^^
+Robôs de acionamento diferencial
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. image:: images/diffdrive.jpg
    :width: 600
 
-These drive bases typically have two or more in-line
-traction or omni  wheels per side (e.g., 6WD or 8WD) and may
-also be known as  "skid-steer", "tank drive", or "West Coast
-Drive". The Kit of Parts  drivetrain is an example of a
-differential drive. These drivetrains are capable of driving
-forward/backward and can turn by driving the two sides in
-opposite directions causing the wheels to skid sideways.
-These drivetrains are not capable of sideways translational
-movement.
+Essas bases de acionamento normalmente têm duas ou mais rodas on-line de tração ou omni por lado (por exemplo, 6WD ou 8WD) e também podem ser conhecidas como "skid-steer", "tank drive" ou "West Coast Drive". O sistema de transmissão do Kit de peças é um exemplo de acionamento diferencial. Essas unidades de transmissão são capazes de dirigir para frente / para trás e podem girar dirigindo os dois lados em direções opostas, fazendo com que as rodas deslizem para os lados. Essas unidades de transmissão não são capazes de movimento translacional lateral.
+
 
 Mecanum Drive
 ^^^^^^^^^^^^^
 .. image:: images/mecanumdrive.jpg
    :width: 600
 
-Mecanum drive is a method of driving using specially
-designed wheels that allow the robot to drive in any
-direction without changing the orientation of the robot. A
-robot with a conventional drivetrain (all wheels pointing in
-the same direction) must turn in the direction it needs to
-drive. A mecanum robot can move in any direction without
-first turning and is called a holonomic drive. The wheels
-(shown on this robot) have rollers that cause the forces
-from driving to be applied at a 45 degree angle rather than
-straight forward as in the case of a conventional drive.
+Mecanum drive é um método de dirigir usando rodas especialmente projetadas que permitem ao robô dirigir em qualquer direção sem alterar a orientação do robô. Um robô com um sistema de transmissão convencional (todas as rodas apontando na mesma direção) deve girar na direção que precisa dirigir. Um robô mecanum pode se mover em qualquer direção sem primeiro girar e é chamado de acionamento holonômico. As rodas (mostradas neste robô) possuem roletes que fazem com que as forças de acionamento sejam aplicadas em um ângulo de 45 graus em vez de para a frente, como no caso de um acionamento convencional.
 
-When viewed from the top, the rollers on a mecanum
-drivetrain should form an 'X' pattern. This results in the
-force vectors (when driving the wheel forward) on the front
-two wheels pointing forward and inward and the rear two
-wheels pointing forward and outward. By spinning the wheels
-in different directions, various components of the force
-vectors cancel out, resulting in the desired robot movement.
-A quick chart of different movements has been provided
-below, drawing out the force vectors for each of these
-motions may help in understanding how these drivetrains
-work. By varying the speeds of the wheels in addition to the
-direction, movements can be combined resulting in
-translation in any direction and rotation, simultaneously.
+Quando vistos de cima, os roletes no trem de força mecanum devem formar um padrão 'X'. Isso resulta nos vetores de força (ao dirigir a roda para frente) nas duas rodas dianteiras apontando para frente e para dentro e as duas rodas traseiras apontando para frente e para fora. Girando as rodas em direções diferentes, vários componentes dos vetores de força são cancelados, resultando no movimento desejado do robô. Um gráfico rápido de diferentes movimentos foi fornecido abaixo, traçando os vetores de força para cada um desses movimentos, podendo ajudar a entender como essas unidades de transmissão funcionam. Ao variar as velocidades das rodas, além da direção, os movimentos podem ser combinados, resultando em translação em qualquer direção e rotação, simultaneamente.
 
-Drive Class Conventions
------------------------
-.. note:: This article describes conventions and defaults used by the WPILib Drive classes (DifferentialDrive, MecanumDrive, and KilloughDrive). For further details on using these classes, see the subsequent articles.
+Convenções de classe de unidade
+-------------------------------
+.. note:: Este artigo contém as convenções e padrões usados ​​pelas classes WPILib Drive (DifferentialDrive, MecanumDrive e KilloughDrive). Para mais detalhes sobre o uso dessas classes, consulte os artigos subseqüentes.
 
-Motor Inversion
-^^^^^^^^^^^^^^^
-By default, the class inverts the motor outputs for the
-right side of the drivetrain. Generally this will mean that
-no inversion needs to be done on the individual
-SpeedController objects. To disable this behavior, use the
-setRightSideInverted() method.
+Inversão do motor
+^^^^^^^^^^^^^^^^^
+Por padrão, a classe inverte as saídas do motor para o lado direito do trem de força. Geralmente, isso significa que nenhuma inversão precisa ser feita nos objetos individuais do SpeedController. Para desativar esse comportamento, use o método setRightSideInverted ().
 
 Squaring Inputs & Input Deadband
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-When driving robots, it is often desirable to manipulate the
-joystick inputs such that the robot has finer control at low
-speeds while still using the full output range. One way to
-accomplish this is by squaring the joystick input, then
-reapplying the sign. By default the Differential Drive class
-will square the inputs. If this is not desired (e.g. if
-passing values in from a PIDController), use one of the
-drive methods with the squaredInputs parameter and set it to
-false.
+Ao dirigir robôs, geralmente é desejável manipular as entradas do joystick, de modo que o robô tenha um controle mais preciso em baixas velocidades enquanto ainda usa toda a faixa de saída. Uma maneira de fazer isso é alinhar ao quadrado a entrada do joystick e reaplicar o sinal. Por padrão, a classe Differential Drive quadrará as entradas. Se isso não for desejado (por exemplo, se você passar valores de um PIDController), use um dos métodos de unidade com o parâmetro squaredInputs e defina-o como false.
 
-By default, the Differential Drive class applies an input
-deadband of .02. This means that input values with a
-magnitude below .02 (after any squaring as described above)
-will be set to 0. In most cases these small inputs result
-from imperfect joystick centering and are not sufficient to
-cause drivetrain movement, the deadband helps reduce
-unnecessary motor heating that may result from applying these
-small values to the drivetrain. To change the deadband, use
-the setDeadband() method.
+Por padrão, a classe Unidade Diferencial aplica uma faixa morta de entrada de 0,02. Isso significa que os valores de entrada com magnitude abaixo de 0,02 (após qualquer quadrado como descrito acima) serão definidos como 0. Na maioria dos casos, essas pequenas entradas resultam da centralização imperfeita do joystick e não são suficientes para causar movimento do trem de força, a faixa morta ajuda a reduzir desnecessários aquecimento do motor que pode resultar da aplicação desses pequenos valores no sistema de transmissão. Para alterar a banda morta, use o método setDeadband ().
 
-Motor Safety
+Motor seguro
 ^^^^^^^^^^^^
-Motor Safety is a mechanism in WPILib that takes the concept of a
-watchdog and breaks it out into one watchdog (Motor Safety timer)
-for each individual actuator. Note that this protection mechanism
-is in addition to the System Watchdog which is controlled by the
-Network Communications code and the FPGA and will disable all
-actuator outputs if it does not receive a valid data packet for
-125ms.
+O Motor seguro é um mecanismo no WPILib que pega o conceito de um cão de guarda e o divide em um cão de guarda (temporizador de segurança do motor) para cada atuador individual. Observe que esse mecanismo de proteção é um complemento ao System Watchdog, que é controlado pelo código de Comunicações de Rede e pelo FPGA e desativará todas as saídas do atuador se ele não receber um pacote de dados válido por 125ms.
 
-The purpose of the Motor Safety mechanism is the same as the
-purpose of a watchdog timer, to disable mechanisms which may
-cause harm to themselves, people or property if the code
-locks up and does not properly update the actuator output.
-Motor Safety breaks this concept out on a per actuator basis
-so that you can appropriately determine where it is
-necessary and where it is not. Examples of mechanisms that
-should have motor safety enabled are systems like drive
-trains and arms. If these systems get latched on a
-particular value they could cause damage to their
-environment or themselves. An example of a mechanism that
-may not need motor safety is a spinning flywheel for a
-shooter. If this mechanism gets latched on a particular
-value it will simply continue spinning until the robot is
-disabled. By default Motor Safety is enabled for RobotDrive
-objects and disabled for all other speed controllers and
-servos.
+A finalidade do mecanismo de segurança do motor é a mesma de um cronômetro de vigilância, para desativar mecanismos que possam causar danos a si mesmos, pessoas ou propriedades se o código travar e não atualizar adequadamente a saída do atuador. A Segurança do motor quebra esse conceito por atuador, para que você possa determinar apropriadamente onde é necessário e onde não é. Exemplos de mecanismos que devem ter a segurança do motor ativada são sistemas como trens e braços de transmissão. Se esses sistemas ficarem presos a um valor específico, poderão causar danos ao meio ambiente ou a si próprios. Um exemplo de mecanismo que pode não precisar de segurança do motor é um volante giratório para um atirador. Se esse mecanismo ficar bloqueado em um valor específico, ele simplesmente continuará girando até que o robô seja desativado.
 
-The Motor Safety feature operates by maintaining a timer
-that tracks how long it has been since the feed() method has
-been called for that actuator. Code in the Driver Station
-class initiates a comparison of these timers to the timeout
-values for any actuator with safety enabled every 5 received
-packets (100ms nominal). The set() methods of each speed
-controller class and the set() and setAngle() methods of the
-servo class call feed() to indicate that the output of the
-actuator has been updated.
-
+O recurso Segurança do motor opera mantendo um temporizador que rastreia quanto tempo faz desde que o método feed () foi chamado para esse atuador. O código na classe Driver Station inicia uma comparação desses temporizadores com os valores de tempo limite de qualquer atuador com segurança ativada a cada 5 pacotes recebidos (100 ms nominais). Os métodos set () de cada classe de controlador de velocidade e os métodos set () e setAngle () da classe de servo chamam feed () para indicar que a saída do atuador foi atualizada.
 The Motor Safety interface of speed controllers can be interacted with by the user using the following methods:
 
-.. tabs::
+Por padrão, todos os objetos RobotDrive habilitam a Segurança do Motor. Dependendo do mecanismo e da estrutura do seu programa, você pode configurar o tempo limite da segurança do motor (em segundos). O tempo limite é configurado por atuador e não é uma configuração global. O valor padrão (e mínimo útil) é 100ms.
 
-    .. code-tab:: java
-
-        exampleJaguar.setSafetyEnabled(true);
-        exampleJaguar.setSafetyEnabled(false);
-        exampleJaguar.setExpiration(.1);
-        exampleJaguar.feed()
-
-    .. code-tab:: c++
-
-        exampleJaguar->SetSafetyEnabled(true);
-        exampleJaguar->SetSafetyEnabled(false);
-        exampleJaguar->SetExpiration(.1);
-        exampleJaguar->Feed();
-
-
-
-By default all RobotDrive objects enable Motor Safety.
-Depending on the mechanism and the structure of your
-program, you may wish to configure the timeout length of the
-motor safety (in seconds). The timeout length is configured
-on a per actuator basis and is not a global setting. The
-default (and minimum useful) value is 100ms.
-
-
-Axis Conventions
-^^^^^^^^^^^^^^^^
+Convenções do Eixo
+^^^^^^^^^^^^^^^^^^
 .. image:: images/axisconventions.jpg
    :width: 600
 
-This library uses the NED axes convention (North-East-Down
-as external reference in the world frame). The positive X
-axis points ahead, the positive Y axis points right, and the
-positive Z axis points down. Rotations follow the right-hand
-rule, so clockwise rotation around the Z axis is positive.
+Esta biblioteca usa a convenção de eixos NED (North-East-Down como referência externa no quadro mundial). O eixo X positivo aponta para a frente, o eixo Y positivo aponta para a direita e o eixo Z positivo aponta para baixo. As rotações seguem a regra da direita, portanto, a rotação no sentido horário ao redor do eixo Z é positiva.
 
-.. warning:: This convention is different than the convention for joysticks which typically have -Y as Up (commonly mapped to throttle) and +X as Right. Pay close attention to the examples below if you want help with typical Joystick->Drive mapping.
+.. warning:: Esta convenção é diferente da convenção para joysticks que geralmente têm -Y como Up (geralmente mapeado para acelerar) e + X como Right. Preste muita atenção aos exemplos abaixo se desejar ajuda com o mapeamento típico de Joystick-> Drive.
 
-Using the DifferentialDrive class to control Differential Drive (WCD) robots
-----------------------------------------------------------------------------
-.. note:: WPILib provides separate Robot Drive classes for the most common drive train configurations (differential, mecanum, and Killough).  The DifferentialDrive class handles the differential drivetrain configuration. These drive bases typically have two or more in-line traction or omni wheels per side (e.g., 6WD or 8WD) and may also be known as "skid-steer", "tank drive", or "West Coast Drive". The Kit of Parts drivetrain is an example of a differential drive. There are methods to control the drive with 3 different styles ("Tank", "Arcade", or "Curvature"), explained in the article below.
+Usando DifferentialDrive para controlar o comando diferencial (CMB) dos robôs
+-----------------------------------------------------------------------------
+.. note:: O WPILib fornece classes de movimentação de robôs separadas para as configurações mais comuns de trem de força (diferencial, mecanismo e Killough). A classe DifferentialDrive lida com a configuração do drivetrain diferencial. Essas bases de acionamento normalmente têm duas ou mais rodas on-line de tração ou omni por lado (por exemplo, 6WD ou 8WD) e também podem ser conhecidas como "skid-steer", "tank drive" ou "West Coast Drive". O sistema de transmissão do Kit de peças é um exemplo de acionamento diferencial. Existem métodos para controlar a unidade com 3 estilos diferentes ("Tanque", "Arcade" ou "Curvatura"), explicados no artigo abaixo.
 
-DifferentialDrive is a method provided for the control of
-"skid-steer" or "West Coast" drivetrains, such as the Kit of
-Parts chassis. Instantiating a DifferentialDrive is as simple
-as so:
-
-.. tabs::
-
-    .. group-tab:: Java
-
-        .. code-block:: java
-
-            public class Robot {
-                Spark m_left = new Spark(1);
-                Spark m_right = new Spark(2);
-                DifferentialDrive m_drive = new DifferentialDrive(m_left, m_right);
-
-                public void robotInit() {
-                    m_left.setInverted(true); // if you want to invert motor outputs, you must do so here
-                }
-
-    .. group-tab:: C++ (Header)
-
-        .. code-block:: cpp
-
-            class Robot {
-                private:
-                    frc::Spark m_left{1};
-                    frc::Spark m_right{2};
-                    frc::DifferentialDrive m_drive{m_left, m_right};
-
-    .. group-tab:: C++ (Source)
-
-        .. code-block:: cpp
-
-            void Robot::RobotInit() {
-                m_left.SetInverted(true); // if you want to invert motor outputs, you must do so here
-            }
-
-
-
-Multi-Motor DifferentialDrive with SpeedControllerGroups
+Unidade Diferencial Multi-Motor com SpeedControllerGroups
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Many FRC drivetrains have more than 1 motor on each side. In
-order to use these with DifferentialDrive, the motors on
-each side have to be collected into a single
-SpeedController, using the SpeedControllerGroup class. The
-examples below show a 4 motor (2 per side) drivetrain. To
-extend to more motors, simply create the additional
-controllers and pass them all into the SpeedController group
-constructor (it takes an arbitrary number of inputs).
+Muitas unidades de transmissão FRC têm mais de 1 motor em cada lado. Para usá-los com o DifferentialDrive, os motores de cada lado precisam ser coletados em um único SpeedController, usando a classe SpeedControllerGroup. Os exemplos abaixo mostram um trem de força com 4 motores (2 por lado). Para estender a mais motores, basta criar os controladores adicionais e passar todos eles para o construtor de grupo SpeedController (é necessário um número arbitrário de entradas).
 
-.. tabs::
-
-    .. group-tab:: Java
-
-        .. code-block:: java
-
-            public class Robot {
-                Spark m_frontLeft = new Spark(1);
-                Spark m_rearLeft = new Spark(2);
-                SpeedControllerGroup m_left = new SpeedControllerGroup(m_frontLeft, m_rearLeft);
-
-                Spark m_frontRight = new Spark(3);
-                Spark m_rearRight = new Spark(4);
-                SpeedControllerGroup m_right = new SpeedControllerGroup(m_frontRight, m_rearRight);
-                DifferentialDrive m_drive = new DifferentialDrive(m_left, m_right);
-
-                public void robotInit() {
-                    m_left.setInverted(true); // if you want to invert the entire side you can do so here
-                }
-
-    .. group-tab:: C++ (Header)
-
-        .. code-block:: c++
-
-            class Robot {
-                public:
-                    frc::Spark m_frontLeft{1};
-                    frc::Spark m_rearLeft{2};
-                    frc::SpeedControllerGroup m_left{m_frontLeft, m_rearLeft};
-
-                    frc::Spark m_frontRight{3};
-                    frc::Spark m_rearRight{4};
-                    frc::SpeedControllerGroup m_right{m_frontRight, m_rearRight};
-
-                    frc::DifferentialDrive m_drive{m_left, m_right};
-
-    .. group-tab:: C++ (Source)
-
-        .. code-block:: c++
-
-            void Robot::RobotInit() {
-                m_left.SetInverted(true); // if you want to invert the entire side you can do so here
-            }
-
-
-
-
-Drive Modes
-^^^^^^^^^^^
+Modos de acionamento
+^^^^^^^^^^^^^^^^^^^^
 .. note::
-    The DifferentialDrive class contains three different
-    default modes of driving your robot's motors.
+  A classe DifferentialDrive contém três modos padrão diferentes de acionar os motores do seu robô.
 
-    - Tank Drive, which controls the left and right side independently
-    - Arcade Drive, which controls a forward and turn speed
-    - Curvature Drive, a subset of Arcade Drive, which makes your robot handle like a car with constant-curvature turns.
+    - Tank Drive, que controla os lados esquerdo e direito de forma independente;
+    - Arcade Drive, que controla a velocidade de avanço e rotação;
+    - Curvature Drive, um subconjunto do Arcade Drive, que faz com que o seu robô lide com um carro com curvas constantes.
 
-As stated above, the DifferentialDrive class contains three
-default methods for controlling skid-steer or WCD robots.
-Note that you can create your own methods of controlling the
-robot's driving and have them call tankDrive() with the
-derived inputs for left and right motors.
+Como mencionado acima, a classe DifferentialDrive contém três métodos padrão para controlar robôs skid-steer ou WCD. Observe que você pode criar seus próprios métodos para controlar a direção do robô e pedir que chamem tankDrive () com as entradas derivadas dos motores esquerdo e direito.
 
-The Tank Drive mode is used to control each side of the
-drivetrain independently (usually with an individual
-joystick axis controlling each). This example shows how to
-use the Y-axis of two separate joysticks to run the
-drivetrain in Tank mode. Construction of the objects has
-been omitted, for above for drivetrain construction and here
-for Joystick construction.
+O modo de acionamento do tanque é usado para controlar cada lado do trem de força de forma independente (geralmente com um eixo de joystick individual controlando cada um). Este exemplo mostra como usar o eixo Y de dois joysticks separados para executar o drivetrain no modo Tank. A construção dos objetos foi omitida, acima para a construção do trem de força e aqui para a construção do Joystick.
 
-The Arcade Drive mode is used to control the drivetrain
-using speed/throttle and rotation rate. This is typically
-used either with two axes from a single joystick, or split
-across joysticks (often on a single gamepad) with the
-throttle coming from one stick and the rotation from
-another. This example shows how to use a single joystick
-with the Arcade mode. Construction of the objects has been
-omitted, for above for drivetrain construction and here for
-Joystick construction.
+O modo Arcade Drive é usado para controlar o trem de força usando velocidade / acelerador e taxa de rotação. Isso geralmente é usado com dois eixos de um único joystick ou dividido entre joysticks (geralmente em um único gamepad), com o acelerador saindo de um manípulo e a rotação de outro. Este exemplo mostra como usar um único joystick com o modo Arcade. A construção dos objetos foi omitida, acima para a construção do trem de força e aqui para a construção do Joystick.
 
-Like Arcade Drive, the Curvature Drive mode is used to
-control the drivetrain using speed/throttle and rotation
-rate. The difference is that the rotation control is
-attempting to control radius of curvature instead of rate of
-heading change. This mode also has a quick-turn parameter
-that is used to engage a sub-mode that allows for turning in
-place. This example shows how to use a single joystick with
-the Curvature mode. Construction of the objects has been
-omitted, for above for drivetrain construction and here for
-Joystick construction.
-
-.. tabs::
-
-    .. code-tab:: java
-
-        public void teleopPeriodic() {
-            myDrive.tankDrive(leftStick.getY(), rightStick.getY());
-            myDrive.arcadeDrive(driveStick.getY(),driveStick.getX());
-            myDrive.curvatureDrive(driveStick.getY(), driveStick.getX(), driveStick.GetButton(1));
-        }
-
-    .. code-tab:: c++
-
-        void TeleopPeriodic() override {
-            myDrive.TankDrive(leftStick.GetY(), rightStick.GetY());
-            myDrive.ArcadeDrive(driveStick.GetY(), driveStick.GetX());
-            myDrive.CurvatureDrive(driveStick.GetY(), driveStick.GetX(), driveStick.GetButton(1));
-        }
+Como o Arcade Drive, o modo Curvature Drive é usado para controlar o trem de força usando velocidade / aceleração e taxa de rotação. A diferença é que o controle de rotação está tentando controlar o raio de curvatura em vez da taxa de mudança de rumo. Este modo também possui um parâmetro de rotação rápida que é usado para ativar um submodo que permite a rotação no lugar. Este exemplo mostra como usar um único joystick com o modo Curvatura. A construção dos objetos foi omitida, acima para a construção do trem de força e aqui para a construção do Joystick.
