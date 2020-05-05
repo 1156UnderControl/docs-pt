@@ -46,49 +46,49 @@ Painel FRC LabVIEW (somente Windows)
 
 .. todo:: port article, see https://github.com/wpilibsuite/frc-docs/issues/118
 
-O FRC LabVIEW Dashboard é o programa padrão do painel instalado e iniciado automaticamente pela FRC Driver Station. O objetivo do painel é fornecer feedback sobre a operação do robô. O painel padrão da FRC serve como um exemplo dos tipos de feedback que as equipes podem desejar do robô. Ele inclui uma tela com guias que pode alternar entre a visualização de uma imagem de uma câmera no robô ou uma exibição das variáveis ​​doNetworkTables, uma exibição de informações sobre os joysticks e os motores de acionamento, um indicador do IP do robô e da tensão da bateria e uma segunda aba exibição que pode alternar entre exemplos de indicadores e controles personalizados, uma guia de teste para uso com o Modo de Teste da Driver Station e uma guia lista de verificação que as equipes podem usar para inserir uma lista de verificação personalizada para concluir antes de cada partida.  O painel padrão do FRC está incluído no FRC Game Tools. Instruções de instalação podem ser encontradas :ref:`aqui <docs/getting-started/getting-started-frc-control-system/frc-game-tools:Installing the FRC Game Tools>`. Mais informações sobre o software do painel padrão FRC podem ser encontradas aqui.
+O FRC LabVIEW Dashboard é o programa padrão do painel instalado e iniciado automaticamente pela FRC Driver Station. O objetivo do painel é fornecer feedback sobre a operação do robô. O painel padrão da FRC serve como um exemplo dos tipos de feedback que as equipes podem desejar do robô. Ele inclui uma tela com guias que pode alternar entre a visualização de uma imagem de uma câmera no robô ou uma exibição das variáveis ​​do NetworkTables, uma exibição de informações sobre os joysticks e os motores de acionamento, um indicador do IP do robô e da tensão da bateria e uma segunda aba exibição que pode alternar entre exemplos de indicadores e controles personalizados, uma guia de teste para uso com o Modo de Teste da Driver Station e uma guia lista de verificação que as equipes podem usar para inserir uma lista de verificação personalizada para concluir antes de cada partida.  O painel padrão do FRC está incluído no FRC Game Tools. Instruções de instalação podem ser encontradas :ref:`aqui <docs/getting-started/getting-started-frc-control-system/frc-game-tools:Installing the FRC Game Tools>`. Mais informações sobre o software do painel padrão FRC podem ser encontradas aqui.
 
 SmartDashboard
 --------------
 
 .. image:: images/control-system-software/smartdashboard.png
 
-SmartDashboard is an alternate dashboard application written in Java. SmartDashboard automatically creates a widget for each variable sent from the Robot sent using the SmartDashboard class or VIs. These widgets can be configured to a number of preset display types, or users can create custom extensions in Java. Vision extensions are available for the SmartDashboard which allow it to display images from the Axis camera on the robot. SmartDashboard is included in the C++ and Java language updates (enabled by clicking the C++ or Java buttons respectively on the Setup tab of the Driver Station). Additional documentation on SmartDashboard can be found :ref:`here <docs/software/wpilib-tools/smartdashboard/index:SmartDashboard>`.
+O SmartDashboard é um aplicativo de painel alternativo escrito no Java. O SmartDashboard cria automaticamente uma ferramenta para cada variável enviada do robô enviado usando a classe ou VIs do SmartDashboard. Essas ferramentas podem ser configuradas para vários tipos de exibição predefinidos ou os usuários podem criar extensões personalizadas em Java. As extensões de visão estão disponíveis para o SmartDashboard, que permite exibir imagens da câmera Axis no robô. O SmartDashboard está incluído nas atualizações de linguagem C ++ e Java (ativadas clicando nos botões C ++ ou Java, respectivamente, na guia Configuração do Driver Station). Documentação adicional no SmartDashboard pode ser encontrada :ref:`aqui <docs/software/wpilib-tools/smartdashboard/index:SmartDashboard>`.
 
 LiveWindow
 ^^^^^^^^^^
 
 .. image:: images/control-system-software/livewindow-smartdashboard.png
 
-LiveWindow is a mode of SmartDashboard , designed for use with the Test Mode of the Driver Station. LiveWindow allows the user to see feedback from sensors on the robot and control actuators independent of the written user code. More information about LiveWindow can be found :ref:`here <docs/software/wpilib-tools/smartdashboard/test-mode-and-live-window/index:SmartDashboard: Test Mode and Live Window>`.
+O LiveWindow é um modo do SmartDashboard, projetado para uso com o Modo de Teste da Driver Station. O LiveWindow permite que o usuário veja o feedback dos sensores no robô e nos atuadores de controle, independentemente do código do usuário. Mais informações sobre o LiveWindow podem ser encontradas :ref:`aqui <docs/software/wpilib-tools/smartdashboard/test-mode-and-live-window/index:SmartDashboard: Test Mode and Live Window>`.
 
 Shuffleboard
 ------------
 
 .. image:: images/control-system-software/shuffleboard.png
 
-Shuffleboard is an alternative dashboard application written in Java. It takes many of the concepts from SmartDashboard such as automatic adding of widgets and adds new features including better layout control and record/playback functionality. Shuffleboard contains all of the basic widget types found in the SmartDashboard as well as a number of new ones intended to make visualizing specific robot components even easier. It has full integration with WPILib’s “cscore” for displaying, recording, and playing back camera streams. Shuffleboard is included in the C++ and Java language updates (enabled by selecting Shuffleboard from the dashboard type on the Setup tab of the Driver Station or by launching it from the WPILib start tool menu in Visual Studio Code). Additional documentation on Shuffleboard can be found :ref:`here <docs/software/wpilib-tools/shuffleboard/index:Shuffleboard>`.
+Shuffleboard é um aplicativo de painel alternativo escrito em Java. É preciso muitos dos conceitos do SmartDashboard, como adição automática de widgets e novos recursos, incluindo melhor controle de layout e funcionalidade de gravação / reprodução. O Shuffleboard contém todos os tipos básicos de widgets encontrados no SmartDashboard, além de vários novos destinados a tornar a visualização de componentes de robôs específicos ainda mais fácil. Possui total integração com o “cscore” do WPILib para exibir, gravar e reproduzir fluxos de câmera. O Shuffleboard está incluído nas atualizações de linguagem C ++ e Java (habilitado selecionando Shuffleboard no tipo de painel na guia Configuração do Driver Station ou iniciando-o no menu da ferramenta de inicialização WPILib no Visual Studio Code). Documentação adicional no Shuffleboard pode ser encontrada :ref:`aqui <docs/software/wpilib-tools/shuffleboard/index:Shuffleboard>`.
 
-FRC roboRIO Imaging Tool (Windows Only)
----------------------------------------
+Ferramenta de imagem FRC roboRIO (Somente Windows)
+--------------------------------------------------
 
 .. image:: images/imaging-your-roborio/roborio-imaging-tool.png
 
-The FRC roboRIO Imaging Tool is a software tool used to format and setup an roboRIO-FRC device for use in FRC. The tool detects any roboRIO device on the network, reports the current MAC, name, IP and Image version. The tool allows the user to configure the team number, set options including Console Out and whether an applications runs on Startup, and install the latest software image on the device. The FRC roboRIO Imaging Tool is installed as part of the FRC Game Tools. Installation instructions can be found :ref:`here <docs/getting-started/getting-started-frc-control-system/frc-game-tools:Installing the FRC Game Tools>`. Additional instructions on imaging your roboRIO using this tool can be found :doc:`here <imaging-your-roborio>`.
+A FRC roboRIO Imaging Tool é uma ferramenta de software usada para formatar e configurar um dispositivo roboRIO-FRC para uso no FRC. A ferramenta detecta qualquer dispositivo roboRIO na rede, relata o MAC atual, nome, IP e versão da imagem. A ferramenta permite que o usuário configure o número da equipe, defina opções como Saída do console e se um aplicativo é executado na inicialização e instale a imagem mais recente do software no dispositivo. A FRC roboRIO Imaging Tool é instalada como parte do FRC Game Tools. As instruções de instalação podem ser encontradas :ref:`aqui <docs/getting-started/getting-started-frc-control-system/frc-game-tools:Installing the FRC Game Tools>`. Instruções adicionais sobre como criar imagens do seu roboRIO usando esta ferramenta podem ser encontradas :doc:`aqui <imaging-your-roborio>`.
 
-Setup Axis Camera (Windows Only)
---------------------------------
+Configuração da câmera Axis (Somente Windows)
+---------------------------------------------
 
 .. image:: images/control-system-software/axis-camera-setup.png
 
-The Setup Axis Camera utility is a LabVIEW program used to configure an Axis 206, M1011 or M1013 camera for use on the robot. The tool takes a factory reset camera connected directly to the computer and configures the IP, username and password, anonymous access, and default framerate and compression (for use with the SmartDashboard or other access methods). The Setup Axis Camera tool is installed as part of the FRC Game Tools. Installation instructions can be found :ref:`here <docs/getting-started/getting-started-frc-control-system/frc-game-tools:Installing the FRC Game Tools>`. Instructions for using the tool to configure the camera are located :ref:`here <docs/software/vision-processing/introduction/configuring-an-axis-camera:Configuring an Axis Camera>`.
+O utilitário Configuração da Câmera Axis é um programa do LabVIEW usado para configurar uma câmera Axis 206, M1011 ou M1013 para uso no robô. A ferramenta utiliza uma câmera de redefinição de fábrica conectada diretamente ao computador e configura o IP, nome de usuário e senha, acesso anônimo e taxa de quadros padrão e compressão (para uso com o SmartDashboard ou outros métodos de acesso). A ferramenta Setup Axis Camera é instalada como parte do FRC Game Tools. As instruções de instalação podem ser encontradas :ref:`aqui <docs/getting-started/getting-started-frc-control-system/frc-game-tools:Installing the FRC Game Tools>`. As instruções para usar a ferramenta para configurar a câmera estão localizadas :ref:`aqui <docs/software/vision-processing/introduction/configuring-an-axis-camera:Configuring an Axis Camera>`.
 
-FRC Driver Station Log Viewer (Windows Only)
---------------------------------------------
+Visualizador de Registros da FRC Driver Station (Somente Windows)
+-----------------------------------------------------------------
 
 .. image:: images/control-system-software/frc-log-viewer.png
 
-The FRC Driver Station Log Viewer is a LabVIEW program used to view logs created by the FRC Driver Station. These logs contain information such as battery voltage, trip time, CPU% and robot mode, as well as events such as joystick removal. The FRC Driver Station Log Viewer is included in the FRC Game Tools. Installation instructions can be found :ref:`here <docs/getting-started/getting-started-frc-control-system/frc-game-tools:Installing the FRC Game Tools>`. More information about the FRC Driver Station Log Viewer and understanding the logs can be found :ref:`here <docs/software/driverstation/driver-station-log-viewer:Driver Station Log File Viewer>`
+O Visualisador de Registros da FRC Driver Station é um programa LabVIEW usado para visualizar registros criados pelo FRC Driver Station. Esses registros contêm informações como voltagem da bateria, tempo de disparo, CPU% e modo do robô, além de eventos como remoção do joystick. O visualisador de registro da FRC Driver Station está incluído no FRC Game Tools. As instruções de instalação podem ser encontradas :ref:`aqui <docs/getting-started/getting-started-frc-control-system/frc-game-tools:Installing the FRC Game Tools>`. Mais informações sobre o visualizador de registros da estação de driver FRC e a compreensão dos registros podem ser encontradas :ref:`here <docs/software/driverstation/driver-station-log-viewer:Driver Station Log File Viewer>`.
 
 RobotBuilder
 ------------
