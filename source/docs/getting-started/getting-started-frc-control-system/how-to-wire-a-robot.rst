@@ -14,7 +14,6 @@ Gather Materials
 .. image:: images/how-to-wire-a-robot/image0.jpg
    :width: 600
 
-Locate the following control system components and tools
 Encontre os seguintes componentes eletrônicos e ferramentas
 
 - Kit Materials:
@@ -111,7 +110,6 @@ to remove it shortly to cut, strip, and crimp the other end of the
 wire). Measure out the length of wire required to reach the positive
 terminal of the PDP.
 
-1. Cut, strip, and crimp the terminal to the 2nd end of the red 6AWG wire.
 1. Corte, encaixa e crimpe o terminal ao "2nd end" do fio vermelho 6AWG.
 2. Utilizando o 7/16" box end, prenda o fio ao lado "AUX" do main breaker de 120A.
 3. Utilizando a Allen de 5mm, prenda a outra ponta ao teminal positivo da PDP.
@@ -138,40 +136,33 @@ Conectores Wago
         <iframe src="//www.youtube.com/embed/L3GJGQ7mJqk" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
 
-The next step will involve using the Wago connectors on the PDP. To use
-the Wago connectors, insert a small flat blade screwdriver into the
-rectangular hole at a shallow angle then angle the screwdriver upwards
-as you continue to press in to actuate the lever, opening the terminal.
-Two sizes of Wago connector are found on the PDP:
+O próximo passo é aprender a utilizar os conectores Wago da PDP. Para utiliza-los, pegue uma pequena chave de fenda e a insira no buraco retangular ( na lateral da PDP) o mais horizontal possível. Empurre a chave para cima, aí você vai poder ver que, abaixo do buraco retangular, uma pequena entrada vai se abrir. Nessa entrada devem ser presos os cabos dos controladores. A PDP têm dois tipos de conectores:
 
-- Small Wago connector: Accepts 10AWG-24AWG, strip 11-12mm (~7/16")
-- Large Wago connector: Accepts 6AWG-12AWG, strip 12-13mm(~1/2")
+- Small Wago connector: Aceita 10AWG-24AWG, strip 11-12mm (~7/16")
+- Large Wago connector: Aceita 6AWG-12AWG, strip 12-13mm(~1/2")
 
-To maximize pullout force and minimize connection resistance wires
-should not be tinned (and ideally not twisted) before inserting into the
-Wago connector.
+Para facilitar a entrada do cabo na entrada da PDP, deve deixar a parte de cobre exposta bem "esticada" (não torcida, de preferencia).
 
-Motor Controller Power
-----------------------
+Energizando controlador de motor
+--------------------------------
 
 .. image:: images/how-to-wire-a-robot/image6.jpg
    :width: 600
 .. image:: images/how-to-wire-a-robot/image7.jpg
    :width: 600
 
-Requires: Wire Stripper, Small Flat Screwdriver, 10 or 12 AWG wire, 10
+Requer: Wire Stripper, Small Flat Screwdriver, 10 or 12 AWG wire, 10
 or 12 AWG fork/ring terminals (terminal controllers only), wire crimper
 
-For Victor SPX or other wire integrated motor controllers (top image):
+Para Victor SPX ou outro controlador de motor com fios integrados (imagem de cima):
+- Desencape a ponta dos cabos de energia (vermelho e preto) e insira na entrada (conector Wago) de 40 amperes (a maior) da PDP.
 
-- Cut and strip the red and black power input wires wire, then insert into one of the 40A (larger) Wago terminal pairs.
+Para controladores de motor com terminais (imagem de baixo)
 
-For terminal motor controllers (bottom image):
-
-1. Cut red and black wire to appropriate length to reach from one of the 40A (larger) Wago terminal pairs to the input side of the speed controller (with a little extra for the length that will be inserted into the terminals on each end)
-2. Strip one end of each of the wires, then insert into the Wago terminals.
-3. Strip the other end of each wire, and crimp on a ring or fork terminal
-4. Attach the terminal to the speed controller input terminals (red to +, black to -)
+1. Corte um cabo vermelho e um cabo preto do tamanho apropriado para chegar até a entrada de 40 amperes da PDP (é recomendado que seja um pouco maior do que o necessário);
+2. Insira a parte desencapada dos fios na PDP conforme a polaridade correspondente;
+3. Crimpe um terminal olho ou "fork" na outra ponta do cabo;
+4. Prenda os fios nos terminais nos controladores (vermelho no + e preto no -).
 
 Weidmuller Connectors
 ---------------------
@@ -321,43 +312,43 @@ the middle of the bus (utilizing both pairs of PDP CAN terminals) move
 the jumper to the “OFF” position and place your own 120 ohm terminating
 resistor at the end of your CAN bus chain.
 
-PWM Cables
+Cabos PWM
 ----------
 
 .. image:: images/how-to-wire-a-robot/image17.jpg
    :width: 600
 
-Requires: 4x PWM cables (if using non-integrated wire controllers), 2x
+Requer: 4x PWM cables (if using non-integrated wire controllers), 2x
 PWM Y-cable (Optional)
 
-Option 1 (Direct connect):
+Opção 1 (conectar diretamente):
 
-- Connect the PWM cables from each controller directly to the roboRIO. For Victor SPX's and other PWM/CAN controllers, the green wire (black wire for non-integrated controllers) should be towards the outside of the roboRIO. For controllers without integrated wires, make sure the controller side of the black wire is located according to the markings on the controller. It is recommended to connect the left side to PWM 0 and 1 and the right side to PWM 2 and 3 for the most straightforward programming experience, but any channel will work as long as you note which side goes to which channel and adjust the code accordingly.
+- Conecte os cabos PWM de cada controlador diretamente no RoboRIO. Para o Victor SPX e outros controladores PWM/CAN, o fio verde (fio preto para controladores com fios não integrados) deve estar conectado na parte mais próxima da borda do RoboRIO. Para controladores com fios não integrados, tenha certeza de que o fio preto esteja conectado conforme o controlador indica. é recomendado conectar o lado esquerdo às entradas PWM 0 e 1 e o lado direito nas entradas PWM 2 e 3 para ajudar na organização durante a programação, mas fique atento: todas as entradas devem estar de acordo com o controlador que lhes foi designado.
 
 Option 2 (Y-cable):
+Opção 2 (cabo Y)
 
-1. Connect 1 PWM Y-cable to the PWM cables for the controllers controlling one side of the robot. The brown wire on the Y-cable should match the green/black wire on the PWM cable.
+
+1. Conecte 1 cabo PWM Y aos cabos PWM dos contoladores que controlam um lado do robô. O fio marrom do cabo Y deve corresponder ao fio verde/preto do cabo PWM do controlador.
 2. Connect the PWM Y-cables to the PWM ports on the roboRIO. The brown wire should be towards the outside of the roboRIO. It is recommended to connect the left side to PWM 0 and the right side to PWM 1 for the most straightforward programming experience, but any channel will work as long as you note which side goes to which channel and adjust the code accordingly.
+2. Conecte os cabos PMW Y às portas PWM do RoboRIO. O fio marrom deve ser conectado ao lado mais próximo à borda do RoboRIO. É recomendado que se conecte o lado esquerdo ao PWM 0 e o lado direito ao PWM 1 para ajudar na organização durante a programação, mas fique atento: As entradas devem estar de acordo com o lado do robô que lhes fora designado.
 
-Robot Signal Light
-------------------
+Robot Signal Light (RSL)
+------------------------
 
 .. image:: images/how-to-wire-a-robot/image18.jpg
    :width: 600
 
-Requires: Wire stripper, 2 pin cable, Robot Signal Light, 18AWG red
+Requer: Wire stripper, 2 pin cable, Robot Signal Light, 18AWG red
 wire, very small flat screwdriver
 
-1. Cut one end off of the 2 pin cable and strip both wires
-2. Insert the black wire into the center, "N" terminal and tighten the terminal.
-3. Strip the 18AWG red wire and insert into the "La" terminal and tighten the terminal.
-4. Cut and strip the other end of the 18AWG wire to insert into the "Lb" terminal
-5. Insert the red wire from the two pin cable into the "Lb" terminal with the 18AWG red wire and tighten the terminal.
-6. Connect the two-pin connector to the RSL port on the roboRIO. The black wire should be closest to the outside of the roboRIO.
+1. Desencape a ponta de um cabo preto e um cabo vermelho e prenda um conector tubular em cada;
+2. Insira o cabo preto no terminal do centro (N), e prenda-o ("aperte" o parafuso do terminal);
+3. Corte um pequeno cabo vermelho 18AWG, insira uma das pontas no terminal "La" e prenda-o, insira a outra ponta no terminal "Lb", mas ainda não prenda;
+4. Insira o cabo vermelho com o conector tubular no terminal "Lb", junto com o cabo vermelho pequeno e prenda-os;
+5. Conecte os cabos com conector tubular na porta RSL do RoboRIO. O fio preto deve ser conectado à porta mais próxima da borda do RoboRIO.
 
-You may wish to temporarily secure the RSL to the control board using
-cable ties or Dual Lock (it is recommended to move the RSL to a more
-visible location as the robot is being constructed) Circuit Breakers
+Você deve prender (temporariamente) a RSL à chapa/base utilizando zip ties ou Dual Shock (é muito importante que a RSL esteja presa em um local bem visível do robô).
 
 Circuit Breakers / Fusíveis
 ----------------
@@ -365,18 +356,15 @@ Circuit Breakers / Fusíveis
 .. image:: images/how-to-wire-a-robot/image19.jpg
    :width: 600
 
-Requer: 4x 40A circuit breakers
+Requer: 4x 40A circuit breakers (fusível de 40 amperes)
 
-Insert 40-amp Circuit Breakers into the positions on the PDP
-corresponding with the Wago connectors the Victors are connected to. Note
-that, for all breakers, the breaker corresponds with the nearest
-positive (red) terminal (see graphic above). All negative terminals on
-the board are directly connected internally.
+Adicione um fusível de 40 amperes na posição correspondente onde os cabos do controlador estão conectados à PDP. Observe que as frestas para encaixar o fusível sempre estão ao lado da entrada positiva correspondente. Todos os terminais negativos estão conectados internamente..
 
-If working on a Robot Quick Build, stop here and insert the board into
-the robot chassis before continuing.
+Se estiver trabalhando em um Robot Quick Build, coloque a chapa/base dentro do chassi antes de continuar.
+
 
 Motor Power
+Energizando motor
 -----------
 
 .. image:: images/how-to-wire-a-robot/image20.jpg
