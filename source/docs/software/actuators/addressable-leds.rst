@@ -9,7 +9,7 @@ Você, primeiramente, cria um ``AddressableLED`` objeto que usa a porta PWM como
 
 .. important:: É importante notar que definir o comprimento do cabeçalho LED é uma tarefa cara e ele não recomendado para executar este periodicamente.
 
-Depois que o comprimento da faixa for definido, você precisará criar um ``AddressableLEDBuffer`` objeto que recebe o número de LEDs como entrada. Você ligará ``myAddressableLed.setData(myAddressableLEDBuffer)`` para definir os dados de saída do led. Finalmente, você pode ligar to set the led output data ``myAddressableLed.start()`` para escrever a saída continuamente. Abaixo está um exemplo completo do processo de inicialização.
+Depois que o comprimento da faixa for definido, você precisará criar um ``AddressableLEDBuffer`` objeto que recebe o número de LEDs como entrada. Você ligará  ``myAddressableLed.setData(myAddressableLEDBuffer)`` para definir os dados de saída do led. Finalmente, você pode ligar to set the led output data ``myAddressableLed.start()`` para escrever a saída continuamente. Abaixo está um exemplo completo do processo de inicialização.
 
 .. note:: C++ não possui um AddressableLEDBuffer, e usa um Array.
 
