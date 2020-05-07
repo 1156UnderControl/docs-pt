@@ -9,143 +9,36 @@ Você, primeiramente, cria um ``AddressableLED`` objeto que usa a porta PWM como
 
 .. important:: É importante notar que definir o comprimento do cabeçalho LED é uma tarefa cara e ele não recomendado para executar este periodicamente.
 
-After the length of the strip has been set, you'll have to create an ``AddressableLEDBuffer`` object that takes the number of LEDs as an input. You'll then call ``myAddressableLed.setData(myAddressableLEDBuffer)`` to set the led output data. Finally, you can call ``myAddressableLed.start()`` to write the output continuously. Below is a full example of the initialization process.
+Depois que o comprimento da faixa for definido, você precisará criar um ``AddressableLEDBuffer`` objeto que recebe o número de LEDs como entrada. Você ligará ``myAddressableLed.setData(myAddressableLEDBuffer)`` para definir os dados de saída do led. Finalmente, você pode ligar to set the led output data ``myAddressableLed.start()`` para escrever a saída continuamente. Abaixo está um exemplo completo do processo de inicialização.
 
-.. note:: C++ does not have an AddressableLEDBuffer, and instead uses an Array.
+.. note:: C++ não possui um AddressableLEDBuffer, e usa um Array.
 
-.. tabs::
+Definindo a faixa para uma cor
+------------------------------
 
-   .. group-tab:: Java
+A cor pode ser definida como um led individual na faixa usando dois métodos: `` setRGB``, que aceita valores RGB como entrada e ``setHSV()`` na qual aceita valores HSV como entrada.
 
-      .. remoteliteralinclude:: https://raw.githubusercontent.com/wpilibsuite/allwpilib/master/wpilibjExamples/src/main/java/edu/wpi/first/wpilibj/examples/addressableled/Robot.java
-         :language: java
-         :lines: 21-35
-         :linenos:
-         :lineno-start: 21
+Usando valores RGB
+^^^^^^^^^^^^^^^^^^
 
-   .. group-tab:: C++
+RGB significa vermelho, verde e azul. Este é um modelo de cores bastante comum, pois é bastante fácil de entender. Os LEDs podem ser configurados com o ``setRGB`` um método que leva 4 argumentos: índice do LED, quantidade de vermelho, quantidade de verde, quantidade de azul. A quantidade de vermelho, verde e azul são valores inteiros entre 0 e 255.
 
-      .. remoteliteralinclude:: https://raw.githubusercontent.com/wpilibsuite/allwpilib/master/wpilibcExamples/src/main/cpp/examples/AddressableLED/cpp/Robot.cpp
-         :language: cpp
-         :lines: 14-23
-         :linenos:
-         :lineno-start: 14
+Usando valores HSV
+^^^^^^^^^^^^^^^^^^
 
-      .. remoteliteralinclude:: https://raw.githubusercontent.com/wpilibsuite/allwpilib/master/wpilibcExamples/src/main/cpp/examples/AddressableLED/cpp/Robot.cpp
-         :language: cpp
-         :lines: 41-47
-         :linenos:
-         :lineno-start: 41
-
-Setting the Entire Strip to One Color
--------------------------------------
-
-Color can be set to an individual led on the strip using two methods.``setRGB`` which takes RGB values as an input and ``setHSV()`` which takes HSV values as an input.
-
-Using RGB Values
-^^^^^^^^^^^^^^^^
-
-RGB stands for Red, Green, and Blue. This is a fairly common color model as it's quite easy to understand. LEDs can be set with the ``setRGB`` method that takes 4 arguments: index of the LED, amount of red, amount of green, amount of blue. The amount of Red, Green, and Blue are integer values between 0-255.
-
-.. tabs::
-
-   .. group-tab:: Java
-
-      .. code-block:: Java
-
-         for (var i = 0; i < m_ledBuffer.getLength(); i++) {
-            // Sets the specified LED to the RGB values for red
-            m_ledBuffer.setRGB(i, 255, 0, 0);
-         }
-
-         m_led.setData(m_ledBuffer);
-
-   .. group-tab:: C++
-
-      .. code-block:: C++
-
-         for (int i = 0; i < kLength; i++) {
-            m_ledBuffer[i].SetRGB(255, 0, 0);
-         }
-
-         m_led.SetData(m_ledBuffer);
-
-Using HSV Values
-^^^^^^^^^^^^^^^^
-
-HSV stands for Hue, Saturation, and Value. Hue describes the color or tint, saturation being the amount of gray, and value being the brightness. In WPILib, Hue is an integer from 0 - 180. Saturation and Value are integers from 0 - 255. If you look at a color picker like `Google's <https://www.google.com/search?q=color+picker>`_, Hue will be 0 - 360 and Saturation and Value are from 0% to 100%. This is the same way that OpenCV handles HSV colors. Make sure the HSV values entered to WPILib are correct, or the color produced might not be the same as was expected.
+HSV significa Matiz, Saturação e Valor. Matiz descreve a cor ou matiz, saturação sendo a quantidade de cinza e valor sendo o brilho. No WPILib, Hue é um número inteiro de 0 a 180. Saturação e Valor são números inteiros de 0 a 255. Se você observar um seletor de cores como `Google's <https://www.google.com/search?q=color+picker>`_, a matiz será de 0 a 360 e a saturação e o valor variam de 0% a 100%. É da mesma maneira que o OpenCV lida com cores HSV. Verifique se os valores HSV inseridos no WPILib estão corretos ou se a cor produzida pode não ser a mesma esperada.
 
 .. image:: images/hsv-models.png
    :alt: HSV models picture
 
-LEDs can be set with the ``setHSV`` method that takes 4 arguments: index of the LED, hue, saturation, and value. An example is shown below for setting the color of an LED strip to red (hue of 0).
+Os LEDs podem ser configurados com o``setHSV`` método que utiliza 4 argumentos: índice do LED, matiz, saturação e valor. Um exemplo é mostrado abaixo para definir a cor de uma faixa de LED para vermelho (matiz de 0).
 
-.. tabs::
+Criando um efeito arco-íris
+---------------------------
+O método abaixo faz algumas coisas importantes. Dentro do loop *for*, distribui igualmente o matiz por todo o comprimento do fio e armazena o matiz de LED individual em uma variável chamada ``hue``. Em seguida, o loop for define o valor HSV desse pixel especificado usando o valor ``hue``.
 
-   .. group-tab:: Java
+Movendo-se para fora do loop for, o ``m_rainbowFirstPixelHue`` itera o pixel que contém o matiz "inicial", criando o efeito arco-íris. ``m_rainbowFirstPixelHue`` para verifica se a matiz está dentro dos limites da matiz de 180. Isso ocorre porque a matiz HSV é um valor de 0 a 180.
 
-      .. code-block:: Java
+.. note:: É uma boa prática de robô manter o ``robotPeriodic()`` método o mais limpo possível, por isso, criaremos um método para lidar com a configuração de nossos dados de LED. Poderemos ligar o método ``rainbow()`` e ligar para ``robotPeriodic()``.
 
-         for (var i = 0; i < m_ledBuffer.getLength(); i++) {
-            // Sets the specified LED to the HSV values for red
-            m_ledBuffer.setHSV(i, 0, 100, 100);
-         }
-
-         m_led.setData(m_ledBuffer);
-
-   .. group-tab:: C++
-
-      .. code-block:: C++
-
-         for (int i = 0; i < kLength; i++) {
-            m_ledBuffer[i].SetHSV(0, 100, 100);
-         }
-
-         m_led.SetData(m_ledBuffer);
-
-Creating a Rainbow Effect
--------------------------
-
-The below method does a couple of important things. Inside of the *for* loop, it equally distributes the hue over the entire length of the strand and stores the individual LED hue to a variable called ``hue``. Then the for loop sets the HSV value of that specified pixel using the ``hue`` value.
-
-Moving outside of the for loop, the ``m_rainbowFirstPixelHue`` then iterates the pixel that contains the "initial" hue creating the rainbow effect. ``m_rainbowFirstPixelHue`` then checks to make sure that the hue is inside the hue boundaries of 180. This is because HSV hue is a value from 0-180.
-
-.. note:: It's good robot practice to keep the ``robotPeriodic()`` method as clean as possible, so we'll create a method for handling setting our LED data. We'll call this method ``rainbow()`` and call it from ``robotPeriodic()``.
-
-.. tabs::
-
-   .. group-tab:: Java
-
-      .. remoteliteralinclude:: https://raw.githubusercontent.com/wpilibsuite/allwpilib/master/wpilibjExamples/src/main/java/edu/wpi/first/wpilibj/examples/addressableled/Robot.java
-         :language: java
-         :lines: 45-58
-         :linenos:
-         :lineno-start: 45
-
-   .. group-tab:: C++
-
-      .. remoteliteralinclude:: https://raw.githubusercontent.com/wpilibsuite/allwpilib/master/wpilibcExamples/src/main/cpp/examples/AddressableLED/cpp/Robot.cpp
-         :language: cpp
-         :lines: 26-39
-         :linenos:
-         :lineno-start: 26
-
-Now that we have our ``rainbow`` method created, we have to actually call the method and set the data of the LED.
-
-.. tabs::
-
-   .. group-tab:: Java
-
-      .. remoteliteralinclude:: https://raw.githubusercontent.com/wpilibsuite/allwpilib/master/wpilibjExamples/src/main/java/edu/wpi/first/wpilibj/examples/addressableled/Robot.java
-         :language: java
-         :lines: 37-43
-         :linenos:
-         :lineno-start: 37
-
-   .. group-tab:: C++
-
-      .. remoteliteralinclude:: https://raw.githubusercontent.com/wpilibsuite/allwpilib/master/wpilibcExamples/src/main/cpp/examples/AddressableLED/cpp/Robot.cpp
-         :language: cpp
-         :lines: 49-55
-         :linenos:
-         :lineno-start: 49
+Agora que tem-se o nosso ``rainbow`` método criado, vamos ter que, na realidade, ligar o método e definar os dados do LED.
