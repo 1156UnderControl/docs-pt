@@ -1,5 +1,5 @@
-Sensors
-=======
+Sensores
+========
 
 .. toctree::
    :maxdepth: 1
