@@ -1,55 +1,53 @@
-Imaging your roboRIO
-====================
+Imaginando seu roboRIO
+======================
 
-.. warning:: Before imaging your roboRIO, you must have completed installation of the :doc:`FRC Game Tools<frc-game-tools>`. You also must have the roboRIO power properly wired to the Power Distribution Panel. Make sure the power wires to the roboRIO are secure and that the connector is secure firmly to the roboRIO (4 total screws to check).
+.. warning:: Antes de criar imagens do seu roboRIO, você deve ter concluído a instalação do :doc:`Ferramentas de jogo FRC<frc-game-tools>`.  Você também deve ter a energia do roboRIO conectada corretamente ao painel de distribuição de energia. Verifique se os fios de energia do roboRIO estão seguros e se o conector está bem firme no roboRIO (4 parafusos no total para verificar).
 
-Configuring the roboRIO
-^^^^^^^^^^^^^^^^^^^^^^^
+Configurando o roboRIO
+^^^^^^^^^^^^^^^^^^^^^^
 
-The roboRIO Imaging Tool will be used to image your roboRIO with the latest
-software.
+A ferramenta de imagem roboRIO será usada para criar uma imagem do seu roboRIO com o software mais recente.
 
-USB Connection
-~~~~~~~~~~~~~~
+Conexão USB
+~~~~~~~~~~~
 
 .. image:: images/imaging-your-roborio/usb-connection.png
 
-Connect a USB cable from the roboRIO USB Device port to the PC. This requires a USB Type A male (standard PC end) to Type B male cable (square with 2 cut corners), most commonly found as a printer USB cable.
+Conecte um cabo USB da porta do dispositivo USB roboRIO ao PC. Isso requer um cabo USB tipo A macho (extremidade padrão do PC) para tipo B cabo macho (quadrado com 2 cantos cortados), mais comumente encontrado como cabo USB da impressora.
 
-.. note:: The roboRIO should only be imaged via the USB connection. It is not recommended to attempt imaging using the Ethernet connection.
+.. note:: O roboRIO só deve ser visualizado através da conexão USB. Não é recomendável tentar criar imagens usando a conexão Ethernet.
 
-Driver Installation
-~~~~~~~~~~~~~~~~~~~
+Instalação do Driver
+~~~~~~~~~~~~~~~~~~~~
 
-The device driver should install automatically. If you see a "New Device" pop-up in the bottom right of the screen, wait for the driver install to complete before continuing.
+O Driver do dispositivo deve ser instalado automaticamente. Se você ver um pop-up "Dispositivo Novo" no canto inferior direito da tela, aguarde a instalação do driver antes de continuar.
 
-Launching the Imaging Tool
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Iniciando a ferramenta de imagem
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: images/imaging-your-roborio/launching-the-imaging-tool.png
 
-The roboRIO imaging tool and latest image are installed with the NI FRC Game Tools. Launch the imaging tool by double clicking on the shortcut on the Desktop. If you have difficulties imaging your roboRIO, you may need to try right-clicking on the icon and selecting Run as Administrator instead.
+A ferramenta de imagem roboRIO e a imagem mais recente são instaladas com as ferramentas do jogo FRC da NI. Inicie a ferramenta de criação de imagens clicando duas vezes no atalho na área de trabalho. Se você tiver dificuldades em criar imagens do seu roboRIO, pode ser necessário clicar com o botão direito do mouse no ícone e selecionar Executar como administrador.
 
-.. note:: The roboRIO imaging tool is also located at ``C:\Program Files (x86)\National Instruments\LabVIEW YYYY\project\roboRIO Tool`` where YYYY is the current year - 1. If it's 2020, the directory would be ``LabVIEW 2019``.
+.. note:: A ferramenta de criação de imagens roboRIO também está localizada ``C:\Program Files (x86)\National Instruments\LabVIEW YYYY\project\roboRIO Tool``onde YYYY é o ano atual - 1. Se for 2020, o diretório seria ``LabVIEW 2019``.
 
-roboRIO Imaging Tool
-^^^^^^^^^^^^^^^^^^^^
+Ferramenta de imagem do roboRIO
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: images/imaging-your-roborio/roborio-imaging-tool.png
 
+Após do lançamento, a ferramenta de imagem roboRIO procurará os roboRIOs disponíveis e indicará qualquer um encontrado na caixa superior esquerda. A caixa inferior esquerda mostra informações e configurações do roboRIO selecionado atualmente. O painel direito contém controles para modificar as configurações do roboRIO:
 
-After launching, the roboRIO Imaging Tool will scan for available roboRIOs and indicate any found in the top left box. The bottom left box will show information and settings for the roboRIO currently selected. The right hand pane contains controls for modifying the roboRIO settings:
+- **Editar configurações de inicialização** - Esta opção é usada quando você deseja definir as configurações de inicialização do roboRIO (as configurações no painel direito), sem gerar imagens do roboRIO.
+- **Formatar alvo** - Esta opção é usada quando você deseja carregar uma nova imagem no roboRIO (ou atualizar novamente a imagem existente). Essa é a opção mais comum.
+- **Atualizar Firmware** - Esta opção é usada para atualizar o firmware do roboRIO. Para esta temporada, a ferramenta de criação de imagens exigirá que o firmware do roboRIO seja da versão 5.0 ou superior.
 
-- **Edit Startup Settings** - This option is used when you want to configure the startup settings of the roboRIO (the settings in the right pane), without imaging the roboRIO.
-- **Format Target** - This option is used when you want to load a new image on the roboRIO (or reflash the existing image). This is the most common option.
-- **Update Firmware** - This option is used to update the roboRIO firmware. For this season, the imaging tool will require roboRIO firmware to be version 5.0 or greater.
-
-Updating Firmware
-~~~~~~~~~~~~~~~~~
+Atualização do Firmware
+~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: images/imaging-your-roborio/updating-firmware.png
 
-roboRIO firmware must be at least v5.0 to work with the 2019 image. If your roboRIO is at least version 5.0 (as shown in the bottom left of the imaging tool) you do not need to update.
+O firmware do roboRIO deve ter pelo menos a versão 5.0 para funcionar com a imagem de 2019. Se o seu roboRIO tiver pelo menos a versão 5.0 (como mostrado na parte inferior esquerda da ferramenta de criação de imagens), você não precisará atualizar.
 
 To update roboRIO firmware:
 
