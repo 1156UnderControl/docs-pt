@@ -109,7 +109,7 @@ place the terminal over the stud. Loosely secure the nut (you may wish
 to remove it shortly to cut, strip, and crimp the other end of the
 wire). Measure out the length of wire required to reach the positive
 terminal of the PDP.
-Prenda um terminal olho na ponta do fio vermelho 6AWG. Retire a porca rosqueada ao parafuso do lado "AUX" do main breaker
+Prenda um terminal olho na ponta do fio vermelho 6AWG. Retire a porca rosqueada ao parafuso do lado "AUX" do main breaker, encaixe o terminal do cabo no parafuso e rosqueie a porca, prendendo-o.
 
 1. Corte, encaixa e crimpe o terminal ao "2nd end" do fio vermelho 6AWG.
 2. Utilizando o 7/16" box end, prenda o fio ao lado "AUX" do main breaker de 120A.
@@ -207,8 +207,8 @@ screwdriver, 18AWG Red and Black
 4. Cut and strip the wire.
 5. Using a very small flat screwdriver connect the wires to the power input connector of the roboRIO (red to V, black to C). Also make sure that the power connector is screwed down securely to the roboRIO.
 
-Voltage Regulator Module Power
-------------------------------
+Energizando Voltage Regulator Module (VRM)
+------------------------------------------
 
 .. image:: images/how-to-wire-a-robot/image11.jpg
    :width: 600
@@ -240,18 +240,18 @@ on the robot.
 4. Cut and strip ~5/16" from the end of the wire.
 5. Connect the wire to the PCM 12Vin terminals.
 
-Radio Power and Ethernet
-------------------------
+Ethernet e energia do rádio
+---------------------------
 
-.. warning:: DO NOT connect the Rev passive POE injector cable directly to the roboRIO. The roboRIO MUST connect to the female end of the cable using an additional Ethernet cable as shown in the next step.
+.. warning:: NÃO conecte o POE diretamente ao RoboRIO. Você deve utilizar um CABO ETHERNET que faça a ponte entre o POE e o RoboRIO.
 
 .. image:: images/how-to-wire-a-robot/image13.jpg
    :width: 600
 
-Requires: Small flat screwdriver (optional), Rev radio PoE cable
+Requer: Small flat screwdriver (optional), Rev radio PoE cable
 
-1. Insert the ferrules of the passive PoE injector cable into the corresponding colored terminals on the 12V/2A section of the VRM.
-2. Connect the male RJ45 (Ethernet) end of the cable into the Ethernet port on the radio closest to the barrel connector (labeled 18-24v POE)
+2. Insira os conectores do PoE nos terminais correspondentes à 12V/2A da VRM.
+2. Conecte o conector macho de Ethernet (RJ45) à porta de ethernet do rádio mais próxima da entrada do pino de energia (com o nome de 18-24v POE).
 
 roboRIO to Radio Ethernet
 -------------------------
@@ -286,32 +286,23 @@ next step).
 3. Measure the length required to reach the CAN terminals of the PCM (either of the two available pairs). Cut and strip ~5/16" off this end of the wires.
 4. Insert the wires into the appropriate color coded CAN terminals on the PCM. You may use either of the Yellow/Green terminal pairs on the PCM, there is no defined in or out.
 
-PCM to PDP CAN
-~~~~~~~~~~~~~~
+CAN da PCM para a PDP
+~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: images/how-to-wire-a-robot/image16.jpg
    :width: 600
 
-Requires: Wire stripper, small flat screwdriver (optional), yellow/green
+Requer: Wire stripper, small flat screwdriver (optional), yellow/green
 twisted CAN cable
 
-Note: The PCM is an optional component used for controlling pneumatics
-on the robot. If you are not using the PCM, wire the CAN connection
-directly from the roboRIO (shown in the above step) to the PDP (show in
-this step).
+Note:  A PCM é um compinente opcional, utilizado para controlar os sistemas pneumáticos do robô. Se não estiver utilizando uma PCM, conecte os fios CAN que vem do RoboRIO diretamente na PDP.
 
-1. Strip ~5/16" off of each of the CAN wires.
-2. Insert the wires into the appropriate CAN terminals on the PCM.
-3. Measure the length required to reach the CAN terminals of the PDP (either of the two available pairs). Cut and strip ~5/16" off this end of the wires.
-4. Insert the wires into the appropriate color coded CAN terminals on the PDP. You may use either of the Yellow/Green terminal pairs on the PDP, there is no defined in or out.
+1. Insira os fios nos terminais CAN da PCM
+2. Messa o comprimento dos fios para que consigam chegar até a PDP (cada um deles).
+3. Insira os fios nos terminais CAN da PDP. Pode usar qualquer um dos dois pares da entrada.
 
-Note: The PDP ships with the CAN bus terminating resistor jumper in the
-“ON” position. It is recommended to leave the jumper in this position
-and place any additional CAN nodes between the roboRIO and the PDP
-(leaving the PDP as the end of the bus). If you wish to place the PDP in
-the middle of the bus (utilizing both pairs of PDP CAN terminals) move
-the jumper to the “OFF” position and place your own 120 ohm terminating
-resistor at the end of your CAN bus chain.
+  Note: Utilize a PDP como o último componente da linha CAN (CAN bus)
+
 
 Cabos PWM
 ----------
