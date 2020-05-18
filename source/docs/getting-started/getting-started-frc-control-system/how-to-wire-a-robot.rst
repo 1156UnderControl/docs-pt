@@ -165,7 +165,7 @@ Para controladores de motor com terminais (imagem de baixo)
 3. Crimpe um terminal olho ou "fork" na outra ponta do cabo;
 4. Prenda os fios nos terminais nos controladores (vermelho no + e preto no -).
 
-Weidmuller Connectors
+Conector Weidmuller
 ---------------------
 
 .. raw:: html
@@ -174,38 +174,33 @@ Weidmuller Connectors
         <iframe src="//www.youtube.com/embed/kCcDw3lDYis" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
 
+O tamanho correto para se desencapar é 5/16", e não 5/8" como dito no vídeo.
 
-The correct strip length is ~5/16" (8mm), not the 5/8" mentioned in the
-video.
+Para utilizar estes conectores de maneira mais eficiente, tenha em mente que:
 
-A number of the CAN and power connectors in the system use a Weidmuller
-LSF series wire-to-board connector. There are a few things to keep in
-mind when using this connector for best results:
+-O fio deve estar entre 16AWG e 24AWG (consulte as regras e verifique cada espessura de fio correspondente ao componente que vai ser utilizado)
+- Deve-se desencapar aproximadamente 5/16" no final dos fios.
+- Para inserir ou remover os fios, pressione o "botão" correspondente para abrir o terminal.
 
-- Wire should be 16AWG to 24AWG (consult rules to verify required gauge for power wiring)
-- Wire ends should be stripped approximately 5/16"
-- To insert or remove the wire, press down on the corresponding "button" to open the terminal
+Depois de conectar, cheque para ter certeza se está tudo certo:
 
-After making the connection check to be sure that it is clean and
-secure:
+- Verifique se não à "pequenos fios" expostos para fora do terminal.
+- Puxe o fio para verificar se ele está bem preso. Se ele ceder, abra o terminal e prenda-o melhor ou desencape um pouco mais a ponta do fio.
 
-- Verify that there are no "whiskers" outside the connector that may cause a short circuit
-- Tug on the wire to verify that it is seated fully. If the wire comes out and is the correct gauge it needs to be inserted further and/or stripped back further.
-
-roboRIO Power
--------------
+Energizando roboRIO
+-------------------
 
 .. image:: images/how-to-wire-a-robot/image8.jpg
    :width: 600
 
-Requires: 10A/20A mini fuses, Wire stripper, very small flat
+Requer: 10A/20A mini fuses, Wire stripper, very small flat
 screwdriver, 18AWG Red and Black
 
-1. Insert the 10A and 20A mini fuses in the PDP in the locations shown on the silk screen (and in the image above)
-2. Strip ~5/16" on both the red and black 18AWG wire and connect to the "Vbat Controller PWR" terminals on the PDB
-3. Measure the required length to reach the power input on the roboRIO. Take care to leave enough length to route the wires around any other components such as the battery and to allow for any strain relief or cable management.
-4. Cut and strip the wire.
-5. Using a very small flat screwdriver connect the wires to the power input connector of the roboRIO (red to V, black to C). Also make sure that the power connector is screwed down securely to the roboRIO.
+1. Insira os fusíves de 10 e 20 amperes à PDP nos lugares demonstrados na imagem acima;
+2. Desencape as pontas dos fios 18 AWG vermelho e preto e  conecte aos terminais "Vbat Controller PWR" da PDP;
+3. Meça o comprimento nescessário dos fios para chegarem á PDP. Tome cuidado ao fazer o "caminho" desses fios, não deixe em nenhum lugar que possa causar problemas;
+4. Corte e desencape-os, adicionando o conector tubular em suas pontas;
+5. Utilizando uma pequena chave de fenda, conecte os fios no terminal do RoboRIO (Vermelho no V e preto no C). Tenha certeza que o terminal está vem preso ao RoboRIO;
 
 Energizando Voltage Regulator Module (VRM)
 ------------------------------------------
@@ -298,7 +293,7 @@ twisted CAN cable
 Note:  A PCM é um compinente opcional, utilizado para controlar os sistemas pneumáticos do robô. Se não estiver utilizando uma PCM, conecte os fios CAN que vem do RoboRIO diretamente na PDP.
 
 1. Insira os fios nos terminais CAN da PCM
-2. Messa o comprimento dos fios para que consigam chegar até a PDP (cada um deles).
+2. Meça o comprimento dos fios para que consigam chegar até a PDP (cada um deles).
 3. Insira os fios nos terminais CAN da PDP. Pode usar qualquer um dos dois pares da entrada.
 
   Note: Utilize a PDP como o último componente da linha CAN (CAN bus)
