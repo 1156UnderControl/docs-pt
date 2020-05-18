@@ -109,6 +109,7 @@ place the terminal over the stud. Loosely secure the nut (you may wish
 to remove it shortly to cut, strip, and crimp the other end of the
 wire). Measure out the length of wire required to reach the positive
 terminal of the PDP.
+Prenda um terminal olho na ponta do fio vermelho 6AWG. Retire a porca rosqueada ao parafuso do lado "AUX" do main breaker
 
 1. Corte, encaixa e crimpe o terminal ao "2nd end" do fio vermelho 6AWG.
 2. Utilizando o 7/16" box end, prenda o fio ao lado "AUX" do main breaker de 120A.
