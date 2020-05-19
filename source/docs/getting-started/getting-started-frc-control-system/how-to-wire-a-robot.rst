@@ -1,5 +1,5 @@
-How to Wire an FRC Robot
-========================
+Como fazer o cabeamento de um robo para FRC
+===========================================
 
 .. note::
 
@@ -8,15 +8,15 @@ How to Wire an FRC Robot
 
    Algumas das imagens presentes nessa seção demonstram o Setup do sistema de controle de um robô que utiliza controladores de motor Spark. Os diagramas e layouts do cabeamento a seguir são bem parecidos com o dos demais controladores. Há também um segundo set de imagens que demonstram o passo a passo do cabeamento de controladores PWM com fios integrados.
 
-Gather Materials
-----------------
+Mateirais e componentes
+-----------------------
 
 .. image:: images/how-to-wire-a-robot/image0.jpg
    :width: 600
 
 Encontre os seguintes componentes eletrônicos e ferramentas
 
-- Kit Materials:
+- Mateirais do KIT:
 
       - Power Distribution Panel (PDP)
       - roboRIO
@@ -42,7 +42,7 @@ Encontre os seguintes componentes eletrônicos e ferramentas
       - Zip ties
       - 1/4" or 1/2" plywood
 
-- Tools Required:
+- Ferramentas nescessaárias:
 
       - Wago Tool or small flat-head screwdriver
       - Very small flat head screwdriver (eyeglass repair size)
@@ -76,8 +76,8 @@ Prenda os componentes
 
 Utilizando Dual Lock (tipo de velcro), fitas dupla-face (VHB por exemplo) ou ZIP ties, prenda todos componentes à base. Tenha em mente que, em muitos dos jogos da FRC, há constante toque físico entre os robôs, sendo a Dual Lock uma opção que pode ser utilizada, mas não sozinha. Muitos times optam por utilizar fitas dupla face e, principalmente, ZIP ties, mesmo sem Dual Lock.
 
-Attach Battery Connector to PDP
-Prenda o Battery Conector  à PDP
+
+Prenda o Battery Conector à PDP
 -------------------------------
 
 .. image:: images/how-to-wire-a-robot/image3.jpg
@@ -103,19 +103,12 @@ Conecte o Breaker à PDP
 
 Requer: 6AWG red wire, 2x 6AWG terminal lugs, 5mm Allen, 7/16" box end
 
-Secure one terminal lug to the end of the 6AWG red wire. Using the 7/16"
-box end, remove the nut from the “AUX” side of the 120A main breaker and
-place the terminal over the stud. Loosely secure the nut (you may wish
-to remove it shortly to cut, strip, and crimp the other end of the
-wire). Measure out the length of wire required to reach the positive
-terminal of the PDP.
-Prenda um terminal olho na ponta do fio vermelho 6AWG. Retire a porca rosqueada ao parafuso do lado "AUX" do main breaker, encaixe o terminal do cabo no parafuso e rosqueie a porca, prendendo-o.
+Prenda um terminal olho na ponta do fio vermelho 6AWG. Retire a porca rosqueada ao parafuso do lado "AUX" do main breaker (utilizando uma 7/16" box end), encaixe o terminal do cabo no parafuso e rosqueie a porca, prendendo-o. Meça o comprimento nescessário para que o cabo chegue ao terminal positivo da PDP.
 
 1. Corte, encaixa e crimpe o terminal ao "2nd end" do fio vermelho 6AWG.
 2. Utilizando o 7/16" box end, prenda o fio ao lado "AUX" do main breaker de 120A.
 3. Utilizando a Allen de 5mm, prenda a outra ponta ao teminal positivo da PDP.
 
-Insulate PDP connections
 Isole as conexões da PDP
 ------------------------
 
@@ -187,7 +180,7 @@ Depois de conectar, cheque para ter certeza se está tudo certo:
 - Verifique se não à "pequenos fios" expostos para fora do terminal.
 - Puxe o fio para verificar se ele está bem preso. Se ele ceder, abra o terminal e prenda-o melhor ou desencape um pouco mais a ponta do fio.
 
-Energizando roboRIO
+Energizando RoboRIO
 -------------------
 
 .. image:: images/how-to-wire-a-robot/image8.jpg
@@ -196,11 +189,11 @@ Energizando roboRIO
 Requer: 10A/20A mini fuses, Wire stripper, very small flat
 screwdriver, 18AWG Red and Black
 
-1. Insira os fusíves de 10 e 20 amperes à PDP nos lugares demonstrados na imagem acima;
-2. Desencape as pontas dos fios 18 AWG vermelho e preto e  conecte aos terminais "Vbat Controller PWR" da PDP;
-3. Meça o comprimento nescessário dos fios para chegarem á PDP. Tome cuidado ao fazer o "caminho" desses fios, não deixe em nenhum lugar que possa causar problemas;
-4. Corte e desencape-os, adicionando o conector tubular em suas pontas;
-5. Utilizando uma pequena chave de fenda, conecte os fios no terminal do RoboRIO (Vermelho no V e preto no C). Tenha certeza que o terminal está vem preso ao RoboRIO;
+1. Insira os fusíves de 10 e 20 amperes à PDP nos lugares demonstrados na imagem acima.
+2. Desencape as pontas dos fios 18 AWG vermelho e preto e  conecte aos terminais "Vbat Controller PWR" da PDP.
+3. Meça o comprimento nescessário dos fios para chegarem á PDP. Tome cuidado ao fazer o "caminho" desses fios, não deixe em nenhum lugar que possa causar problemas.
+4. Corte e desencape-os, adicionando o conector tubular em suas pontas.
+5. Utilizando uma pequena chave de fenda, conecte os fios no terminal do RoboRIO (Vermelho no V e preto no C). Tenha certeza que o terminal está vem preso ao RoboRIO.
 
 Energizando Voltage Regulator Module (VRM)
 ------------------------------------------
@@ -208,16 +201,16 @@ Energizando Voltage Regulator Module (VRM)
 .. image:: images/how-to-wire-a-robot/image11.jpg
    :width: 600
 
-Requires: Wire stripper, small flat screwdriver (optional), 18AWG red
+Requer: Wire stripper, small flat screwdriver (optional), 18AWG red
 and black wire:
 
-1. Strip ~5/16" on the end of the red and black 18AWG wire.
-2. Connect the wire to one of the two terminal pairs labeled "Vbat VRM PCM PWR" on the PDP.
-3. Measure the length required to reach the "12Vin" terminals on the VRM. Take care to leave enough length to route the wires around any other components such as the battery and to allow for any strain relief or cable management.
-4. Cut and strip ~5/16" from the end of the wire.
-5. Connect the wire to the VRM 12Vin terminals.
+1. Desencape ~5/16" da ponta de um cabo vermelho e um cabo preto 18 AWG.
+2. Conecte os fios à um dos dois pares de terminais da PDP com o nome de "Vbat VRM PCM PWR".
+3. Meça o tamanho nescessário para chegar ao terminal "Vin" da PCM. Tome cuidado ao fazer o "caminho" desses fios, não deixe em nenhum lugar que possa causar problemas.
+4. Corte os cabos do tamanho correto e desncape as pontas encapadas.
+5. Conecte os fios ao terminal 12Vin da VRM.
 
-Pneumatics Control Module Power (Optional)
+Energizando Pneumatics Control Module (PCM) (opcional)
 ------------------------------------------
 
 .. image:: images/how-to-wire-a-robot/image12.jpg
@@ -226,14 +219,14 @@ Pneumatics Control Module Power (Optional)
 Requires: Wire stripper, small flat screwdriver (optional), 18AWG red
 and black wire
 
-Note: The PCM is an optional component used for controlling pneumatics
-on the robot.
+Note: A PCM é um componetne opcional, utilizado para controlar os sistemas pneumáticos do robô.
 
-1. Strip ~5/16" on the end of the red and black 18AWG wire.
-2. Connect the wire to one of the two terminal pairs labeled "Vbat VRM PCM PWR" on the PDP.
-3. Measure the length required to reach the "Vin" terminals on the PCM. Take care to leave enough length to route the wires around any other components such as the battery and to allow for any strain relief or cable management.
-4. Cut and strip ~5/16" from the end of the wire.
-5. Connect the wire to the PCM 12Vin terminals.
+
+1. Desencape ~5/16" da ponta de um cabo vermelho e um cabo preto 18 AWG.
+2. Conecte os fios à um dos dois pares de terminais da PDP com o nome de "Vbat VRM PCM PWR".
+3. Meça o tamanho nescessário para chegar ao terminal "Vin" da PCM. Tome cuidado ao fazer o "caminho" desses fios, não deixe em nenhum lugar que possa causar problemas.
+4. Corte os cabos do tamanho correto e desncape as pontas encapadas.
+5. Conecte os fios ao terminal 12Vin da PCM.
 
 Ethernet e energia do rádio
 ---------------------------
@@ -248,38 +241,34 @@ Requer: Small flat screwdriver (optional), Rev radio PoE cable
 2. Insira os conectores do PoE nos terminais correspondentes à 12V/2A da VRM.
 2. Conecte o conector macho de Ethernet (RJ45) à porta de ethernet do rádio mais próxima da entrada do pino de energia (com o nome de 18-24v POE).
 
-roboRIO to Radio Ethernet
--------------------------
+Conectando rádio ao RoboRIO
+---------------------------
 
 .. image:: images/how-to-wire-a-robot/image14.jpg
    :width: 600
 
-Requires: Ethernet cable
+Requer: Ethernet cable
 
-Connect an Ethernet cable from the female RJ45 (Ethernet) port of the
-Rev Passive POE cable to the RJ45 (Ethernet) port on the roboRIO.
+Conecte o cabo de Ethernet na porta fêmea RJ45 do cabo POE à entrada Ethernet (RJ45) do RoboRIO.
 
-CAN Devices
------------
+Dispositivos CAN
+----------------
 
-roboRIO to PCM CAN
-~~~~~~~~~~~~~~~~~~
+CAN do RoboRIO para a PCM
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: images/how-to-wire-a-robot/image15.jpg
    :width: 600
 
-Requires: Wire stripper, small flat screwdriver (optional), yellow/green
+Requer : Wire stripper, small flat screwdriver (optional), yellow/green
 twisted CAN cable
 
-Note: The PCM is an optional component used for controlling pneumatics
-on the robot. If you are not using the PCM, wire the CAN connection
-directly from the roboRIO (shown in this step) to the PDP (show in the
-next step).
+Note: A PCM é um compinente opcional, utilizado para controlar os sistemas pneumáticos do robô. Se não estiver utilizando uma PCM, conecte os fios CAN que vem do RoboRIO diretamente na PDP.
 
-1. Strip ~5/16" off of each of the CAN wires.
-2. Insert the wires into the appropriate CAN terminals on the roboRIO (Yellow->YEL, Green->GRN).
-3. Measure the length required to reach the CAN terminals of the PCM (either of the two available pairs). Cut and strip ~5/16" off this end of the wires.
-4. Insert the wires into the appropriate color coded CAN terminals on the PCM. You may use either of the Yellow/Green terminal pairs on the PCM, there is no defined in or out.
+1. Desncape ~5/16" de cada fio CAN.
+2. Insira os fios nos terminais destinados à linha CAN no RoboRIO (Amerelo -> YEL, Verde -> GRN).
+3. Meça o comprimento nescessário dos cabos para chegar com um pouco de folga na PCM.
+4. Insira os fios CAN no terminal destinado à eles. Pode utilizar qualque um dos pares de terminais CAN (Amarelo/Verde).
 
 CAN da PCM para a PDP
 ~~~~~~~~~~~~~~~~~~~~~
@@ -338,7 +327,7 @@ wire, very small flat screwdriver
 Você deve prender (temporariamente) a RSL à chapa/base utilizando zip ties ou Dual Shock (é muito importante que a RSL esteja presa em um local bem visível do robô).
 
 Circuit Breakers / Fusíveis
-----------------
+---------------------------
 
 .. image:: images/how-to-wire-a-robot/image19.jpg
    :width: 600
@@ -350,7 +339,6 @@ Adicione um fusível de 40 amperes na posição correspondente onde os cabos do 
 Se estiver trabalhando em um Robot Quick Build, coloque a chapa/base dentro do chassi antes de continuar.
 
 
-Motor Power
 Energizando motor
 -----------
 
@@ -382,10 +370,7 @@ STOP
 
 .. danger:: STOP!!
 
-.. danger:: Before plugging in the battery, make sure all connections have been made with the proper polarity. Ideally have someone that did not wire the robot check to make sure all connections are correct.
-
-
-Antes de conectar a bateria, tenha certeza que todas as conexões estão com as polaridades corretas (positivo no positivo, negativo no negativo). Provavelmente devem ter algumas que não estão conectadas, cheque tudo.
+.. danger:: Antes de conectar a bateria, tenha certeza que todas as conexões estão com as polaridades corretas (positivo no positivo, negativo no negativo). Provavelmente devem ter algumas que não estão conectadas, cheque tudo.
 
 - Verifique se o fio vermelho está conectado ao terminal positivo da bateria.
 - Verifique se o fio vermelho está indo do main breaker para o terminal positivo da PDP e se o fio preto está indo para o terminal negativo.
@@ -395,7 +380,6 @@ Antes de conectar a bateria, tenha certeza que todas as conexões estão com as 
 
 É recomendado que o robô esteja com as rodas suspensas para prevenir acidentes se o robô se movimentar de maneira inesperada.
 
-Manage Wires
 Organize os fios
 ------------
 
