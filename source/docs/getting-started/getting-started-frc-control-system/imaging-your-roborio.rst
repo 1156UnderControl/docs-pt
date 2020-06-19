@@ -1,5 +1,5 @@
-Imaginando seu roboRIO
-======================
+Visualizando seu roboRIO
+========================
 
 .. warning:: Antes de criar imagens do seu roboRIO, você deve ter concluído a instalação do :doc:`Ferramentas de jogo FRC<frc-game-tools>`.  Você também deve ter a energia do roboRIO conectada corretamente ao painel de distribuição de energia. Verifique se os fios de energia do roboRIO estão seguros e se o conector está bem firme no roboRIO (4 parafusos no total para verificar).
 
@@ -49,49 +49,49 @@ Atualização do Firmware
 
 O firmware do roboRIO deve ter pelo menos a versão 5.0 para funcionar com a imagem de 2019. Se o seu roboRIO tiver pelo menos a versão 5.0 (como mostrado na parte inferior esquerda da ferramenta de criação de imagens), você não precisará atualizar.
 
-To update roboRIO firmware:
+Para atualizar o firmware do roboRIO:
 
-1. Make sure your roboRIO is selected in the top left pane.
-2. Select Update Firmware in the top right pane
-3. Enter a team number in the Team Number box
-4. Select the latest firmware file in the bottom right
-5. Click the **Update** button
+1. Verifique se o seu roboRIO está selecionado no painel superior esquerdo.
+2. Selecione atualizar firmware no painel superior direito.
+3. Digite um número de equipe na caixa Número da equipe.
+4. Selecione o arquivo firmware mais recente no canto inferior direito.
+5. Clique no botão **atualizar**.
 
-Imaging the roboRIO
-^^^^^^^^^^^^^^^^^^^
+Visualizando o roboRIO
+^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: images/imaging-your-roborio/imaging-the-roborio.png
 
-1. Make sure the roboRIO is selected in the top left pane
-2. Select Format Target in the right pane
-3. Enter your team number in the box
-4. Select the latest image version in the box.
-5. Click Reformat to begin the imaging process.
+1. Verifique se o roboRIO está selecionado no painel superior esquerdo.
+2. Selecione formatar alvo no painel direito.
+3. Digite o número da sua equipe na caixa.
+4. Selecione a versão mais recente da imagem na caixa.
+5. Clique em reformatar para iniciar o processo de visualização da imagem.
 
-Imaging Progress
-^^^^^^^^^^^^^^^^
+Progresso de visualização da imagem
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: images/imaging-your-roborio/imaging-progress.png
 
-The imaging process will take approximately 3-10 minutes. A progress bar in the bottom left of the window will indicate progress.
+O processo de visualização da imagem levará aproximadamente de 3 a 10 minutos. Uma barra de progresso no canto inferior esquerdo da janela indicará o progresso.
 
-Imaging Complete
-^^^^^^^^^^^^^^^^
+Visualização completa
+^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: images/imaging-your-roborio/imaging-complete.png
 
-When the imaging completes you should see the dialog above. Click Ok, then click the Close button at the bottom right to close the imaging tool. Reboot the roboRIO using the Reset button to have the new team number take effect.
+Quando a imagem for concluída, você deverá ver a caixa de diálogo acima. Clique em Ok e clique no botão Fechar no canto inferior direito para fechar a ferramenta de criação de imagens. Reinicie o roboRIO usando o botão Redefinir para que o novo número da equipe entre em vigor.
 
-.. note:: The default CAN webdash functionality has been removed from the image (CAN devices will still work from robot code). You will need to use the tools provided by individual vendors to service their CAN devices.
+.. note:: A funcionalidade padrão de webdash CAN foi removida da imagem (os dispositivos CAN ainda funcionarão com o código do robô). Você precisará usar as ferramentas fornecidas por fornecedores individuais para atender seus dispositivos CAN.
 
-Troubleshooting
-^^^^^^^^^^^^^^^
+Solução de problemas
+^^^^^^^^^^^^^^^^^^^^
 
-If you are unable to image your roboRIO, troubleshooting steps include:
+Se você não conseguir criar uma imagem do seu roboRIO, as etapas de solução de problemas incluem:
 
-- Try running the roboRIO Imaging Tool as Administrator by right-clicking on the Desktop icon to launch it.
-- Try accessing the roboRIO webpage with a web-browser at ``http://172.22.11.2/`` and/or verify that the NI network adapter appears in your list of Network Adapters in the Control Panel. If not, try re-installing the NI FRC Game Tools or try a different PC.
-- Make sure your firewall is turned off.
-- Try a different PC
-- Some teams have experienced an issue where imaging fails if the device name of the computer you're using has a dash (``-``) in it. Try renaming the computer (or using a different PC).
-- Try booting the roboRIO into Safe Mode by pressing and holding the reset button for at least 5 seconds.
+- Tente executar a ferramenta de imagem roboRIO como administrador clicando com o botão direito do mouse no ícone da área de trabalho para iniciá-la.
+- Tente acessar a página do roboRIO com um navegador da web em ``http://172.22.11.2/`` e / ou verifique se o adaptador de rede da NI aparece na sua lista de adaptadores de rede no painel de controle. Caso contrário, tente reinstalar o NI FRC Game Tools ou tente um PC diferente.
+- Verifique se o seu firewall está desligado.
+- Experimente um PC diferente.
+- Algumas equipes enfrentam um problema em que a criação de imagens falha se o nome do dispositivo do computador que você está usando tiver um traço (`` -``). Tente renomear o computador (ou usando um PC diferente).
+- Tente inicializar o roboRIO no modo de segurança pressionando e segurando o botão de reset por pelo menos 5 segundos.
