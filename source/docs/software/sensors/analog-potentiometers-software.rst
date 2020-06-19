@@ -1,90 +1,27 @@
-Analog Potentiometers - Software
-================================
+Potenciômetros analógicos - Software
+====================================
 
-.. note:: This section covers analog potentiometers in software.  For a hardware guide to analog potentiometers, see :ref:`docs/hardware/sensors/analog-potentiometers-hardware:Analog Potentiometers - Hardware`.
+.. note:: Esta seção aborda potenciômetros analógicos em software. Para obter um guia de hardware para potenciômetros analógicos, consulte  :ref:`docs/hardware/sensors/analog-potentiometers-hardware:Analog Potentiometers - Hardware`.
 
-Potentiometers are variable resistors that allow information about position to be converted into an analog voltage signal.  This signal can be read by the roboRIO to control whatever device is attached to the potentiometer.
+Potenciômetros são resistores variáveis ​​que permitem converter informações sobre a posição em um sinal de tensão analógico. Esse sinal pode ser lido pelo roboRIO para controlar qualquer dispositivo conectado ao potenciômetro.
 
-While it is possible to read information from a potentiometer directly with an :doc:`analog-inputs-software`, WPILib provides an :code:`AnalogPotentiometer` class (`Java <https://first.wpi.edu/FRC/roborio/release/docs/java/edu/wpi/first/wpilibj/AnalogPotentiometer.html>`__, `C++ <https://first.wpi.edu/FRC/roborio/release/docs/cpp/classfrc_1_1AnalogPotentiometer.html>`__) that handles re-scaling the values into meaningful units for the user.  It is strongly encouraged to use this class.
+Embora seja possível ler informações de um potenciômetro diretamente com um :doc:`analog-inputs-software`, o WPILib fornece uma :code:`AnalogPotentiometer` explicação (`Java <https://first.wpi.edu/FRC/roborio/release/docs/java/edu/wpi/first/wpilibj/AnalogPotentiometer.html>`__, `C++ <https://first.wpi.edu/FRC/roborio/release/docs/cpp/classfrc_1_1AnalogPotentiometer.html>`__) que lida com a redimensionamento dos valores em unidades significativas para o usuário. É altamente recomendável usar esta explicação.
 
-In fact, the :code:`AnalogPotentiometer` name is something of a misnomer - this class should be used for the vast majority of sensors that return their signal as a simple, linearly-scaled analog voltage.
+De fato, o :code:`AnalogPotentiometer` nome é um nome impróprio - essa classe deve ser usada para a grande maioria dos sensores que retornam seu sinal como uma tensão analógica simples, em escala linear.
 
-The AnalogPotentiometer class
------------------------------
+Explicação dos Potenciômetros analógicos
+----------------------------------------
 
-.. note:: The "full range" or "scale" parameters in the :code:`AnalogPotentiometer` constructor are scale factors from a range of 0-1 to the actual range, *not* from 0-5.  That is, they represent a native fractional scale, rather than a voltage scale.
+.. note:: Os parâmetros "faixa completa" ou "escala" no :code:`AnalogPotentiometer` construtor são fatores de escala de um intervalo de 0-1 ao intervalo real, não de 0-5. Ou seja, eles representam uma escala fracionária nativa, em vez de uma escala de tensão.
 
-An AnalogPotentiometer can be initialized as follows:
+Personalizando o Potenciômetro analógico subjacente
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. tabs::
+.. note:: Se o usuário alterar a escala da :code:`AnalogInput` com superamostragem, isso deve ser refletido na configuração de escala passada para o
 
-    .. code-tab:: java
-
-        // Initializes an AnalogPotentiometer on analog port 0
-        // The full range of motion (in meaningful external units) is 0-180 (this could be degrees, for instance)
-        // The "starting point" of the motion, i.e. where the mechanism is located when the potentiometer reads 0v, is 30.
-
-        AnalogPotentiometer pot = new AnalogPotentiometer(0, 180, 30);
-
-    .. code-tab:: c++
-
-        // Initializes an AnalogPotentiometer on analog port 0
-        // The full range of motion (in meaningful external units) is 0-180 (this could be degrees, for instance)
-        // The "starting point" of the motion, i.e. where the mechanism is located when the potentiometer reads 0v, is 30.
-
-        frc::AnalogPotentiometer pot{0, 180, 30};
-
-Customizing the underlying AnalogInput
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. note:: If the user changes the scaling of the :code:`AnalogInput` with oversampling, this must be reflected in the scale setting passed to the :code:`AnalogPotentiometer`.
-
-If the user would like to apply custom settings to the underlying :code:`AnalogInput` used by the :code:`AnalogPotentiometer`, an alternative constructor may be used in which the :code:`AnalogInput` is injected:
-
-.. tabs::
-
-    .. code-tab:: java
-
-        // Initializes an AnalogInput on port 0, and enables 2-bit averaging
-        AnalogInput input = new AnalogInput(0);
-        input.setAverageBits(2);
-
-        // Initializes an AnalogPotentiometer with the given AnalogInput
-        // The full range of motion (in meaningful external units) is 0-180 (this could be degrees, for instance)
-        // The "starting point" of the motion, i.e. where the mechanism is located when the potentiometer reads 0v, is 30.
-
-        AnalogPotentiometer pot = new AnalogPotentiometer(input, 180, 30);
-
-    .. code-tab:: c++
-
-        // Initializes an AnalogInput on port 0, and enables 2-bit averaging
-        frc::AnalogInput input{0};
-        input.SetAverageBits(2);
-
-        // Initializes an AnalogPotentiometer with the given AnalogInput
-        // The full range of motion (in meaningful external units) is 0-180 (this could be degrees, for instance)
-        // The "starting point" of the motion, i.e. where the mechanism is located when the potentiometer reads 0v, is 30.
-
-        frc::AnalogPotentiometer pot{input, 180, 30};
-
-Reading values from the AnalogPotentiometer
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The scaled value can be read by simply calling the :code:`get` method:
-
-.. tabs::
-
-    .. code-tab:: java
-
-        pot.get();
-
-    .. code-tab:: c++
-
-        pot.Get();
-
-Using AnalogPotentiometers in code
+Usando potenciômetros analógicos no código
 ----------------------------------
 
-Analog sensors can be used in code much in the way other sensors that measure the same thing can be.  If the analog sensor is a potentiometer measuring an arm angle, it can be used similarly to an :doc:`encoder <encoders-software>`.  If it is an ultrasonic sensor, it can be used similarly to other :doc:`ultrasonics <ultrasonics-software>`.
+Os sensores analógicos podem ser usados ​​no código da mesma maneira que outros sensores que medem a mesma coisa. Se o sensor analógico for um potenciômetro medindo um ângulo do braço, ele poderá ser usado de maneira semelhante a um :doc:`encoder <encoders-software>`.  Se for um sensor ultrassônico, pode ser usado de maneira semelhante a outros  :doc:`ultrasonics <ultrasonics-software>`.
 
-It is very important to keep in mind that actual, physical potentiometers generally have a limited range of motion.  Safeguards should be present in both the physical mechanism and the code to ensure that the mechanism does not break the sensor by traveling past its maximum throw.
+É muito importante ter em mente que os potenciômetros físicos reais geralmente têm uma amplitude de movimento limitada. As salvaguardas devem estar presentes tanto no mecanismo físico quanto no código, para garantir que o mecanismo não quebre o sensor passando seu lance máximo.
