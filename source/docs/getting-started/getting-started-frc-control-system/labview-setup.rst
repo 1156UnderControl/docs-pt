@@ -1,20 +1,20 @@
 .. include:: <isonum.txt>
 
-Installing LabVIEW for FRC (LabVIEW only)
-=========================================
+Instalando LabVIEW para FRC (LabVIEW apenas)
+============================================
 
 .. image:: images/labview/ni_logo.png
 
-.. note:: This installation is for teams programming in LabVIEW or using NI Vision Assistant only. C++ and Java teams not using these features do not need to install from the DVD and should proceed to :doc:`Installing the FRC Game Tools </docs/getting-started/getting-started-frc-control-system/frc-game-tools>`.
+.. note:: Esta instalação é para times que programam em LabVIEW ou usam o NI Vision Assistant apenas. Times que utilizam C++ e Java que não estão utilizando estes recursos não precisam instalar a partir do DVD e devem prosseguir para :doc:`Instalando FRC Game Tools </docs/getting-started/getting-started-frc-control-system/frc-game-tools>`.
 
-Download and installation times will vary widely with computer and internet connection specifications, however note that this process involves a large file download and installation and will likely take at least an hour to complete.
+O tempo para download e instalação varia muito de acordo com as especificações de conexão do computador, no entanto, note que esse processo envolve o download e a instalação de um arquivo grande e provavelmente levará pelo menos uma hora para ser concluído.
 
-Uninstall Old Versions (Recommended)
-------------------------------------
+Desinstale as Versões Antigas (Recomendado)
+-------------------------------------------
 
-.. note:: If you wish to keep programming cRIOs you will need to maintain an install of LabVIEW for FRC 2014. The LabVIEW for FRC 2014 license has been extended. While these versions should be able to co-exist on a single computer, this is not a configuration that has been extensively tested.
+.. note:: Se você deseja continuar utilizando cRIOs você precisará manter uma instalação do LabVIEW para FRC 2014. A licença para o LabVIEW para FRC 2014 foi estendida. Embora essas versões possam coexistir em um único computador, essa não é uma configuração extensivamente testada.
 
-Before installing the new version of LabVIEW it is recommended to remove any old versions. The new version will likely co-exist with the old version, but all testing has been done with FRC 2020 only. Make sure to back up any team code located in the "User\\LabVIEW Data" directory before un-installing. Then click Start >> Add or Remove Programs. Locate the entry labeled "National Instruments Software", and select Uninstall.
+Antes de instalar a nova versão do LabVIEW, é recomendado remover as versões antigas. A nova versão provavelmente coexistirá com a versão antiga, porém todos os testes foram feitos apenas com a FRC 2020. Certifique-se de fazer um backup de qualquer código do time localizado no diretório  "User\\LabVIEW Data" antes de desinstalar. Em seguida clique em Iniciar >> Adicionar ou Remover Programas. Localize "National Instruments Software" e selecione "Uninstall".
 
 .. image:: images/labview/uninstall_old_control_panel.png
 
@@ -182,4 +182,3 @@ Restart
 .. image:: images/labview/labview_restart.png
 
 Select "Reboot Now" after closing any open programs.
-
