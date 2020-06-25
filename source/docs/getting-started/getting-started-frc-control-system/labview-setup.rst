@@ -18,12 +18,12 @@ Antes de instalar a nova versão do LabVIEW, é recomendado remover as versões 
 
 .. image:: images/labview/uninstall_old_control_panel.png
 
-Select Components to Uninstall
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Selecione Componentes para Desinstalar
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In the dialog box that appears, select all entries. The easiest way to do this is to de-select the "Products Only" check-box and select the check-box to the left of "Name". Click Remove. Wait for the uninstaller to complete and reboot if prompted.
+Na caixa de diálogo exibida, selecione todas as entradas. A maneira mais fácil de fazer isso é desmarcar a caixa de seleção "Products Only" e marcar a caixa de seleção à esquerda de "Name". Clique em “Remove”. Aguarde o desinstalador concluir e, se solicitado, reinicie o computador.
 
-.. warning:: These instructions assume that no other National Instruments software is installed. If you have other National Instruments software installed, it is necessary to uncheck the software that should not be uninstalled.
+.. warning:: Essas instruções assumem que nenhum outro software da National Instruments esteja instalado. Se você tiver outro software da National Instruments instalado, é necessário desmarcar o software que não deve ser desinstalado.
 
 .. image:: images/labview/uninstall_select_components.png
 
