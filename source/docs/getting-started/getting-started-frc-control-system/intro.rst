@@ -2,7 +2,7 @@
 
 Introdução
 ==========
-.. class:: justify
+
 Bem-vindo à home oficial da documentação para os pacotes de software do Sistema de Controle e WPILib da *FIRST*\ |reg| Robotics Competition. Essa página é a principal fonte de documentação do uso do Sitema de Controle da FRC\ |reg| (incluindo fiação, configuração e software), assim como as bibliotecas e ferramentas WPILib.
 
 Novo na Programação?
