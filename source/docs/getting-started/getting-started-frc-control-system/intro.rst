@@ -3,14 +3,14 @@
 Introdução
 ==========
 
-Welcome to the official documentation home for the *FIRST*\ |reg| Robotics Competition Control System and WPILib software packages. This page is the primary resource documenting the use of the FRC\ |reg| Control System (including wiring, configuration and software) as well as the WPILib libraries and tools.
+Bem-vindo à home oficial da documentação para os pacotes de software do Sistema de Controle e WPILib da *FIRST*\ |reg| Robotics Competition. Essa página é a principal fonte de documentação do uso do Sitema de Controle da FRC\ |reg| (incluindo fiação, configuração e software), assim como as bibliotecas e ferramentas WPILib.
 
-New to Programming?
--------------------
+Novo na Programação?
+--------------------
 
-These pages cover the specifics of the WPILib libraries and the FRC Control System and do not describe the basics of using the supported programming languages. If would like resources on learning the supported programming languages check out the recommendations below:
+Estas páginas cobrem os detalhes das bibliotecas WPILib e do Sistema de Controle da FRC e não descrevem o básico do uso das linguagens de programação suportadas. Se procura obter recursos para aprender as linguagens de programação suportadas, consulte as recomendações abaixo:
 
-.. note:: You can continue with this Getting Started section to get a functioning basic robot without knowledge of the programming language. To go beyond that, you will need to be familiar with the language you choose to program in.
+.. note:: Você pode continuar com esta seção de Introdução para obter um robô básico funcional sem o conhecimento da linguagem de programação. Para prosseguir, você precisará estar familiarizado com a linguagem de programação escolhida.
 
 C++
 ^^^
@@ -33,4 +33,4 @@ LabVIEW
 
 0 to Robot
 ----------
-The remaining pages in this Getting Started section are designed to be completed in order to go from 0 to a working basic robot. The documents will walk you through installation of all needed software, wiring and configuration of hardware, and loading a basic example program that should allow your robot to operate. When you complete a page, simply click **Next** to navigate to the next page and continue with the process. When you're done, you can click **Next** to continue to an overview of WPILib in C++/Java or jump back to the home page using the logo at the top left to explore the rest of the content.
+As páginas restantes nesta seção de Introdução foram projetadas para serem concluídas para ir de nada a um robô básico funcional. Os documentos guiarão você na instalação do software necessário, na fiação e configuração do hardware, e no carregamento de um exemplo básico que deve permitir a operação de seu robô. Quando você completar uma página, clique em **Next** para navegar para a próxima página e continuar com o processo. Quando estiver pronto, clique em **Next** para continuar para uma visão geral da WPILib em C++/Java ou clique no logo no canto superior esquerdo para voltar para página principal e explorar o conteúdo restante.
