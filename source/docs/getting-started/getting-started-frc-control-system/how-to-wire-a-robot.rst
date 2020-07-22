@@ -8,13 +8,13 @@ Como fazer o cabeamento de um robo para FRC
 
    Algumas das imagens presentes nessa seção demonstram o Setup do sistema de controle de um robô que utiliza controladores de motor Spark. Os diagramas e layouts do cabeamento a seguir são bem parecidos com o dos demais controladores. Há também um segundo set de imagens que demonstram o passo a passo do cabeamento de controladores PWM com fios integrados.
 
-Mateirais e componentes
+Materiais e componentes
 -----------------------
 
 .. image:: images/how-to-wire-a-robot/image0.jpg
    :width: 600
 
-Encontre os seguintes componentes eletrônicos e ferramentas
+Você vai precisar dos seguintes componentes eletrônicos e ferramentas
 
 - Mateirais do KIT:
 
@@ -22,40 +22,37 @@ Encontre os seguintes componentes eletrônicos e ferramentas
       - roboRIO
       - Pneumatics Control Module (PCM)
       - Voltage Regulator Module (VRM)
-      - OpenMesh radio (with power cable and Ethernet cable)
+      - OpenMesh radio (com seu cabo de alimentação POE)
       - Robot Signal Light (RSL)
-      - 4x Victor SPX or other speed controllers
-      - 2x PWM y-cables
+      - 4x Victor SPX ou outro controlador de motor
       - 120A Circuit breaker
       - 4x 40A Circuit breaker
-      - 6 AWG Red wire
-      - 10 AWG Red/Black wire
-      - 18 AWG Red/Black wire
-      - 22AWG yellow/green twisted CAN cable
-      - 16x 10-12 AWG  (yellow) ring terminals
-        (8x quick disconnect pairs if using integrated wire controllers)
-      - 2x Andersen SB50 battery connectors
-      - 6AWG Terminal lugs
-      - 12V Battery
-      - Red/Black Electrical tape
-      - Dual Lock material or fasteners
+      - Fio vermelho e preto de 6 AWG
+      - Fio vermelho e preto de 10 AWG
+      - Fio vermelho e preto de 18 AWG
+      - Fio amarelo e verde de 22AWG
+      - 16x 10-12 AWG  terminais em olho (amarelos)
+      - 2x Anderson SB50
+      - Terminais em olho de 6 AWG
+      - Baterida 12V
+      - Fita isolante
       - Zip ties
-      - 1/4" or 1/2" plywood
+      - Compensado de 1/2" ou 1/4". Ou Policarbonato
 
 - Ferramentas nescessaárias:
 
-      - Wago Tool or small flat-head screwdriver
-      - Very small flat head screwdriver (eyeglass repair size)
-      - Philips head screw driver
-      - 5mm Hex key (3/16" may work if metric is unavailable)
-      - 1/16" Hex key
-      - Wire cutters, strippers, and crimpers
-      - 7/16” box end wrench or nut driver
+      - Chave de fenda pequena
+      - Chave de fenda muito pequena (do tipo utilizdado em ajuste de óculos)
+      - Chave Phillips
+      - Chave Allen de 5mm
+      - Chave Allen de 1/16"
+      - Alicate desemcapador e de corte
+      - Chave de boca de 7/16"
 
-Produza a base do para o Sistema de Controle
---------------------------------------------
+Construindo a base do para o Sistema de Controle
+------------------------------------------------
 
-Para a produção da base, corte uma chapa (madeira ou plástico) de 1/4” ou 1/2" de espessura e aproximadamente 24" x 16". Se for o caso de um Robot Quick Build, consulte a documentação e verifique o tamanho ideal para a configuração do chassi correspondente.
+Para a produção da base, corte uma chapa (madeira ou plástico) de 1/4” ou 1/2" de espessura e aproximadamente 24" x 16". Se for o caso de um chassi pré-fabricado, consulte a documentação e verifique o tamanho ideal para a configuração do chassi correspondente.
 
 Organize os principais componentes do Sistema de Controle
 ---------------------------------------------------------
@@ -64,34 +61,33 @@ Organize os principais componentes do Sistema de Controle
    :width: 600
 
 
-Organize os componentes na chapa. O layout da imagem acima (images/how-to-wire-a-robot) é um bom exemplo.
+Organize os componentes na chapa. O layout da imagem acima é um bom exemplo.
 
 .. image:: images/how-to-wire-a-robot/image2.png
    :width: 600
 
 
 
-Prenda os componentes
+Fixe os componentes
 ---------------------
 
-Utilizando Dual Lock (tipo de velcro), fitas dupla-face (VHB por exemplo) ou ZIP ties, prenda todos componentes à base. Tenha em mente que, em muitos dos jogos da FRC, há constante toque físico entre os robôs, sendo a Dual Lock uma opção que pode ser utilizada, mas não sozinha. Muitos times optam por utilizar fitas dupla face e, principalmente, ZIP ties, mesmo sem Dual Lock.
+Utilizando fitas dupla-face (VHB por exemplo) ou ZIP ties, prenda todos componentes à base. Tenha em mente que, em muitos dos jogos da FRC, há constante toque físico entre os robôs. Muitos times optam por utilizar fitas dupla face e, principalmente, ZIP ties para garantir a fixação apropriada dos componentes.
 
 
-Prenda o Battery Conector à PDP
--------------------------------
+Fixe o conector da bateria à PDP
+--------------------------------
 
 .. image:: images/how-to-wire-a-robot/image3.jpg
    :width: 600
 
-Requer: Battery Connector, 6AWG terminal lugs, 1/16" Allen, 5mm Allen,
-7/16" Box end
+**Requer: Conector Anderson, Terminal olho de 6AWG , Allen de 1/16", Alle de 5mm e a chave de boca 7/16"**
 
 
 
-Prenda os "terminal lugs" ao battery conector (Conector da bateria):
+Prenda os terminais em olho ao Conector da bateria:
 
-1. Utilizando uma 1/16" Allen wrench, retire os dois parafusos que prendem a proteção dos terminais da PDP.
-2. Utilizando uma 5mm Allen wrench (3/16" também funciona se não tiver em mm), remova o parafuso e a arruela que que fica rosqueadas ao o polo negativo da PDP e prenda o terminal negativo do battery conector (conector da bateria).
+1. Utilizando a Allen 1/16", retire os dois parafusos que prendem a proteção dos terminais da PDP.
+2. Utilizando a Allen 5mm, remova o parafuso e a arruela que que fica rosqueadas ao o polo negativo da PDP e prenda o terminal negativo do conector da bateria.
 3. Utilizando um 7/16" box end wrench, remova a proteção de borracha e a porca do "parafuso" do main breaker, encaixe o terminal positivo do conector do battery conector (conector de bateria) e prenda-o bem com a porca.
 
 Conecte o Breaker à PDP
