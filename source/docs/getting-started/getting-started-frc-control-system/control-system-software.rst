@@ -1,21 +1,23 @@
 Visão Geral dos Softwares de programação para FRC
 =================================================
 
-O sistema de controle FRC consiste em uma ampla variedade de componentes de software obrigatórios e opcionais. Estes elementos foram projetados para ajudá-lo no design, desenvolvimento, e depuração do código do robô, bem como, ajudar no controle operacional do robô e fornecer um feedback ao solucionar problemas. Para cada componente do software este documento fornecerá uma breve visão geral de sua finalidade, um link para o download do pacote, se apropriado, e um link para a documentação adicional, quando disponível.
+O sistema de controle FRC consiste em uma ampla variedade de componentes de software obrigatórios e opcionais. Estes elementos foram projetados para ajudá-lo no design, desenvolvimento, e depuração do código do robô, bem como, ajudar no controle operacional do robô e fornecer um feedback ao solucionar problemas. Para cada componente do software, este documento fornecerá uma breve visão geral de sua finalidade, um link para o download do pacote, se apropriado, e um link para a documentação adicional, quando disponível.
 
 Compatibilidade com o Sistema Operacional
 -----------------------------------------
 
 O sistema operacional principal com suporte para componentes FRC é o Windows. Todos os componentes de software FRC necessários foram testados no Windows 7, 8 e 10. O Windows XP não é suportado.
 
-Dito isso, muitas das ferramentas para programação C ++ / Java também são suportadas e testadas no macOS e Linux. As equipes de programação em C ++ / Java poderão desenvolver usando esses sistemas, usando um sistema Windows para operações apenas do Windows, como Driver Station, programação de rádio e imagem roboRIO.
+Dito isso, muitas das ferramentas para programação C ++ / Java também são suportadas e testadas no macOS e Linux. As equipes que oprarem por programar em C ++ / Java poderão desenvolver usando esses sistemas, usando um sistema Windows para operações como a Driver Station, a configuração do rádio e a formatação do roboRIO.
 
-LabVIEW FRC (Somente Windows)
+LabVIEW para FRC (Somente Windows)
 -----------------------------
 
 .. image:: images/control-system-software/labview-frc.png
 
-LabVIEW FRC, baseado no LabVIEW 2019 da National Instruments, é o ambiente de desenvolvimento do LabVIEW, uma das três linguagens oficialmente suportadas para a programação de um robô FRC. O LabVIEW é uma linguagem gráfica orientada a fluxo de dados. Os programas LabVIEW consistem em uma coleção de ícones, chamados VIs, conectados com fios que passam dados entre os VIs. O instalador do LabVIEW FRC é distribuído em um DVD encontrado no Kickoff Kit de peças e também está disponível para download (consulte a página de instruções de instalação vinculada abaixo). Instruções para instalar as bibliotecas FRC (o pacote também inclui Driver Station e Utilitários) podem ser encontradas :ref:`aqui <docs/getting-started/getting-started-frc-control-system/frc-game-tools:Installing the FRC Game Tools>`. Um guia para começar a usar o software LabVIEW FRC, incluindo instruções de instalação, pode ser encontrado :ref:`aqui <docs/getting-started/getting-started-frc-control-system/labview-setup:Installing LabVIEW for FRC (LabVIEW only)>`.
+LabVIEW para FRC, baseado no LabVIEW 2019 da National Instruments, é o ambiente de desenvolvimento do LabVIEW, uma das três linguagens oficialmente suportadas para a programação de um robô de FRC. O LabVIEW é uma linguagem gráfica orientada a fluxo de dados. Os programas no LabVIEW consistem em uma coleção de ícones, chamados VIs, conectados com fios que passam dados entre os VIs. O instalador do LabVIEW FRC é distribuído em um DVD encontrado no Kit de peças e também está disponível para download (consulte a página de instruções de instalação vinculada abaixo).
+
+ **Instruções para instalar as bibliotecas para FRC** (o pacote também inclui Driver Station e Utilitários) podem ser encontradas :ref:`aqui <docs/getting-started/getting-started-frc-control-system/frc-game-tools:Installing the FRC Game Tools>`. Um guia para começar a usar o software LabVIEW FRC, incluindo instruções de instalação, pode ser encontrado :ref:`aqui <docs/getting-started/getting-started-frc-control-system/labview-setup:Installing LabVIEW for FRC (LabVIEW only)>`.
 
 Simulador de robô FRC (Somente Windows)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

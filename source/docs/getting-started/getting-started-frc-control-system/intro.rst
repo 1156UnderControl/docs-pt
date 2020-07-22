@@ -31,6 +31,6 @@ LabVIEW
 
 - `National Instruments Learn LabVIEW <http://www.ni.com/academic/students/learn-labview/>`__
 
-0 to Robot
+Do zero á um robô
 ----------
 As páginas restantes nesta seção de Introdução foram projetadas para serem concluídas para ir de nada a um robô básico funcional. Os documentos guiarão você na instalação do software necessário, na fiação e configuração do hardware, e no carregamento de um exemplo básico que deve permitir a operação de seu robô. Quando você completar uma página, clique em **Next** para navegar para a próxima página e continuar com o processo. Quando estiver pronto, clique em **Next** para continuar para uma visão geral da WPILib em C++/Java ou clique no logo no canto superior esquerdo para voltar para página principal e explorar o conteúdo restante.
