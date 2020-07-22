@@ -3,7 +3,7 @@
 Introdução
 ==========
 
-Bem-vindo à home oficial da documentação para os pacotes de software do Sistema de Controle e WPILib da *FIRST*\ |reg| Robotics Competition. Essa página é a principal fonte de documentação do uso do Sitema de Controle da FRC\ |reg| (incluindo fiação, configuração e software), assim como as bibliotecas e ferramentas WPILib.
+Bem-vindo à documentação para os pacotes de software do Sistema de Controle e WPILib da *FIRST*\ |reg| Robotics Competition. Esta página é a principal fonte de documentação quanto ao uso do Sistema de Controle da FRC\ |reg| (incluindo fiação, configuração e software), assim como as bibliotecas e ferramentas da WPILib. Lembrando que esta é a versão traduzida pela equipe Under Control, para acessar a versão oficial em inglês, `clique aqui <https://docs.wpilib.org/en/stable/>`_.
 
 Novo na Programação?
 --------------------
