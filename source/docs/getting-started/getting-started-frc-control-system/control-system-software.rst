@@ -24,7 +24,7 @@ Simulador de robô FRC (Somente Windows)
 
 .. image:: images/control-system-software/robot-simulator.png
 
-O simulador de robô FRC é um componente do ambiente de programação LabVIEW que permite operar um robô predefinido em um ambiente simulado para testar o código e/ou funções da Driver Station. Ele utiliza um projeto de código do LabVIEW como o código do robô e se comunica com a FRC Driver Station para controle do robô e o Painel de Controle padrão FRC para feedback do robô. O simulador de robô FRC é instalado com o pacote LabVIEW FRC. Informações sobre o uso do simulador de robô FRC podem ser encontradas abrindo o arquivo simulação do robô Readme.html no Explorador de Projetos do LabVIEW.
+O simulador de robô FRC é um componente do ambiente de programação LabVIEW que permite operar um robô predefinido em um ambiente simulado para testar o código e/ou funções da Driver Station. Ele utiliza um projeto de código do LabVIEW como o código do robô e se comunica com a Driver Station para controle do robô e a Dashboard padrão para feedback do robô. O simulador de robô FRC é instalado com o pacote do LabVIEW para FRC. Informações sobre o uso do simulador de robô FRC podem ser encontradas abrindo o arquivo simulação do robô Readme.html no Explorador de Projetos do LabVIEW.
 
 Visual Studio Code
 ------------------

@@ -88,21 +88,21 @@ Prenda os terminais em olho ao Conector da bateria:
 
 1. Utilizando a Allen 1/16", retire os dois parafusos que prendem a proteção dos terminais da PDP.
 2. Utilizando a Allen 5mm, remova o parafuso e a arruela que que fica rosqueadas ao o polo negativo da PDP e prenda o terminal negativo do conector da bateria.
-3. Utilizando um 7/16" box end wrench, remova a proteção de borracha e a porca do "parafuso" do main breaker, encaixe o terminal positivo do conector do battery conector (conector de bateria) e prenda-o bem com a porca.
+3. Utilizando a chave de boca 7/16", remova a proteção de borracha e a porca do parafuso do Disjuntor principal, encaixe o terminal positivo do conector de bateria e prenda-o bem com a porca.
 
-Conecte o Breaker à PDP
------------------------
+Conecte o Disjuntor principal à PDP
+-----------------------------------
 
 .. image:: images/how-to-wire-a-robot/image4.jpg
    :width: 600
 
 
-Requer: 6AWG red wire, 2x 6AWG terminal lugs, 5mm Allen, 7/16" box end
+**Requer: Fio vermelho de 6AWG, 2x terminais olho de 6AWG, Allen de 5mm e a chave de boca 7/16".**
 
-Prenda um terminal olho na ponta do fio vermelho 6AWG. Retire a porca rosqueada ao parafuso do lado "AUX" do main breaker (utilizando uma 7/16" box end), encaixe o terminal do cabo no parafuso e rosqueie a porca, prendendo-o. Meça o comprimento nescessário para que o cabo chegue ao terminal positivo da PDP.
+Crimpe um terminal olho na ponta do fio vermelho de 6AWG. Retire a porca rosqueada ao parafuso do lado "AUX" do disjuntor principal (utilizando a chave de boca 7/16"), encaixe o terminal do cabo no parafuso e rosqueie a porca, prendendo-o. Meça o comprimento nescessário para que o cabo chegue ao terminal positivo da PDP.
 
-1. Corte, encaixa e crimpe o terminal ao "2nd end" do fio vermelho 6AWG.
-2. Utilizando o 7/16" box end, prenda o fio ao lado "AUX" do main breaker de 120A.
+1. Corte, encaixa e crimpe o terminal ao outro lado do fio vermelho de 6AWG.
+2. Utilizando a chave de boca 7/16", prenda o fio ao lado "AUX" do disjuntor principal	de 120A.
 3. Utilizando a Allen de 5mm, prenda a outra ponta ao teminal positivo da PDP.
 
 Isole as conexões da PDP
@@ -111,10 +111,10 @@ Isole as conexões da PDP
 .. image:: images/how-to-wire-a-robot/image5.jpg
    :width: 600
 
-Requer: 1/16" Allen, Electrical tape (Fita isolante)
+**Requer: Allen 1/16", Fita isolante**
 
 
-1. Utilizando a fita isolante, isole as duas conexões do main breaker. Isole a parte dos terminais da PDPD que irão entrar em contato com a proteção quando for presa novamente. Uma maneira de isolar as conexões do main breaker é passar a fita no cabo e na porca antes de serem presos e, depois de presos, passar fita novamente.
+1. Utilizando a fita isolante, isole as duas conexões do disjuntor principal. Isole a parte dos terminais da PDP que irão entrar em contato com a proteção quando for presa novamente. Uma maneira de isolar as conexões do disjuntor principal é passar a fita no cabo e na porca antes de serem presos e, depois de presos, passar fita novamente.
 2. Utilizando a Allen de 1/16", prenda a proteção dos terminais à PDP.
 
 Conectores Wago
