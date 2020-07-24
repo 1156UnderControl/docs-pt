@@ -293,19 +293,16 @@ Cabos PWM
 .. image:: images/how-to-wire-a-robot/image17.jpg
    :width: 600
 
-Requer: 4x PWM cables (if using non-integrated wire controllers), 2x
-PWM Y-cable (Optional)
+**Requer: 4x PWM se não estiver utilizando controladores com cabos integrados, 2x PWM Y-cable (Opcional)**
 
 Opção 1 (conectar diretamente):
 
-- Conecte os cabos PWM de cada controlador diretamente no RoboRIO. Para o Victor SPX e outros controladores PWM/CAN, o fio verde (fio preto para controladores com fios não integrados) deve estar conectado na parte mais próxima da borda do RoboRIO. Para controladores com fios não integrados, tenha certeza de que o fio preto esteja conectado conforme o controlador indica. é recomendado conectar o lado esquerdo às entradas PWM 0 e 1 e o lado direito nas entradas PWM 2 e 3 para ajudar na organização durante a programação, mas fique atento: todas as entradas devem estar de acordo com o controlador que lhes foi designado.
+- Conecte os cabos PWM de cada controlador diretamente no RoboRIO. Para o Victor SPX e outros controladores PWM/CAN, o fio verde (fio preto para controladores com fios não integrados) deve estar conectado na parte mais próxima da borda do RoboRIO. Para controladores com fios não integrados, tenha certeza de que o fio preto esteja conectado conforme o controlador indica.
 
-Option 2 (Y-cable):
 Opção 2 (cabo Y)
 
 
 1. Conecte 1 cabo PWM Y aos cabos PWM dos contoladores que controlam um lado do robô. O fio marrom do cabo Y deve corresponder ao fio verde/preto do cabo PWM do controlador.
-2. Connect the PWM Y-cables to the PWM ports on the roboRIO. The brown wire should be towards the outside of the roboRIO. It is recommended to connect the left side to PWM 0 and the right side to PWM 1 for the most straightforward programming experience, but any channel will work as long as you note which side goes to which channel and adjust the code accordingly.
 2. Conecte os cabos PMW Y às portas PWM do RoboRIO. O fio marrom deve ser conectado ao lado mais próximo à borda do RoboRIO. É recomendado que se conecte o lado esquerdo ao PWM 0 e o lado direito ao PWM 1 para ajudar na organização durante a programação, mas fique atento: As entradas devem estar de acordo com o lado do robô que lhes fora designado.
 
 Robot Signal Light (RSL)
@@ -314,11 +311,10 @@ Robot Signal Light (RSL)
 .. image:: images/how-to-wire-a-robot/image18.jpg
    :width: 600
 
-Requer: Wire stripper, 2 pin cable, Robot Signal Light, 18 AWG (1mm de seção) red
-wire, very small flat screwdriver
+**Requer: Alicate desemcapador, cabo de 2 vias, Robot Signal Light, fio vermelho de 18 AWG (1mm de seção) e chave de fenda pequena.**
 
-1. Desencape a ponta de um cabo preto e um cabo vermelho e prenda um conector tubular em cada;
-2. Insira o cabo preto no terminal do centro (N), e prenda-o ("aperte" o parafuso do terminal);
+1. Desencape a ponta de um cabo preto e um cabo vermelho e prenda um conector tubular em cada um;
+2. Insira o cabo preto no terminal do centro (N), e prenda-o (aperte o parafuso do terminal);
 3. Corte um pequeno cabo vermelho 18 AWG (1mm de seção), insira uma das pontas no terminal "La" e prenda-o, insira a outra ponta no terminal "Lb", mas ainda não prenda;
 4. Insira o cabo vermelho com o conector tubular no terminal "Lb", junto com o cabo vermelho pequeno e prenda-os;
 5. Conecte os cabos com conector tubular na porta RSL do RoboRIO. O fio preto deve ser conectado à porta mais próxima da borda do RoboRIO.
@@ -331,11 +327,9 @@ Circuit Breakers / Fusíveis
 .. image:: images/how-to-wire-a-robot/image19.jpg
    :width: 600
 
-Requer: 4x 40A circuit breakers (fusível de 40 amperes)
+**Requer: 4x 40A circuit breakers (fusível de 40 amperes)**
 
 Adicione um fusível de 40 amperes na posição correspondente onde os cabos do controlador estão conectados à PDP. Observe que as frestas para encaixar o fusível sempre estão ao lado da entrada positiva correspondente. Todos os terminais negativos estão conectados internamente..
-
-Se estiver trabalhando em um Robot Quick Build, coloque a chapa/base dentro do chassi antes de continuar.
 
 
 Energizando motor
@@ -344,8 +338,7 @@ Energizando motor
 .. image:: images/how-to-wire-a-robot/image20.jpg
    :width: 600
 
-Requer: Wire stripper, wire crimper, phillips head screwdriver, wire
-connecting hardware
+**Requer: Alicate desemcapador, crimpador, chave phillips, terminais de conexão entre cabos (terminais olho por exemplo).
 
 Para cada CIM motor:
 
@@ -354,11 +347,11 @@ Para cada CIM motor:
 Para controladores com fios integrados (incluindo Victor SPX):
 
 1. Deixe os cabos brancos e vermelhos do controlador esticados.
-2. Conecte os fios do motor nos fios output/saída do controlador (é recomendado que conecte o fio vermelho ao fio branco M+). A imagem abaixo mostra exemplos de utilização dos quick disconnect terminal.
+2. Conecte os fios do motor nos fios output/saída do controlador (é recomendado que conecte o fio vermelho ao fio branco M+).
 
 Para Sparks e outros controladores com fios não integrados:
 
-1. Crimpe um terminal "olho" ou "fork" em cada um dos fios (tanto dos motores quanto controladores).
+1. Crimpe um terminal olho ou garfo em cada um dos fios (tanto dos motores quanto controladores).
 2. Conecte os fios no output/saída de cada controlador de motor (vermelho no positivo, preto no negativo).
 
 STOP
@@ -385,8 +378,8 @@ Organize os fios
 .. image:: images/how-to-wire-a-robot/image22.jpg
    :width: 600
 
-Requer: Zip ties
+**Requer: Zip ties**
 
 Essa é a hora de adicionar alguns zip ties aos fios. Isso fará com que os fios do robô se mantenham firmes e organizados.
 
-Conecte a bateria ao robô como o conector Anderson. Para ligar o robô, empurre a "alavanca" do main breaker até ela dar um estalo e ficar presa. Se as os eletrônicos começarem a piscar, provavelmente está tudo certo. Agora conecte o RoboRIO ao computador e tente passar o código!
+Conecte a bateria ao robô com o conector Anderson. Para ligar o robô, empurre a "alavanca" do disjuntor principal até ela dar um estalo e ficar presa. Se as os eletrônicos começarem a piscar, provavelmente está tudo certo. Agora conecte o RoboRIO ao computador e tente passar o código!
