@@ -27,9 +27,9 @@ Você vai precisar dos seguintes componentes eletrônicos e ferramentas
       - 4x Victor SPX ou outro controlador de motor
       - 120A Circuit breaker
       - 4x 40A Circuit breaker
-      - Fio vermelho e preto de 6 AWG
-      - Fio vermelho e preto de 10 AWG
-      - Fio vermelho e preto de 18 AWG
+      - Fio vermelho e preto de 6 AWG (4,1mm de seção)
+      - Fio vermelho e preto de 10 AWG (2,5mm de seção)
+      - Fio vermelho e preto de 18 AWG (1mm de seção)
       - Fio amarelo e verde de 22AWG
       - 16x 10-12 AWG  terminais em olho (amarelos)
       - 2x Anderson SB50
@@ -181,12 +181,11 @@ Energizando RoboRIO
 .. image:: images/how-to-wire-a-robot/image8.jpg
    :width: 600
 
-Requer: 10A/20A mini fuses, Wire stripper, very small flat
-screwdriver, 18AWG Red and Black
+**Requer: Fusiveis automotivos de 10A e 20A, alicate desemcapador, chave fenda bem pequena, fios vermelho e preto de 18 AWG (1mm de seção) **
 
-1. Insira os fusíves de 10 e 20 amperes à PDP nos lugares demonstrados na imagem acima.
-2. Desencape as pontas dos fios 18 AWG vermelho e preto e  conecte aos terminais "Vbat Controller PWR" da PDP.
-3. Meça o comprimento nescessário dos fios para chegarem á PDP. Tome cuidado ao fazer o "caminho" desses fios, não deixe em nenhum lugar que possa causar problemas.
+1. Insira os fusíves de 10 e 20 amperes na PDP nos lugares demonstrados na imagem acima.
+2. Desencape as pontas dos fios de 18 AWG (1mm de seção) vermelho e preto e conecte aos terminais "Vbat Controller PWR" na PDP.
+3. Meça o comprimento nescessário dos fios para chegarem do RoboRio a PDP. Tome cuidado ao fazer o caminho desses fios, não passe por nenhum lugar que possa causar problemas.
 4. Corte e desencape-os, adicionando o conector tubular em suas pontas.
 5. Utilizando uma pequena chave de fenda, conecte os fios no terminal do RoboRIO (Vermelho no V e preto no C). Tenha certeza que o terminal está vem preso ao RoboRIO.
 
@@ -196,13 +195,13 @@ Energizando Voltage Regulator Module (VRM)
 .. image:: images/how-to-wire-a-robot/image11.jpg
    :width: 600
 
-Requer: Wire stripper, small flat screwdriver (optional), 18AWG red
-and black wire:
+**Requer: alicate desemcapador, chave de fenda pequena, fio vermelho e preto de 18 AWG (1mm de seção) red
+and black wire:**
 
-1. Desencape ~5/16" da ponta de um cabo vermelho e um cabo preto 18 AWG.
+1. Desencape ~5/16" da ponta de um cabo vermelho e um cabo preto 18 AWG (1mm de seção).
 2. Conecte os fios à um dos dois pares de terminais da PDP com o nome de "Vbat VRM PCM PWR".
-3. Meça o tamanho nescessário para chegar ao terminal "Vin" da PCM. Tome cuidado ao fazer o "caminho" desses fios, não deixe em nenhum lugar que possa causar problemas.
-4. Corte os cabos do tamanho correto e desncape as pontas encapadas.
+3. Meça o tamanho nescessário para chegar ao terminal "Vin" da PCM. Tome cuidado ao fazer o caminho desses fios, não passe por nenhum lugar que possa causar problemas.
+4. Corte os cabos do tamanho correto e desencape as pontas encapadas.
 5. Conecte os fios ao terminal 12Vin da VRM.
 
 Energizando Pneumatics Control Module (PCM) (opcional)
@@ -211,16 +210,15 @@ Energizando Pneumatics Control Module (PCM) (opcional)
 .. image:: images/how-to-wire-a-robot/image12.jpg
    :width: 600
 
-Requires: Wire stripper, small flat screwdriver (optional), 18AWG red
-and black wire
+**Requer: Alicate desemcapador, chave de fenda pequena, cabo vermelho e preto de 18 AWG (1mm de seção)**
 
-Note: A PCM é um componetne opcional, utilizado para controlar os sistemas pneumáticos do robô.
+Note: A PCM é um componente opcional, utilizado para controlar os sistemas pneumáticos do robô.
 
 
-1. Desencape ~5/16" da ponta de um cabo vermelho e um cabo preto 18 AWG.
+1. Desencape ~5/16"(~8mm) da ponta de um cabo vermelho e um cabo preto de 18 AWG (1mm de seção).
 2. Conecte os fios à um dos dois pares de terminais da PDP com o nome de "Vbat VRM PCM PWR".
-3. Meça o tamanho nescessário para chegar ao terminal "Vin" da PCM. Tome cuidado ao fazer o "caminho" desses fios, não deixe em nenhum lugar que possa causar problemas.
-4. Corte os cabos do tamanho correto e desncape as pontas encapadas.
+3. Meça o tamanho nescessário para chegar ao terminal "Vin" da PCM. Tome cuidado ao fazer o caminho desses fios, não passe por nenhum lugar que possa causar problemas.
+4. Corte os cabos do tamanho correto e desencape as pontas encapadas.
 5. Conecte os fios ao terminal 12Vin da PCM.
 
 Ethernet e energia do rádio
@@ -231,13 +229,15 @@ Ethernet e energia do rádio
 .. image:: images/how-to-wire-a-robot/image13.jpg
    :width: 600
 
-Requer: Small flat screwdriver (optional), Rev radio PoE cable
+**Requer: Chave de fenda pequena, Cabo PoE incluso no Kit**
 
-2. Insira os conectores do PoE nos terminais correspondentes à 12V/2A da VRM.
+1. Insira os conectores do PoE nos terminais correspondentes a 12V/2A da VRM.
 2. Conecte o conector macho de Ethernet (RJ45) à porta de ethernet do rádio mais próxima da entrada do pino de energia (com o nome de 18-24v POE).
 
-Conectando rádio ao RoboRIO
----------------------------
+**ATENÇÂO:** Não conecte mais nada no barramento 12V/2A da VRM, as 2 portas devem ser utilizadas apenas e exclusivamente para o rádio.
+
+Conectando o rádio ao RoboRIO
+----------------------------
 
 .. image:: images/how-to-wire-a-robot/image14.jpg
    :width: 600
@@ -310,12 +310,12 @@ Robot Signal Light (RSL)
 .. image:: images/how-to-wire-a-robot/image18.jpg
    :width: 600
 
-Requer: Wire stripper, 2 pin cable, Robot Signal Light, 18AWG red
+Requer: Wire stripper, 2 pin cable, Robot Signal Light, 18 AWG (1mm de seção) red
 wire, very small flat screwdriver
 
 1. Desencape a ponta de um cabo preto e um cabo vermelho e prenda um conector tubular em cada;
 2. Insira o cabo preto no terminal do centro (N), e prenda-o ("aperte" o parafuso do terminal);
-3. Corte um pequeno cabo vermelho 18AWG, insira uma das pontas no terminal "La" e prenda-o, insira a outra ponta no terminal "Lb", mas ainda não prenda;
+3. Corte um pequeno cabo vermelho 18 AWG (1mm de seção), insira uma das pontas no terminal "La" e prenda-o, insira a outra ponta no terminal "Lb", mas ainda não prenda;
 4. Insira o cabo vermelho com o conector tubular no terminal "Lb", junto com o cabo vermelho pequeno e prenda-os;
 5. Conecte os cabos com conector tubular na porta RSL do RoboRIO. O fio preto deve ser conectado à porta mais próxima da borda do RoboRIO.
 
