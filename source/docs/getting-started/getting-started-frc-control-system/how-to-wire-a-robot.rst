@@ -242,9 +242,9 @@ Conectando o rádio ao RoboRIO
 .. image:: images/how-to-wire-a-robot/image14.jpg
    :width: 600
 
-Requer: Ethernet cable
+**Requer: Cabo Ethernet**
 
-Conecte o cabo de Ethernet na porta fêmea RJ45 do cabo POE à entrada Ethernet (RJ45) do RoboRIO.
+Conecte o cabo de Ethernet na porta RJ45 do cabo POE e na entrada Ethernet (RJ45) do RoboRIO.
 
 Dispositivos CAN
 ----------------
@@ -255,15 +255,16 @@ CAN do RoboRIO para a PCM
 .. image:: images/how-to-wire-a-robot/image15.jpg
    :width: 600
 
-Requer : Wire stripper, small flat screwdriver (optional), yellow/green
-twisted CAN cable
+**Requer : Alicate desemcapador, chave de fenda pequena, fios verde e amarelo de 22 AWG**
 
-Note: A PCM é um compinente opcional, utilizado para controlar os sistemas pneumáticos do robô. Se não estiver utilizando uma PCM, conecte os fios CAN que vem do RoboRIO diretamente na PDP.
+.. note::
 
-1. Desncape ~5/16" de cada fio CAN.
+A PCM é um compinente opcional, utilizado para controlar os sistemas pneumáticos do robô. Se não estiver utilizando uma PCM, conecte os fios CAN que vem do RoboRIO diretamente na PDP.
+
+1. Desencape ~5/16"(8mm) de cada fio CAN.
 2. Insira os fios nos terminais destinados à linha CAN no RoboRIO (Amerelo -> YEL, Verde -> GRN).
 3. Meça o comprimento nescessário dos cabos para chegar com um pouco de folga na PCM.
-4. Insira os fios CAN no terminal destinado à eles. Pode utilizar qualque um dos pares de terminais CAN (Amarelo/Verde).
+4. Insira os fios CAN no terminal destinado à eles. Pode utilizar qualquer um dos pares de terminais CAN (Amarelo/Verde).
 
 CAN da PCM para a PDP
 ~~~~~~~~~~~~~~~~~~~~~
@@ -271,16 +272,19 @@ CAN da PCM para a PDP
 .. image:: images/how-to-wire-a-robot/image16.jpg
    :width: 600
 
-Requer: Wire stripper, small flat screwdriver (optional), yellow/green
-twisted CAN cable
+**Requer : Alicate desemcapador, chave de fenda pequena, fios verde e amarelo de 22 AWG**
 
-Note:  A PCM é um compinente opcional, utilizado para controlar os sistemas pneumáticos do robô. Se não estiver utilizando uma PCM, conecte os fios CAN que vem do RoboRIO diretamente na PDP.
+.. note::
+
+A PCM é um componente opcional, utilizado para controlar os sistemas pneumáticos do robô. Se não estiver utilizando uma PCM, conecte os fios CAN que vem do RoboRIO diretamente na PDP.
 
 1. Insira os fios nos terminais CAN da PCM
 2. Meça o comprimento dos fios para que consigam chegar até a PDP (cada um deles).
 3. Insira os fios nos terminais CAN da PDP. Pode usar qualquer um dos dois pares da entrada.
 
-  Note: Utilize a PDP como o último componente da linha CAN (CAN bus)
+.. note::
+
+Utilize a PDP como o último componente da linha CAN (CAN bus)
 
 
 Cabos PWM
