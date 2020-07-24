@@ -117,7 +117,7 @@ Isole as conexões da PDP
 1. Utilizando a fita isolante, isole as duas conexões do disjuntor principal. Isole a parte dos terminais da PDP que irão entrar em contato com a proteção quando for presa novamente. Uma maneira de isolar as conexões do disjuntor principal é passar a fita no cabo e na porca antes de serem presos e, depois de presos, passar fita novamente.
 2. Utilizando a Allen de 1/16", prenda a proteção dos terminais à PDP.
 
-Conectores Wago
+Conectores *Wago*
 ---------------
 
 .. raw:: html
@@ -126,25 +126,24 @@ Conectores Wago
         <iframe src="//www.youtube.com/embed/L3GJGQ7mJqk" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
 
-O próximo passo é aprender a utilizar os conectores Wago da PDP. Para utiliza-los, pegue uma pequena chave de fenda e a insira no buraco retangular ( na lateral da PDP) o mais horizontal possível. Empurre a chave para cima, aí você vai poder ver que, abaixo do buraco retangular, uma pequena entrada vai se abrir. Nessa entrada devem ser presos os cabos dos controladores. A PDP têm dois tipos de conectores:
+O próximo passo é aprender a utilizar os conectores *Wago* na PDP. Para utiliza-los, pegue uma pequena chave de fenda e a insira no buraco retangular (na lateral da PDP) o mais horizontal possível. Empurre a chave para cima, aí você vai poder ver que, abaixo do buraco retangular, uma pequena entrada vai se abrir. Nessa entrada devem ser presos os cabos dos componentes a serem energizados. A PDP têm dois tipos de conectores:
 
-- Small Wago connector: Aceita 10AWG-24AWG, strip 11-12mm (~7/16")
-- Large Wago connector: Aceita 6AWG-12AWG, strip 12-13mm(~1/2")
+- Conector *Wago* pequeno: Aceita 10AWG-24AWG, strip 11-12mm (~7/16")
+- Conector *Wago* grande: Aceita 6AWG-12AWG, strip 12-13mm(~1/2")
 
-Para facilitar a entrada do cabo na entrada da PDP, deve deixar a parte de cobre exposta bem "esticada" (não torcida, de preferencia).
+Para facilitar a entrada do cabo na entrada da PDP, deve deixar a parte de cobre exposta bem esticada (não torcida, de preferencia).
 
-Energizando controlador de motor
---------------------------------
+Energizando controladores de motor
+----------------------------------
 
 .. image:: images/how-to-wire-a-robot/image6.jpg
    :width: 600
 .. image:: images/how-to-wire-a-robot/image7.jpg
    :width: 600
 
-Requer: Wire Stripper, Small Flat Screwdriver, 10 or 12 AWG wire, 10
-or 12 AWG fork/ring terminals (terminal controllers only), wire crimper
+**Requer: Alicate para desencapar fios, Chave de fenda pequena, fio de 10 ou 12 AWG, terminal olho de 10 ou 12, aicate crimpador**
 
-Para Victor SPX ou outro controlador de motor com fios integrados (imagem de cima):
+Para o Victor SPX ou outro controlador de motor com fios integrados (imagem de cima):
 - Desencape a ponta dos cabos de energia (vermelho e preto) e insira na entrada (conector Wago) de 40 amperes (a maior) da PDP.
 
 Para controladores de motor com terminais (imagem de baixo)
