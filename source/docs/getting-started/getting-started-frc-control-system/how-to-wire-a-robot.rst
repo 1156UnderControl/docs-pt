@@ -144,16 +144,16 @@ Energizando controladores de motor
 **Requer: Alicate para desencapar fios, Chave de fenda pequena, fio de 10 ou 12 AWG, terminal olho de 10 ou 12, aicate crimpador**
 
 Para o Victor SPX ou outro controlador de motor com fios integrados (imagem de cima):
-- Desencape a ponta dos cabos de energia (vermelho e preto) e insira na entrada (conector Wago) de 40 amperes (a maior) da PDP.
+- Desencape a ponta dos cabos de energia (vermelho e preto) e insira na entrada (conector Wago) de 40 amperes da PDP.
 
 Para controladores de motor com terminais (imagem de baixo)
 
 1. Corte um cabo vermelho e um cabo preto do tamanho apropriado para chegar até a entrada de 40 amperes da PDP (é recomendado que seja um pouco maior do que o necessário);
 2. Insira a parte desencapada dos fios na PDP conforme a polaridade correspondente;
-3. Crimpe um terminal olho ou "fork" na outra ponta do cabo;
-4. Prenda os fios nos terminais nos controladores (vermelho no + e preto no -).
+3. Crimpe um terminal olho na outra ponta do cabo;
+4. Prenda os fios nos terminais dos controladores (vermelho no + e preto no -).
 
-Conector Weidmuller
+Conector *Weidmuller*
 ---------------------
 
 .. raw:: html
@@ -162,13 +162,13 @@ Conector Weidmuller
         <iframe src="//www.youtube.com/embed/kCcDw3lDYis" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
 
-O tamanho correto para se desencapar é 5/16", e não 5/8" como dito no vídeo.
+O tamanho correto para se desencapar é 5/16"(~8mm), e não 5/8" como dito no vídeo.
 
 Para utilizar estes conectores de maneira mais eficiente, tenha em mente que:
 
--O fio deve estar entre 16AWG e 24AWG (consulte as regras e verifique cada espessura de fio correspondente ao componente que vai ser utilizado)
-- Deve-se desencapar aproximadamente 5/16" no final dos fios.
-- Para inserir ou remover os fios, pressione o "botão" correspondente para abrir o terminal.
+- O fio deve estar entre 16AWG e 24AWG (consulte as regras e verifique cada espessura de fio correspondente ao componente que será utilizado)
+- Deve-se desencapar aproximadamente 5/16"(~8mm) no final dos fios.
+- Para inserir ou remover os fios, pressione o botão correspondente para abrir o terminal.
 
 Depois de conectar, cheque para ter certeza se está tudo certo:
 
